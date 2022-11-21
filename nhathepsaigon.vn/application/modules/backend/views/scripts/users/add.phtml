@@ -1,0 +1,86 @@
+<?php
+$arrUserDetail = $this->arrUserDetail;
+$arrGroups = $this->arrGroups;
+if(isset($arrUserDetail['birthday'])) {
+    //format date
+    $arrUserDetail['birthday'] = isset($arrUserDetail['birthday']) ? date('d/m/Y',$arrUserDetail['birthday']) : '';
+}
+?>
+<form id="frm-user-add" action="" method="POST" role="form">
+    <input type="hidden" name="intUserId" value="<?php echo isset($arrUserDetail['user_id']) ? $arrUserDetail['user_id'] : 0; ?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Tạo mới user</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strCateName">Email</label>
+            <input <?php echo isset($arrUserDetail['email'])?'readonly':'';?> type="text" name="strEmail" value="<?php echo isset($arrUserDetail['email'])?$arrUserDetail['email']:'';?>" class="form-control" id="strEmail" placeholder="Email">
+            <!-- /.input group -->
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intGroupId">Nhóm quyền</label>
+            <select class="form-control" name="intGroupId">
+                <option value="">Chọn nhóm quyền</option>
+                <?php
+                if(!empty($arrGroups['data'])) {
+                    foreach($arrGroups['data'] as $row) {
+                        ?>
+                        <option <?php echo isset($arrUserDetail['group_id']) && $arrUserDetail['group_id']==$row['group_id']?'selected="selected"':'';?> value="<?php echo $row['group_id'];?>"><?php echo $row['group_name'];?></option>
+                    <?php
+                    }
+                }
+                ?>
+            </select>
+        </div>
+        <?php
+        if(!isset($arrUserDetail['user_id'])) {
+            ?>
+            <div class="form-group frm-validate">
+                <label for="strPassWord">Mật khẩu</label>
+                <input type="password" name="strPassWord" value="" class="form-control" id="strPassWord" placeholder="Mật khẩu">
+            </div>
+            <div class="form-group frm-validate">
+                <label for="strConfirmPassWord">Xác nhận mật khẩu</label>
+                <input type="password" name="strConfirmPassWord" value="" class="form-control" id="strConfirmPassWord" placeholder="Xác nhận mật khẩu">
+            </div>
+        <?php
+        }
+        ?>
+        <div class="form-group frm-validate">
+            <label for="strFullname">Họ tên</label>
+            <input type="text" name="strFullname" value="<?php echo isset($arrUserDetail['fullname'])?$arrUserDetail['fullname']:'';?>" class="form-control" id="strFullname" placeholder="Họ tên">
+        </div>
+        <!-- Date dd/mm/yyyy -->
+        <div class="form-group frm-validate">
+            <label for="strBirthday">Ngày sinh</label>
+            <input type="text" value="<?php echo isset($arrUserDetail['birthday']) ? $arrUserDetail['birthday'] : '';?>" name="strBirthday" class="form-control" id="strBirthday" placeholder="Ngày sinh">
+            <!-- /.input group -->
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strAddress">Địa chỉ</label>
+            <input type="text" name="strAddress" value="<?php echo isset($arrUserDetail['address'])?$arrUserDetail['address']:'';?>" class="form-control" id="strAddress" placeholder="Địa chỉ">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strPhone">Số điện thoại</label>
+            <input type="text" name="strPhone" value="<?php echo isset($arrUserDetail['phone'])?$arrUserDetail['phone']:'';?>" class="form-control" id="strPhone" placeholder="Điện thoại">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intGender">Giới tính</label>
+            <div class="input-group">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" <?php echo !isset($arrUserDetail['gender'])?'checked="checked"':((isset($arrUserDetail['gender']) && $arrUserDetail['gender'] == 1)?'checked="checked"':'');?> name="intGender" value="1">
+                Nam
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" <?php echo (isset($arrUserDetail['gender']) && $arrUserDetail['gender'] == 0)?'checked="checked"':'';?> name="intGender" value="0">
+                Nữ
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Cập nhật</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+    </div>
+</form>

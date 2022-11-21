@@ -1,0 +1,165 @@
+<?php
+$arrConfig = $this->arrConfig;
+?>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/config" title="Cấu hình chung">Cấu hình chung</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <form id="add" action="" method="POST" role="form">
+            <input type="hidden" name="intId" value="<?php echo isset($arrConfig['id'])?$arrConfig['id']:0;?>">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Cấu hình chung</h3>
+                    </div>
+                    <div class="box-body" style="margin-bottom: 20px;">
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strWebLink">Website Link</label>
+                                    <input name="strWebLink" type="text" value="<?php echo isset($arrConfig['web_link'])?$arrConfig['web_link']:'';?>" class="form-control" id="strWebLink">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strWebName">Website Name</label>
+                                    <input name="strWebName" type="text" value="<?php echo isset($arrConfig['web_name'])?$arrConfig['web_name']:'';?>" class="form-control" id="strWebName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strWebDescription">Website Description</label>
+                                    <textarea name="strWebDescription" class="form-control" id="strWebDescription"><?php echo isset($arrConfig['web_description'])?$arrConfig['web_description']:'';?></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strMetaTitle">Website Meta Title</label>
+                                    <input name="strMetaTitle" type="text" value="<?php echo isset($arrConfig['meta_title'])?$arrConfig['meta_title']:'';?>" class="form-control" id="strMetaTitle">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strMetaDescription">Website Meta Description</label>
+                                    <textarea name="strMetaDescription" class="form-control" id="strMetaDescription"><?php echo isset($arrConfig['meta_description'])?$arrConfig['meta_description']:'';?></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strMetaKeyword">Website Keyword</label>
+                                    <input name="strMetaKeyword" type="text" value="<?php echo isset($arrConfig['meta_keyword'])?$arrConfig['meta_keyword']:'';?>" class="form-control" id="strMetaKeyword">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strAddress">Address</label>
+                                    <input name="strAddress" type="text" value="<?php echo isset($arrConfig['address'])?$arrConfig['address']:'';?>" class="form-control" id="strAddress">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strPhone">Phone</label>
+                                    <input name="strPhone" type="text" value="<?php echo isset($arrConfig['phone'])?$arrConfig['phone']:'';?>" class="form-control" id="strPhone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strEmail">Email</label>
+                                    <input name="strEmail" type="text" value="<?php echo isset($arrConfig['email'])?$arrConfig['email']:'';?>" class="form-control" id="strEmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strLinkFb">Link facebook fanpage</label>
+                                    <input name="strLinkFb" type="text" value="<?php echo isset($arrConfig['link_fb'])?$arrConfig['link_fb']:'';?>" class="form-control" id="strLinkFb">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strLinkTwitter">Link twitter</label>
+                                    <input name="strLinkTwitter" type="text" value="<?php echo isset($arrConfig['link_twitter'])?$arrConfig['link_twitter']:'';?>" class="form-control" id="strLinkTwitter">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strLinkGPlus">Link G+</label>
+                                    <input name="strLinkGPlus" type="text" value="<?php echo isset($arrConfig['link_gplus'])?$arrConfig['link_gplus']:'';?>" class="form-control" id="strLinkGPlus">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strLinkYoutube">Link youtube</label>
+                                    <input name="strLinkYoutube" type="text" value="<?php echo isset($arrConfig['link_youtube'])?$arrConfig['link_youtube']:'';?>" class="form-control" id="strLinkYoutube">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="intTopstoryType">Cơ chế lấy tin topstory</label>
+                                    <select class="form-control" name="intTopstoryType">
+                                        <option value="0"<?php echo isset($arrConfig['topstory_type']) && $arrConfig['topstory_type'] == 0?' selected':'';?>>Lấy tin tự động</option>
+                                        <option value="1"<?php echo isset($arrConfig['topstory_type']) && $arrConfig['topstory_type'] == 1?' selected':'';?>>Set bằng tay</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strTextBanner">Tiêu đề box text banner</label>
+                                    <input name="strTextBanner" type="text" value="<?php echo isset($arrConfig['text_banner'])?$arrConfig['text_banner']:'';?>" class="form-control" id="strTextBanner">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="strColorTextBanner">Màu box text banner</label>
+                                    <input name="strColorTextBanner" type="text" value="<?php echo isset($arrConfig['color_text_banner'])?$arrConfig['color_text_banner']:'#fff';?>" class="form-control" id="strColorTextBanner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        <button type="button" class="btn btn-default cancel">Hủy</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section><!-- /.content -->

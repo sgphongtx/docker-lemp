@@ -1,0 +1,169 @@
+<?php
+$arrData = $this->arrData;
+$arrUser = $this->arrUser;
+$arrUserId = $this->arrUserId;
+?>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/pages" title="Trang tĩnh">Trang tĩnh</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Trang tĩnh</h3>
+                    <div class="box-tools pull-right">
+                        <a href="<?php echo SITE_URL;?>/backend/pages/add" class="btn btn-add act-add btn-block btn-primary btn-sm">Tạo mới</a>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-header clearfix">
+                    <form id="frmFilter" role="form" method="GET" action="<?php echo SITE_URL; ?>/backend/pages/index">
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Search</span>
+                                    <input name="keyid" value="<?php echo isset($this->intId)&&$this->intId>0?$this->intId:'';?>" type="text" class="form-control" placeholder="ID trang tĩnh" data-toggle="tooltip" data-original-title="Tìm theo ID trang tĩnh">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-group" style="width: 100%;">
+                                    <input name="keyword" value="<?php echo isset($this->strKeyword)?$this->strKeyword:'';?>" type="text" class="form-control" placeholder="Tên trang tĩnh" data-toggle="tooltip" data-original-title="Tìm theo tên trang tĩnh">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Người đăng</span>
+                                    <select class="form-control" name="userid">
+                                        <option value="0" <?php echo $this->intUserId == 0 ? 'selected' : ''; ?>>All</option>
+                                        <?php
+                                        if(!empty($arrUserId)){
+                                            foreach($arrUserId as $row){
+                                                ?>
+                                                <option value="<?php echo $row['user_id'];?>" <?php echo $this->intUserId == $row['user_id'] ? 'selected' : ''; ?>><?php echo $row['fullname'].' - '.$row['email'];?></option>
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Pageviews</span>
+                                    <select class="form-control" name="pageview">
+                                        <option value="0" <?php echo $this->intPageview == 0 ? 'selected' : ''; ?>>All</option>
+                                        <option value="1" <?php echo $this->intPageview == 1 ? 'selected' : ''; ?>>Tăng dần</option>
+                                        <option value="2" <?php echo $this->intPageview == 2 ? 'selected' : ''; ?>>Giảm dần</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="width: 115px;">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-search">&nbsp;Search</i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <?php
+                if(!empty($arrData['data'])) {
+                    ?>
+                    <!-- /.box-header -->
+                    <div class="box-header clearfix">
+                        <?php echo $this->Pagination($arrData['total'], $arrData['intPage'], $arrData['intLimit'], 1); ?>
+                    </div>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th style="width: 10px">ID</th>
+                                <th class="text-center">Page key</th>
+                                <th>Tên trang tĩnh</th>
+                                <th class="text-center">Pageviews</th>
+                                <th class="text-center">Người đăng</th>
+                                <th class="text-center">Thời gian đăng</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                            <?php
+                            foreach ($arrData['data'] as $data) {
+                                ?>
+                                <tr>
+                                    <td class="text-center"><?php echo $data['id']; ?></td>
+                                    <td class="text-center"><?php echo $data['page_key']; ?></td>
+                                    <td><a data-toggle="tooltip" data-original-title="Edit"
+                                           href="<?php echo SITE_URL . '/backend/pages/edit/id/' . $data['id']; ?>"><?php echo $data['name']; ?></a>
+                                    </td>
+                                    <td class="text-center"><?php echo $data['views']; ?></td>
+                                    <td class="text-center"><?php echo isset($arrUser) ? $arrUser[$data['id']]['user']['fullname'] : ''; ?><br><?php echo isset($arrUser) ? $arrUser[$data['id']]['user']['email'] : ''; ?></td>
+                                    <td class="text-center"><?php echo date('H:i:s', $data['ptime']); ?><br><?php echo date('d/m/Y', $data['ptime']); ?></td>
+                                    <td class="text-center"><?php echo $this->arrStatus[$data['status']]; ?></td>
+                                    <td class="text-center">
+                                        <a data-toggle="tooltip" data-original-title="Edit"
+                                           href="<?php echo SITE_URL . '/backend/pages/edit/id/' . $data['id']; ?>">
+                                            <i class="fa fa-edit"></i>
+                                        </a>&nbsp;
+                                        <?php
+                                        if($data['status'] == PAGES_STATUS_INACTIVE) {
+                                            ?>
+                                            <a class="act-update-status" data-id="<?php echo $data['id']; ?>"
+                                               data-name="<?php echo $data['name']; ?>" data-status="<?php echo PAGES_STATUS_ACTIVE;?>"
+                                               href="javascript:;" data-toggle="tooltip" data-original-title="Active">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                            &nbsp;
+                                            <?php
+                                        }
+                                        if($data['status'] == PAGES_STATUS_ACTIVE) {
+                                            ?>
+                                            <a class="act-update-status" data-id="<?php echo $data['id']; ?>"
+                                               data-name="<?php echo $data['name']; ?>" data-status="<?php echo PAGES_STATUS_INACTIVE;?>"
+                                               href="javascript:;" data-toggle="tooltip"
+                                               data-original-title="Inactive">
+                                                <i class="fa fa-stop"></i>
+                                            </a>
+                                            &nbsp;
+                                            <?php
+                                        }
+                                        ?>
+                                        <a data-toggle="tooltip" data-original-title="Xóa" class="act-del"
+                                           data-id="<?php echo $data['id']; ?>"
+                                           data-name="<?php echo $data['name']; ?>" href="javascript:;">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                            ?>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <?php echo $this->Pagination($arrData['total'], $arrData['intPage'], $arrData['intLimit'], 1); ?>
+                    </div>
+                <?php
+                }else{
+                    ?>
+                    <div class="box-body">
+                        <div class="alert alert-warning p-b-10" role="alert">Không tìm thấy dữ liêu!</div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section><!-- /.content -->

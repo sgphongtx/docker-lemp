@@ -1,0 +1,60 @@
+<?php
+$arrTopicDetail = $this->arrTopicDetail;
+$arrCategoryDetail = $this->arrCategoryDetail;
+$arrCategories = $this->arrCategories['data'];
+?>
+<form id="frm-topic-add" action="" method="POST" role="form">
+    <input type="hidden" name="intTopicId" value="<?php echo isset($arrTopicDetail['topic_id'])?$arrTopicDetail['topic_id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Add topic</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strTopicName">Tên topics</label>
+            <input type="text" name="strTopicName" value="<?php echo isset($arrTopicDetail['topic_name'])?$arrTopicDetail['topic_name']:'';?>" class="form-control" id="strTopicName" placeholder="Topic name">
+        </div>
+        <div class="form-group frm-validate">
+            <label>Category</label>
+            <div class="block_select site_id_list">
+                <span class="selected_data" id="site_id_list" data-value="<?php echo isset($arrCategoryDetail['category_id'])?$arrCategoryDetail['category_id']:0;?>"><span><?php echo $arrCategoryDetail['cate_name'];?></span></span>
+                <input class="selected_data_hidden" type="hidden" name="intCategoryId" value="<?php echo isset($arrCategoryDetail['category_id'])?$arrCategoryDetail['category_id']:0;?>">
+                <ul class="list_menu">
+                    <?php
+                    if (isset($arrCategories) && !empty($arrCategories)) {
+                        $arrHtml = array();
+                        foreach ($arrCategories as $row) {
+                            $p = (int)$row['parent_id'];
+                            $c = (int)$row['category_id'];
+                            // Xuat category name
+                            $name = '<a href="javascript:;" data-value="'.$c.'">'.$row['cate_name'].'</a><span class="colspan">&nbsp;</span>';
+                            if (isset($arrHtml[$c]) && !empty($arrHtml[$c])) {
+                                $arrHtml[$p][$c] = '<li class="has_sub_menu">' . $name . '<ul>' . implode('', $arrHtml[$c]) . '</ul></li>';
+                                unset($arrHtml[$c]);
+                            } else {
+                                $arrHtml[$p][$c] = '<li class="has_sub_menu">' . $name . '</li>';
+                            }
+                        }
+                        echo implode('', $arrHtml[0]);
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intStatus">Status</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" checked="" name="intStatus" value="1">
+            Active
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="intStatus" value="2">
+            Inactive
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+    </div>
+</form>

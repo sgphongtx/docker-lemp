@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cấu hình hệ thống - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+
+    <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="row">
+
+                      <div class="col-md-3 col-sm-12 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="tim-kiem-vi-tri" placeholder="Tìm kiếm vị trí">
+                        <span class="fa fa-search form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-3 col-sm-12 col-xs-12 col-md-offset-6 text-center">
+                        <button type="button" class="btn btn-ebuilding" data-toggle="modal" data-target=".bs-them-chuc-vu-modal-lg">Thêm</button>
+                      </div>
+
+                      <div class="clearfix"></div>
+
+                      <div class="table-responsive">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr class="headings">
+                              <th class="column-title text-center">Vị trí</th>
+                              <th class="column-title text-center">Quyền</th>
+                              <th class="column-title text-center">Cập nhật</th>
+                              <th class="column-title text-center">Xóa</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="odd pointer">
+                              <td class="danh-sach-dv text-center upper-case vertical-align-middle">Admin</td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">Quyền cầu hình hệ thống, Quyền quản lý nhân viên, Quyền báo cáo, Quyền giao tiếp cư dân, Quyền thanh toán, Quyền quản lý dịch vụ, Quyền quản lý cư dân, Quyền quản lý căn hộ, Quyền quản lý lịch sử thao tác với hệ thống, Quyền quản lý trang thiết bị vật tư và đối tác, Quyền quản lý công việc nội bộ</td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">
+                                <a href="" class="btn-khoi" data-toggle="modal" data-target=".bs-cap-nhat-chuc-vu-modal-lg"><i class="fa fa-pencil"></i></a>
+                              </td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-xoa-modal-sm"><i class="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            <tr class="even pointer">
+                              <td class="danh-sach-dv text-center upper-case vertical-align-middle">Kế toán dự án</td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">Quyền cầu hình hệ thống, Quyền quản lý nhân viên, Quyền báo cáo, Quyền giao tiếp cư dân, Quyền thanh toán, Quyền quản lý dịch vụ, Quyền quản lý cư dân, Quyền quản lý căn hộ, Quyền quản lý trang thiết bị vật tư và đối tác, Quyền quản lý công việc nội bộ</td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">
+                                <a href="" class="btn-khoi" data-toggle="modal" data-target=".bs-cap-nhat-chuc-vu-modal-lg"><i class="fa fa-pencil"></i></a>
+                              </td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-xoa-modal-sm"><i class="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            <tr class="even pointer">
+                              <td class="danh-sach-dv text-center upper-case vertical-align-middle">Trưởng ban</td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">Quyền cầu hình hệ thống, Quyền quản lý nhân viên, Quyền báo cáo, Quyền giao tiếp cư dân, Quyền thanh toán, Quyền quản lý dịch vụ, Quyền quản lý cư dân, Quyền quản lý căn hộ, Quyền quản lý trang thiết bị vật tư và đối tác, Quyền quản lý công việc nội bộ</td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">
+                                <a href="" class="btn-khoi" data-toggle="modal" data-target=".bs-cap-nhat-chuc-vu-modal-lg"><i class="fa fa-pencil"></i></a>
+                              </td>
+                              <td class="danh-sach-dv text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-xoa-modal-sm"><i class="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <div class="modal fade bs-them-chuc-vu-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal form-label-left">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title">Thêm chức vụ</h4>
+            </div>
+            <div class="modal-body">
+              
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="chuc-vu">Chức vụ <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="chuc-vu" required="required" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="quyen">Quyền <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="quyen" required="required" class="form-control col-md-7 col-xs-12" value="">
+                  </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <tbody>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quyền cấu hình hệ thống
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quản lý thông tin khối, tầng, căn hộ, toà nhà
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quản lý thông tin dịch vụ
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quản lý thông tin chức vụ
+                          </td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quyền quản lý nhân viên
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quản lý thông tin nhân viên</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm nhân viên</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Phân quyền cho nhân viên</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Reset mật khẩu về mặc định</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xoá nhân viên</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền báo cáo</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo doanh thu</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo công nợ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo sổ quỹ</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo phiếu chi</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá phiếu chi</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền giao tiếp cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quản lý thông báo đến cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem ý kiến cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Xem ý kiến cư dân liên quan đến nhân viên đó, không thể tạo công việc nội bộ từ ý kiến cư dân
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Phản hồi ý kiến
+                          </td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền thanh toán</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem danh sách căn hộ cần thu tiền</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thu tiền</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý dịch vụ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin sử dụng dịch vụ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Cập nhật thông tin sử dụng(đăng ký, chốt chỉ số)</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin hoá đơn</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa hoá đơn</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, sửa, xoá thông tin cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Mời cư dân sử dụng app</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý căn hộ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin các căn hộ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin chi tiết căn hộ</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý lịch sử thao tác với hệ thống</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin lịch sử</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý lịch sử thao tác với hệ thống</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin lịch sử</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý trang thiết bị vật tư và đối tác</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin trang thiết bị</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin vật tư</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin đối tác</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa trang thiết bị</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa vật tư</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa đối tác</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý công việc nội bộ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin trang thiết bị</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-primary">Thêm</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bs-cap-nhat-chuc-vu-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal form-label-left">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title">Cập nhật chức vụ</h4>
+            </div>
+            <div class="modal-body">
+              
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="chuc-vu">Chức vụ <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="chuc-vu" required="required" class="form-control col-md-7 col-xs-12" value="Admin">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="quyen">Quyền <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="quyen" required="required" class="form-control col-md-7 col-xs-12" value="Quyền cầu hình hệ thống, Quyền quản lý nhân viên, Quyền báo cáo, Quyền giao tiếp cư dân, Quyền thanh toán, Quyền quản lý dịch vụ, Quyền quản lý cư dân, Quyền quản lý căn hộ, Quyền quản lý lịch sử thao tác với hệ thống, Quyền quản lý trang thiết bị vật tư và đối tác, Quyền quản lý công việc nội bộ">
+                  </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <tbody>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quyền cấu hình hệ thống
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quản lý thông tin khối, tầng, căn hộ, toà nhà
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quản lý thông tin dịch vụ
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quản lý thông tin chức vụ
+                          </td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Quyền quản lý nhân viên
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quản lý thông tin nhân viên</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm nhân viên</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Phân quyền cho nhân viên</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Reset mật khẩu về mặc định</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xoá nhân viên</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền báo cáo</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo doanh thu</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo công nợ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo sổ quỹ</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem báo cáo phiếu chi</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá phiếu chi</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền giao tiếp cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quản lý thông báo đến cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem ý kiến cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Xem ý kiến cư dân liên quan đến nhân viên đó, không thể tạo công việc nội bộ từ ý kiến cư dân
+                          </td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">
+                            Phản hồi ý kiến
+                          </td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền thanh toán</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem danh sách căn hộ cần thu tiền</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thu tiền</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý dịch vụ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin sử dụng dịch vụ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Cập nhật thông tin sử dụng(đăng ký, chốt chỉ số)</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin hoá đơn</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa hoá đơn</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, sửa, xoá thông tin cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin cư dân</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Mời cư dân sử dụng app</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý căn hộ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin các căn hộ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin chi tiết căn hộ</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý lịch sử thao tác với hệ thống</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin lịch sử</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý lịch sử thao tác với hệ thống</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin lịch sử</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý trang thiết bị vật tư và đối tác</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin trang thiết bị</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin vật tư</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin đối tác</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa trang thiết bị</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa vật tư</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Thêm, xoá, sửa đối tác</td>
+                        </tr>
+                        <tr class="odd pointer line-header">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Quyền quản lý công việc nội bộ</td>
+                        </tr>
+                        <tr class="even pointer">
+                          <td class="danh-sach-dv text-center">
+                            <input type="checkbox" name="su-dung-select" checked="">
+                          </td>
+                          <td class="danh-sach-dv text-center">Xem thông tin trang thiết bị</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-primary">Cập nhật</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bs-xoa-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal form-label-left">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title">Xác nhận xóa chức vụ</h4>
+            </div>
+            <div class="modal-body">
+              Bạn có chắc muốn xóa chức vụ "Admin" không?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-danger">Xóa</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script> 
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+  </body>
+</html>

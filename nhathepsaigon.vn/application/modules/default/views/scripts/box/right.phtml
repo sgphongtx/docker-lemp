@@ -1,0 +1,521 @@
+<?php
+$arrReturn24h = $this->arrReturn24h;
+$arrTags = $this->arrTags;
+$arrTopViews = $this->arrTopViews;
+$arrTopComments = $this->arrTopComments;
+?>
+<div class="right_banner_ads facebook_ads">
+    <div style="display:none; position: relative;">
+        <iframe style="display:none;"></iframe>
+        <script type="text/javascript">
+            var data = {
+                placementid: '974813445964975_1014696888643297',
+                format: 'native',
+                testmode: false,
+                onAdLoaded: function(element) {
+                    console.log('Audience Network ad loaded');
+                    element.style.display = 'block';
+                },
+                onAdError: function(errorCode, errorMessage) {
+                    console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
+                }
+            };
+            (function(w,l,d,t){var a=t();var b=d.currentScript||(function(){var c=d.getElementsByTagName('script');return c[c.length-1];})();var e=b.parentElement;e.dataset.placementid=data.placementid;var f=function(v){try{return v.document.referrer;}catch(e){}return'';};var g=function(h){var i=h.indexOf('/',h.indexOf('://')+3);if(i===-1){return h;}return h.substring(0,i);};var j=[l.href];var k=false;var m=false;if(w!==w.parent){var n;var o=w;while(o!==n){var h;try{m=m||(o.$sf&&o.$sf.ext);h=o.location.href;}catch(e){k=true;}j.push(h||f(n));n=o;o=o.parent;}}var p=l.ancestorOrigins;if(p){if(p.length>0){data.domain=p[p.length-1];}else{data.domain=g(j[j.length-1]);}}data.url=j[j.length-1];data.channel=g(j[0]);data.width=screen.width;data.height=screen.height;data.pixelratio=w.devicePixelRatio;data.placementindex=w.ADNW&&w.ADNW.Ads?w.ADNW.Ads.length:0;data.crossdomain=k;data.safeframe=!!m;var q={};q.iframe=e.firstElementChild;var r='https://www.facebook.com/audiencenetwork/web/?sdk=5.3';for(var s in data){q[s]=data[s];if(typeof(data[s])!=='function'){r+='&'+s+'='+encodeURIComponent(data[s]);}}q.iframe.src=r;q.tagJsInitTime=a;q.rootElement=e;q.events=[];w.addEventListener('message',function(u){if(u.source!==q.iframe.contentWindow){return;}u.data.receivedTimestamp=t();if(this.sdkEventHandler){this.sdkEventHandler(u.data);}else{this.events.push(u.data);}}.bind(q),false);q.tagJsIframeAppendedTime=t();w.ADNW=w.ADNW||{};w.ADNW.Ads=w.ADNW.Ads||[];w.ADNW.Ads.push(q);w.ADNW.init&&w.ADNW.init(q);})(window,location,document,Date.now||function(){return+new Date;});
+        </script>
+        <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw.js" async></script>
+        <style>
+            .thirdPartyRoot {
+                background-color: white;
+                color: #444;
+                border: 1px solid #ccc;
+                border-left: 0;
+                border-right: 0;
+                font-family: sans-serif;
+                font-size: 14px;
+                line-height: 16px;
+                width: 320px;
+                text-align: left;
+                position: relative;
+            }
+            .thirdPartyMediaClass {
+                width: 320px;
+                height: 168px;
+                margin: 12px 0;
+            }
+            .thirdPartySubtitleClass {
+                font-size: 18px;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                height: 16px;
+                -webkit-box-orient: vertical;
+            }
+            .thirdPartyTitleClass {
+                padding-right: 12px;
+                line-height: 18px;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                height: 36px;
+                -webkit-box-orient: vertical;
+            }
+            .thirdPartyCallToActionClass {
+                background-color: #416BC4;
+                color: white;
+                border-radius: 4px;
+                padding: 6px 20px;
+                float: right;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 11px;
+            }
+            .fbDefaultNativeAdWrapper {
+                font-size: 12px;
+                line-height: 14px;
+                margin: 12px 0;
+                height: 36px;
+                vertical-align: top;
+            }
+        </style>
+        <div class="thirdPartyRoot">
+            <a class="fbAdLink">
+                <div class="fbAdMedia thirdPartyMediaClass"></div>
+                <div class="fbAdSubtitle thirdPartySubtitleClass"></div>
+                <div class="fbDefaultNativeAdWrapper">
+                    <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
+                    <div class="fbAdTitle thirdPartyTitleClass"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--<div class="right_banner_ads">
+    <a target="_blank" title="Thời Trang Trẻ Em" href="http://cherrykids.vn"><img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/qc-317x127.jpg" src="<?php echo STATIC_URL; ?>/fe/images/qc-317x127.jpg" alt="Thời Trang Trẻ Em"></a>
+</div>-->
+<div class="row sb-keysearch">
+    <div class="col-md-12 keysearch">
+        <div class="title_box_category">
+            <h2 class="txt_main_category">
+                <a title="Kết nối & Chia sẽ" href="javascript:;">Kết nối & Chia sẽ</a>
+            </h2>
+        </div>
+        <div class="fb-page" data-href="<?php echo $this->arrConfig['link_fb'];?>" data-width="317" data-height="214" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo $this->arrConfig['link_fb'];?>"><a href="<?php echo $this->arrConfig['link_fb'];?>"><?php echo $this->arrConfig['web_name'];?></a></blockquote></div></div>
+    </div>
+</div>
+<?php
+if(!empty($arrReturn24h['data'])) {
+    ?>
+    <div class="row sb-new-top-views"><!--sb-new-hot-->
+        <div class="col-md-12">
+            <div class="title_box_category">
+                <h2 class="txt_main_category">
+                    <a title="Xem nhiều nhất" href="<?php echo SITE_URL;?>/tin-tuc/48h-qua">Tin hot 48h qua</a>
+                </h2>
+                <div class="block_arrow_title">&nbsp;</div>
+            </div>
+            <?php
+            foreach($arrReturn24h['data'] as $row) {
+                ?>
+                <div class="media">
+                    <a class="pull-left" href="<?php echo SITE_URL . $row['share_url']; ?>"
+                       title="<?php echo $this->escape($row['title']); ?>">
+                        <img class="lazy" data-original="<?php echo $this->ImageurlArticle($row, 'size3'); ?>" src="<?php echo $this->ImageurlArticle($row, 'size3'); ?>"
+                             alt="<?php echo $this->escape($row['title']); ?>">
+                    </a>
+
+                    <div class="media-body">
+                        <h2 class="title_news">
+                            <a class="txt_link title_mobile_700_18" href="<?php echo SITE_URL . $row['share_url']; ?>"
+                               title="<?php echo $this->escape($row['title']); ?>"><?php echo $row['title']; ?></a>
+                        </h2>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+<?php
+}
+?>
+<div class="row sb-keysearch">
+    <div class="col-md-12 keysearch">
+        <div class="title_box_category">
+            <h2 class="txt_main_category">
+                <a title="Mua sắm" href="javascript:;">Mua sắm</a>
+            </h2>
+        </div>
+        <div class="fb-page" data-href="https://www.facebook.com/AdevaDongNai.Vn/" data-width="317" data-height="214" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/AdevaDongNai.Vn/"><a href="https://www.facebook.com/AdevaDongNai.Vn/">Mua sắm</a></blockquote></div></div>
+    </div>
+</div>
+<div class="right_banner_ads facebook_ads">
+    <div style="display:none; position: relative;">
+        <iframe style="display:none;"></iframe>
+        <script type="text/javascript">
+            var data = {
+                placementid: '974813445964975_1014698241976495',
+                format: 'native',
+                testmode: false,
+                onAdLoaded: function(element) {
+                    console.log('Audience Network ad loaded');
+                    element.style.display = 'block';
+                },
+                onAdError: function(errorCode, errorMessage) {
+                    console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
+                }
+            };
+            (function(w,l,d,t){var a=t();var b=d.currentScript||(function(){var c=d.getElementsByTagName('script');return c[c.length-1];})();var e=b.parentElement;e.dataset.placementid=data.placementid;var f=function(v){try{return v.document.referrer;}catch(e){}return'';};var g=function(h){var i=h.indexOf('/',h.indexOf('://')+3);if(i===-1){return h;}return h.substring(0,i);};var j=[l.href];var k=false;var m=false;if(w!==w.parent){var n;var o=w;while(o!==n){var h;try{m=m||(o.$sf&&o.$sf.ext);h=o.location.href;}catch(e){k=true;}j.push(h||f(n));n=o;o=o.parent;}}var p=l.ancestorOrigins;if(p){if(p.length>0){data.domain=p[p.length-1];}else{data.domain=g(j[j.length-1]);}}data.url=j[j.length-1];data.channel=g(j[0]);data.width=screen.width;data.height=screen.height;data.pixelratio=w.devicePixelRatio;data.placementindex=w.ADNW&&w.ADNW.Ads?w.ADNW.Ads.length:0;data.crossdomain=k;data.safeframe=!!m;var q={};q.iframe=e.firstElementChild;var r='https://www.facebook.com/audiencenetwork/web/?sdk=5.3';for(var s in data){q[s]=data[s];if(typeof(data[s])!=='function'){r+='&'+s+'='+encodeURIComponent(data[s]);}}q.iframe.src=r;q.tagJsInitTime=a;q.rootElement=e;q.events=[];w.addEventListener('message',function(u){if(u.source!==q.iframe.contentWindow){return;}u.data.receivedTimestamp=t();if(this.sdkEventHandler){this.sdkEventHandler(u.data);}else{this.events.push(u.data);}}.bind(q),false);q.tagJsIframeAppendedTime=t();w.ADNW=w.ADNW||{};w.ADNW.Ads=w.ADNW.Ads||[];w.ADNW.Ads.push(q);w.ADNW.init&&w.ADNW.init(q);})(window,location,document,Date.now||function(){return+new Date;});
+        </script>
+        <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw.js" async></script>
+        <style>
+            .thirdPartyRoot {
+                background-color: white;
+                color: #444;
+                border: 1px solid #ccc;
+                border-left: 0;
+                border-right: 0;
+                font-family: sans-serif;
+                font-size: 14px;
+                line-height: 16px;
+                width: 320px;
+                text-align: left;
+                position: relative;
+            }
+            .thirdPartyMediaClass {
+                width: 320px;
+                height: 168px;
+                margin: 12px 0;
+            }
+            .thirdPartySubtitleClass {
+                font-size: 18px;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                height: 16px;
+                -webkit-box-orient: vertical;
+            }
+            .thirdPartyTitleClass {
+                padding-right: 12px;
+                line-height: 18px;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                height: 36px;
+                -webkit-box-orient: vertical;
+            }
+            .thirdPartyCallToActionClass {
+                background-color: #416BC4;
+                color: white;
+                border-radius: 4px;
+                padding: 6px 20px;
+                float: right;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 11px;
+            }
+            .fbDefaultNativeAdWrapper {
+                font-size: 12px;
+                line-height: 14px;
+                margin: 12px 0;
+                height: 36px;
+                vertical-align: top;
+            }
+        </style>
+        <div class="thirdPartyRoot">
+            <a class="fbAdLink">
+                <div class="fbAdMedia thirdPartyMediaClass"></div>
+                <div class="fbAdSubtitle thirdPartySubtitleClass"></div>
+                <div class="fbDefaultNativeAdWrapper">
+                    <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
+                    <div class="fbAdTitle thirdPartyTitleClass"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--<a title="Liên hệ quảng cáo" href="<?php echo SITE_URL;?>/lien-he-quang-cao"><img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/qc-317x264.png" src="<?php echo STATIC_URL; ?>/fe/images/qc-317x264.png" alt="ads sidebar"></a>-->
+</div>
+<?php
+if(!empty($arrTopViews['data'])) {
+    ?>
+    <div class="row sb-new-top-views">
+        <div class="col-md-12">
+            <div class="title_box_category">
+                <h2 class="txt_main_category">
+                    <a title="Xem nhiều nhất" href="javascript:;">Xem nhiều nhất</a>
+                </h2>
+            </div>
+            <?php
+            foreach($arrTopViews['data'] as $row) {
+                ?>
+                <div class="media">
+                    <a class="pull-left" href="<?php echo SITE_URL . $row['share_url']; ?>"
+                       title="<?php echo $this->escape($row['title']); ?>">
+                        <img class="lazy" data-original="<?php echo $this->ImageurlArticle($row, 'size3'); ?>" src="<?php echo $this->ImageurlArticle($row, 'size3'); ?>"
+                             alt="<?php echo $this->escape($row['title']); ?>">
+                    </a>
+
+                    <div class="media-body">
+                        <h2 class="title_news">
+                            <a class="txt_link title_mobile_700_18" href="<?php echo SITE_URL . $row['share_url']; ?>"
+                               title="<?php echo $this->escape($row['title']); ?>"><?php echo $row['title']; ?></a>
+                        </h2>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+<?php
+}
+?>
+<div class="right_banner_ads facebook_ads">
+	<div style="display:none; position: relative;">
+	  <iframe style="display:none;"></iframe>
+	  <script type="text/javascript">
+		var data = {
+		  placementid: '974813445964975_1021041244675528',
+		  format: 'native',
+		  testmode: false,
+		  onAdLoaded: function(element) {
+			console.log('Audience Network ad loaded');
+			element.style.display = 'block';
+		  },
+		  onAdError: function(errorCode, errorMessage) {
+			console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
+		  }
+		};
+		(function(w,l,d,t){var a=t();var b=d.currentScript||(function(){var c=d.getElementsByTagName('script');return c[c.length-1];})();var e=b.parentElement;e.dataset.placementid=data.placementid;var f=function(v){try{return v.document.referrer;}catch(e){}return'';};var g=function(h){var i=h.indexOf('/',h.indexOf('://')+3);if(i===-1){return h;}return h.substring(0,i);};var j=[l.href];var k=false;var m=false;if(w!==w.parent){var n;var o=w;while(o!==n){var h;try{m=m||(o.$sf&&o.$sf.ext);h=o.location.href;}catch(e){k=true;}j.push(h||f(n));n=o;o=o.parent;}}var p=l.ancestorOrigins;if(p){if(p.length>0){data.domain=p[p.length-1];}else{data.domain=g(j[j.length-1]);}}data.url=j[j.length-1];data.channel=g(j[0]);data.width=screen.width;data.height=screen.height;data.pixelratio=w.devicePixelRatio;data.placementindex=w.ADNW&&w.ADNW.Ads?w.ADNW.Ads.length:0;data.crossdomain=k;data.safeframe=!!m;var q={};q.iframe=e.firstElementChild;var r='https://www.facebook.com/audiencenetwork/web/?sdk=5.3';for(var s in data){q[s]=data[s];if(typeof(data[s])!=='function'){r+='&'+s+'='+encodeURIComponent(data[s]);}}q.iframe.src=r;q.tagJsInitTime=a;q.rootElement=e;q.events=[];w.addEventListener('message',function(u){if(u.source!==q.iframe.contentWindow){return;}u.data.receivedTimestamp=t();if(this.sdkEventHandler){this.sdkEventHandler(u.data);}else{this.events.push(u.data);}}.bind(q),false);q.tagJsIframeAppendedTime=t();w.ADNW=w.ADNW||{};w.ADNW.Ads=w.ADNW.Ads||[];w.ADNW.Ads.push(q);w.ADNW.init&&w.ADNW.init(q);})(window,location,document,Date.now||function(){return+new Date;});
+	  </script>
+	  <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw.js" async></script>
+	  <style>
+	   .thirdPartyRoot {
+			background-color: white;
+			color: #444;
+			border: 1px solid #ccc;
+			border-left: 0;
+			border-right: 0;
+			font-family: sans-serif;
+			font-size: 14px;
+			line-height: 16px;
+			width: 320px;
+			text-align: left;
+			position: relative;
+		  }
+		  .thirdPartyMediaClass {
+			width: 320px;
+			height: 168px;
+			margin: 12px 0;
+		  }
+		  .thirdPartySubtitleClass {
+			font-size: 18px;
+			-webkit-line-clamp: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			height: 16px;
+			-webkit-box-orient: vertical;
+		  }
+		  .thirdPartyTitleClass {
+			padding-right: 12px;
+			line-height: 18px;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			height: 36px;
+			-webkit-box-orient: vertical;
+		  }
+		  .thirdPartyCallToActionClass {
+			background-color: #416BC4;
+			color: white;
+			border-radius: 4px;
+			padding: 6px 20px;
+			float: right;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 11px;
+		  }
+		  .fbDefaultNativeAdWrapper {
+			font-size: 12px;
+			line-height: 14px;
+			margin: 12px 0;
+			height: 36px;
+			vertical-align: top;
+		  }
+	  </style>
+	  <div class="thirdPartyRoot">
+	  <a class="fbAdLink">
+		<div class="fbAdMedia thirdPartyMediaClass"></div>
+		<div class="fbAdSubtitle thirdPartySubtitleClass"></div>
+		<div class="fbDefaultNativeAdWrapper">
+		  <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
+		  <div class="fbAdTitle thirdPartyTitleClass"></div>
+		</div>
+	  </a>
+	</div>
+	</div>
+    <!--<a title="Máy ép gạch không nung" href="http://blockmachine.vn" target="_blank"><img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/qc_blockmachine.png" src="<?php echo STATIC_URL; ?>/fe/images/qc_blockmachine.png" alt="Máy ép gạch không nung"></a>-->
+</div>
+<?php
+if(!empty($arrTopComments['data'])) {
+    ?>
+    <div class="row sb-new-top-views">
+        <div class="col-md-12">
+            <div class="title_box_category">
+                <h2 class="txt_main_category">
+                    <a title="Xem nhiều nhất" href="javascript:;">Bình luận nhiều nhất</a>
+                </h2>
+            </div>
+            <?php
+            foreach($arrTopComments['data'] as $row) {
+                ?>
+                <div class="media">
+                    <a class="pull-left" href="<?php echo SITE_URL . $row['share_url']; ?>"
+                       title="<?php echo $this->escape($row['title']); ?>">
+                        <img class="lazy" data-original="<?php echo $this->ImageurlArticle($row, 'size3'); ?>" src="<?php echo $this->ImageurlArticle($row, 'size3'); ?>"
+                             alt="<?php echo $this->escape($row['title']); ?>">
+                    </a>
+
+                    <div class="media-body">
+                        <h2 class="title_news">
+                            <a class="txt_link title_mobile_700_18" href="<?php echo SITE_URL . $row['share_url']; ?>"
+                               title="<?php echo $this->escape($row['title']); ?>"><?php echo $row['title']; ?></a>
+                        </h2>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+<?php
+}
+?>
+<div class="right_banner_ads facebook_ads">
+	<div style="display:none; position: relative;">
+	  <iframe style="display:none;"></iframe>
+	  <script type="text/javascript">
+		var data = {
+		  placementid: '974813445964975_1021041988008787',
+		  format: 'native',
+		  testmode: false,
+		  onAdLoaded: function(element) {
+			console.log('Audience Network ad loaded');
+			element.style.display = 'block';
+		  },
+		  onAdError: function(errorCode, errorMessage) {
+			console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
+		  }
+		};
+		(function(w,l,d,t){var a=t();var b=d.currentScript||(function(){var c=d.getElementsByTagName('script');return c[c.length-1];})();var e=b.parentElement;e.dataset.placementid=data.placementid;var f=function(v){try{return v.document.referrer;}catch(e){}return'';};var g=function(h){var i=h.indexOf('/',h.indexOf('://')+3);if(i===-1){return h;}return h.substring(0,i);};var j=[l.href];var k=false;var m=false;if(w!==w.parent){var n;var o=w;while(o!==n){var h;try{m=m||(o.$sf&&o.$sf.ext);h=o.location.href;}catch(e){k=true;}j.push(h||f(n));n=o;o=o.parent;}}var p=l.ancestorOrigins;if(p){if(p.length>0){data.domain=p[p.length-1];}else{data.domain=g(j[j.length-1]);}}data.url=j[j.length-1];data.channel=g(j[0]);data.width=screen.width;data.height=screen.height;data.pixelratio=w.devicePixelRatio;data.placementindex=w.ADNW&&w.ADNW.Ads?w.ADNW.Ads.length:0;data.crossdomain=k;data.safeframe=!!m;var q={};q.iframe=e.firstElementChild;var r='https://www.facebook.com/audiencenetwork/web/?sdk=5.3';for(var s in data){q[s]=data[s];if(typeof(data[s])!=='function'){r+='&'+s+'='+encodeURIComponent(data[s]);}}q.iframe.src=r;q.tagJsInitTime=a;q.rootElement=e;q.events=[];w.addEventListener('message',function(u){if(u.source!==q.iframe.contentWindow){return;}u.data.receivedTimestamp=t();if(this.sdkEventHandler){this.sdkEventHandler(u.data);}else{this.events.push(u.data);}}.bind(q),false);q.tagJsIframeAppendedTime=t();w.ADNW=w.ADNW||{};w.ADNW.Ads=w.ADNW.Ads||[];w.ADNW.Ads.push(q);w.ADNW.init&&w.ADNW.init(q);})(window,location,document,Date.now||function(){return+new Date;});
+	  </script>
+	  <script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw.js" async></script>
+	  <style>
+	   .thirdPartyRoot {
+			background-color: white;
+			color: #444;
+			border: 1px solid #ccc;
+			border-left: 0;
+			border-right: 0;
+			font-family: sans-serif;
+			font-size: 14px;
+			line-height: 16px;
+			width: 320px;
+			text-align: left;
+			position: relative;
+		  }
+		  .thirdPartyMediaClass {
+			width: 320px;
+			height: 168px;
+			margin: 12px 0;
+		  }
+		  .thirdPartySubtitleClass {
+			font-size: 18px;
+			-webkit-line-clamp: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			height: 16px;
+			-webkit-box-orient: vertical;
+		  }
+		  .thirdPartyTitleClass {
+			padding-right: 12px;
+			line-height: 18px;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			height: 36px;
+			-webkit-box-orient: vertical;
+		  }
+		  .thirdPartyCallToActionClass {
+			background-color: #416BC4;
+			color: white;
+			border-radius: 4px;
+			padding: 6px 20px;
+			float: right;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 11px;
+		  }
+		  .fbDefaultNativeAdWrapper {
+			font-size: 12px;
+			line-height: 14px;
+			margin: 12px 0;
+			height: 36px;
+			vertical-align: top;
+		  }
+	  </style>
+	  <div class="thirdPartyRoot">
+	  <a class="fbAdLink">
+		<div class="fbAdMedia thirdPartyMediaClass"></div>
+		<div class="fbAdSubtitle thirdPartySubtitleClass"></div>
+		<div class="fbDefaultNativeAdWrapper">
+		  <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
+		  <div class="fbAdTitle thirdPartyTitleClass"></div>
+		</div>
+	  </a>
+	</div>
+	</div>
+    <!--<a title="Liên hệ quảng cáo" href="<?php echo SITE_URL;?>/lien-he-quang-cao"><img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/qc-317x264.png" src="<?php echo STATIC_URL; ?>/fe/images/qc-317x264.png" alt="ads sidebar"></a>-->
+</div>
+<!--<iframe width="317px" height="250px" frameborder="0" vspace="0" src="http://ngoisao.net/widget/box300" scrolling="no" marginwidth="0" marginheight="0" hspace="0" class="ad_frame_protection ad_frame_protection" allowtransparency="true"></iframe>-->
+<?php
+if(!empty($arrTags['data'])){
+    ?>
+    <div class="row sb-keysearch">
+        <div class="col-md-12 keysearch">
+            <div class="title_box_category">
+                <h2 class="txt_main_category">
+                    <a title="Xem nhiều nhất" href="javascript:;">Tags</a>
+                </h2>
+            </div>
+            <?php
+            foreach($arrTags['data'] as $key => $row){
+                ?>
+                <a class="tags_key desc_mobile_400_16" href="<?php echo SITE_URL . '/'.$row['tag_code'].'/tag-' . $row['tag_id'] .'-1.html'; ?>" title="<?php echo $this->escape($row['tag_name']); ?>">
+                    <?php echo $row['tag_name']; ?>
+                </a>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+<?php
+}
+?>
+<!--<div class="row sb-keysearch">
+    <div class="col-md-12 keysearch">
+        <div class="title_box_category">
+            <h2 class="txt_main_category">
+                <a title="Đồ Bộ Trẻ Em" href="javascript:;">Shop <?php echo $this->arrConfig['web_name']; ?></a>
+            </h2>
+        </div>
+        <div class="fb-page" data-href="https://www.facebook.com/thoitrangsaigonshop" data-width="317" data-height="214" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/thoitrangsaigonshop"><a href="https://www.facebook.com/thoitrangsaigonshop">Shop <?php echo $this->arrConfig['web_name']; ?></a></blockquote></div></div>
+    </div>
+</div>-->

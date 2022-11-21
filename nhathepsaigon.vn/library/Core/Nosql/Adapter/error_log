@@ -1,0 +1,2 @@
+[15-Jul-2016 06:57:27 Asia/Bangkok] PHP Fatal error:  Class 'Core_Nosql_Adapter_Abstract' not found in /home/thoit894/public_html/library/Core/Nosql/Adapter/Redis.php on line 11
+[15-Jul-2016 07:04:08 Asia/Bangkok] PHP Fatal error:  Class 'Core_Nosql_Adapter_Abstract' not found in /home/thoit894/public_html/library/Core/Nosql/Adapter/Mongo.php on line 10

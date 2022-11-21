@@ -1,0 +1,185 @@
+<?php
+$arrArticleDetail = $this->arrArticleDetail;
+$arrTagsArticle = $this->arrTagsArticle;
+$arrOtherNews = $this->arrOtherNews;
+?>
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="news container">
+        <!-- row -->
+        <div class="row">
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2 class="title"><?php echo $arrArticleDetail['title']; ?></h2>
+                </div>
+            </div>
+            <!-- section title -->
+            <!-- section desc -->
+            <div class="col-md-12">
+                <div class="block_timer_share">
+                    <div class="block_timer left">
+                        <?php echo $this->DateTimeFormat($arrArticleDetail['ptime'], 'long_short'); ?>
+                    </div>
+                    <div class="block_share right">
+                        <?php echo $this->render('/detail/box/share_article.phtml');?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="section-desc"><span style="color: #FF0000;"><?php echo $this->arrConfig['web_name']; ?></span> - <?php echo $arrArticleDetail['lead']; ?></div>
+            </div>
+            <!-- section title -->
+            <!-- Product Single -->
+            <div class="col-md-12">
+                <div class="section-content"><?php echo $arrArticleDetail['content']; ?></div>
+            </div>
+            <!-- /Product Single -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->
+
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="news container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <?php echo $this->render('/detail/box/share_bottom.phtml');?>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->
+
+<!-- section -->
+<!--<div class="section">-->
+    <!-- container -->
+    <!--<div class="news container">-->
+        <!-- row -->
+        <!--<div class="row">-->
+            <!-- section title -->
+            <!--<div class="col-md-12">
+                <div class="section-title">
+                    <h2 class="title">Bình luận</h2>
+                </div>
+            </div>-->
+            <!-- section title -->
+            <!--<div class="col-md-12">-->
+                <?php
+                /*if($arrArticleDetail['is_comment'] == 1)
+                {
+                    echo $this->render('/detail/box/comment.phtml');
+                }*/
+                ?>
+            <!--</div>-->
+        <!--</div>-->
+        <!-- /row -->
+    <!--</div>-->
+    <!-- /container -->
+<!--</div>-->
+<!-- /section -->
+
+<!-- section -->
+<?php
+/*
+?>
+<div class="section">
+    <!-- container -->
+    <div class="news container">
+        <!-- row -->
+        <div class="row">
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2 class="title">Tags</h2>
+                </div>
+            </div>
+            <!-- section title -->
+            <div class="col-md-12">
+                <?php
+                if(!empty($arrTagsArticle)) {
+                    ?>
+                    <div class="block_tag width_common space_bottom_20">
+                        <div class="txt_tag"><i class="fa fa-tag"></i>Tags</div>
+                        <?php
+                        foreach($arrTagsArticle as $row) {
+                            ?>
+                            <a class="tag_item" href="<?php echo SITE_URL . '/'.$row['tag_code'].'/tag-' . $row['tag_id'] .'-1.html'; ?>" title="<?php echo $this->escape($row['tag_name']); ?>">
+                                <?php echo $row['tag_name']; ?>
+                            </a>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<?php
+*/
+?>
+<!-- /section -->
+
+<?php
+if(!empty($arrOtherNews['data'])) {
+    ?>
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="news container">
+            <!-- row -->
+            <div class="row">
+                <!-- section title -->
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2 class="title">Bài viết liên quan</h2>
+                    </div>
+                </div>
+                <!-- section title -->
+                <?php
+                foreach ($arrOtherNews['data'] as $row) {
+                    ?>
+                    <!-- Product Single -->
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="product product-single">
+                            <a href="<?php echo SITE_URL . $row['share_url']; ?>" title="<?php echo $this->escape($row['title']); ?>" class="product-thumb">
+                                <img class="lazy" data-original="<?php echo $this->ImageurlArticle($row, 'size1'); ?>" src="<?php echo $this->ImageurlArticle($row, 'size1'); ?>" alt="<?php echo $this->escape($row['title']); ?>">
+                            </a>
+                            <div class="product-body">
+                                <h1 class="news-title"><a href="<?php echo SITE_URL . $row['share_url']; ?>" title="<?php echo $this->escape($row['title']); ?>"><?php echo $row['title']; ?></a></h1>
+                                <h2 class="news-desc"><?php echo $this->CropWord($row['lead'], 40); ?></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Product Single -->
+                    <?php
+                }
+                ?>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /section -->
+    <?php
+}
+?>
+<script type="text/javascript">
+    var article_url = '<?php echo SITE_URL . $arrArticleDetail['share_url']; ?>';
+    var article_title       = '<?php echo urlencode(htmlspecialchars_decode($this->strMetaTitle));?>';
+    var article_description = '<?php echo urlencode(htmlspecialchars_decode($this->strMetaDesc));?>';
+    var article_image       = '<?php echo $this->strMetaImage;?>';
+</script>

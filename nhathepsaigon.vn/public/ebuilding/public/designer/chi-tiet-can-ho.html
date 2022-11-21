@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Chi tiết căn hộ - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+
+    <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>CHUNG CƯ BESCO AN SƯƠNG</h3>
+              </div>
+            </div>
+            
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>CÔNG TY CỔ PHẦN DỊCH VỤ KỸ THUẬT GIẢI PHÁP AN GIA</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a href=""><i class="fa fa-wrench"></i></a>
+                      </li>
+                      
+                    </ul>
+                    <div class="clearfix"></div>
+                    <h2>Số 18, Võ Duy Ninh, phường 22, quận Bình Thạnh</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                      <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                        <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                          <li role="presentation" class="ebuilding-tab active"><a href="#tab_ttcb" id="ttcb-tab" role="tab" data-toggle="tab" aria-expanded="true">Thông tin cơ bản</a>
+                          </li>
+                          <li role="presentation" class="ebuilding-tab"><a href="#tab_lsgd" role="tab" id="lsgd-tab" data-toggle="tab" aria-expanded="false">Lịch sử giao dịch</a>
+                          </li>
+                          <li role="presentation" class="ebuilding-tab"><a href="#tab_lsdv" role="tab" id="lsdv-tab" data-toggle="tab" aria-expanded="false">Lịch sử dịch vụ</a>
+                          </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                          <div role="tabpanel" class="tab-pane fade active in" id="tab_ttcb" aria-labelledby="ttcb-tab">
+                            <div class="col-xs-3">
+                            <!-- required for floating -->
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs tabs-left can-ho-cu-dan-tab-left">
+                              <li class="active"><a href="#can-ho" data-toggle="tab">Căn hộ</a>
+                              </li>
+                              <li><a href="#cu-dan" data-toggle="tab">Cư dân(5)</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="col-xs-9">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                              <div class="tab-pane active" id="can-ho">
+                                <p class="col-xs-12 col-md-6"><i class="fa fa-home"></i> A101</p>
+                                <p class="col-xs-12 col-md-6"><i class="fa fa-align-justify"></i> Tầng A1</p>
+                                <p class="col-xs-12 col-md-6"><i class="fa fa-arrows-alt"></i> 100m2</p>
+                                <p class="col-xs-12 col-md-6"><i class="fa fa-text-width"></i> Chính chủ</p>
+                                <p class="col-xs-12 col-md-6"><i class="fa fa-dollar"></i> 0</p>
+                              </div>
+                              <div class="tab-pane" id="cu-dan">
+                                <div class="cu-dan-line">
+                                  
+                                  <div class="col-xs-12 col-md-4">
+                                    <div class="div-cu-dan"><img src="images/img.jpg"></div>
+                                    <div class="div-cu-dan h-div-cu-dan">Dương Quang Tường</div>
+                                    <div class="div-cu-dan">
+                                      <a href="">
+                                        <i class="fa fa-pencil"></i>
+                                      </a>
+                                      <a href="">
+                                        <i class="fa fa-remove"></i>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-xs-12 col-md-4">
+                                    <div class="div-cu-dan"><img src="images/img.jpg"></div>
+                                    <div class="div-cu-dan h-div-cu-dan">Nguyễn Thị Thúy Lan Liễu</div>
+                                    <div class="div-cu-dan">
+                                      <a href="">
+                                        <i class="fa fa-pencil"></i>
+                                      </a>
+                                      <a href="">
+                                        <i class="fa fa-remove"></i>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xs-12 col-md-4">
+                                    <div class="div-cu-dan"><img src="images/img.jpg"></div>
+                                    <div class="div-cu-dan h-div-cu-dan">Dương Quang Tường</div>
+                                    <div class="div-cu-dan">
+                                      <a href="">
+                                        <i class="fa fa-pencil"></i>
+                                      </a>
+                                      <a href="">
+                                        <i class="fa fa-remove"></i>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xs-12 col-md-4">
+                                    <div class="div-cu-dan"><img src="images/img.jpg"></div>
+                                    <div class="div-cu-dan h-div-cu-dan">Dương Quang Tường</div>
+                                    <div class="div-cu-dan">
+                                      <a href="">
+                                        <i class="fa fa-pencil"></i>
+                                      </a>
+                                      <a href="">
+                                        <i class="fa fa-remove"></i>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-xs-12 col-md-4">
+                                    <div class="div-cu-dan"><img src="images/img.jpg"></div>
+                                    <div class="div-cu-dan h-div-cu-dan">Dương Quang Tường</div>
+                                    <div class="div-cu-dan">
+                                      <a href="">
+                                        <i class="fa fa-pencil"></i>
+                                      </a>
+                                      <a href="">
+                                        <i class="fa fa-remove"></i>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="clearfix"></div>
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="tab_lsgd" aria-labelledby="lsgd-tab">
+                            <canvas id="lsgdChart"></canvas>
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="tab_lsdv" aria-labelledby="lsdv-tab">
+                            <canvas id="lsdvChart"></canvas>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script> 
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- Chart.js -->
+    <!-- <script src="js/vendors/Chart.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+    <script type="text/javascript">
+      var ctx = document.getElementById("lsgdChart").getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+            datasets: [{
+                label: 'Số sử dụng',
+                data: [31, 74, 6, 39, 20, 85, 7, 31, 74, 6, 39, 20],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+          responsive: true,
+            title: {
+              display: true,
+              text: 'Biểu đồ sử dụng nước'
+            },
+            tooltips: {
+              mode: 'index',
+              intersect: false,
+            },
+            hover: {
+              mode: 'nearest',
+              intersect: true
+            },
+            scales: {
+                xAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Tháng'
+                  }
+                }],
+                yAxes: [{
+                  display: true,
+                  ticks: {
+                        beginAtZero:true
+                  },
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Số sử dụng'
+                  }
+                }]
+            }
+        }
+    });
+
+      var ctx2 = document.getElementById("lsdvChart").getContext('2d');
+      var myChart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+            datasets: [{
+                label: 'Số sử dụng',
+                data: [5, 15, 6, 9, 20, 25, 17, 31, 24, 6, 39, 20],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+          responsive: true,
+            title: {
+              display: true,
+              text: 'Biểu đồ sử dụng nước'
+            },
+            tooltips: {
+              mode: 'index',
+              intersect: false,
+            },
+            hover: {
+              mode: 'nearest',
+              intersect: true
+            },
+            scales: {
+                xAxes: [{
+                  display: true,
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Tháng'
+                  }
+                }],
+                yAxes: [{
+                  display: true,
+                  ticks: {
+                        beginAtZero:true
+                  },
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Số sử dụng'
+                  }
+                }]
+            }
+        }
+    });
+    </script>
+  </body>
+</html>

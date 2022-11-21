@@ -1,0 +1,62 @@
+<?php
+$arrMenuDetail = $this->arrMenuDetail;
+$arrMenus = $this->arrMenus;
+?>
+<form id="frm-menu-add" action="" method="POST" role="form">
+    <input type="hidden" name="intMenuId" value="<?php echo isset($arrMenuDetail['menu_id'])?$arrMenuDetail['menu_id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Thêm menu</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label>Danh mục cha</label>
+            <div class="block_select site_id_list">
+                <span class="selected_data" id="site_id_list" data-value="<?php echo isset($arrMenuDetail['parent_id'])?$arrMenuDetail['parent_id']:0;?>"><span><?php echo isset($arrMenuDetail['parent_name'])?$arrMenuDetail['parent_name']:'';?></span></span>
+                <input class="selected_data_hidden" type="hidden" name="intParentId" value="<?php echo isset($arrMenuDetail['parent_id'])?$arrMenuDetail['parent_id']:0;?>">
+                <ul class="list_menu">
+                    <?php
+                    if (isset($arrMenus) && !empty($arrMenus)) {
+                        $arrHtml = array();
+                        foreach ($arrMenus as $row) {
+                            $p = (int)$row['parent_id'];
+                            $c = (int)$row['menu_id'];
+                            // Xuat menu name
+                            $name = '<a href="javascript:;" data-value="'.$c.'">'.$row['menu_name'].'</a>';
+                            if (isset($arrHtml[$c]) && !empty($arrHtml[$c])) {
+                                $arrHtml[$p][$c] = '<li class="has_sub_menu">' . $name . '<span class="colspan">&nbsp;</span><ul>' . implode('', $arrHtml[$c]) . '</ul></li>';
+                                unset($arrHtml[$c]);
+                            } else {
+                                $arrHtml[$p][$c] = '<li class="has_sub_menu">' . $name . '</li>';
+                            }
+                        }
+                        echo implode('', $arrHtml[0]);
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMenuName">Tên menu</label>
+            <input type="text" name="strMenuName" value="<?php echo isset($arrMenuDetail['menu_name'])?$arrMenuDetail['menu_name']:'';?>" class="form-control" id="strMenuName" placeholder="Tên menu">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMenuCode">Menu code</label>
+            <input type="text" name="strMenuCode" value="<?php echo isset($arrMenuDetail['menu_code'])?$arrMenuDetail['menu_code']:'';?>" class="form-control" id="strMenuCode" placeholder="Menu code (VD: Module_Controller_Action)">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMenuUrl">Menu url</label>
+            <input type="text" name="strMenuUrl" value="<?php echo isset($arrMenuDetail['url'])?$arrMenuDetail['url']:'';?>" class="form-control" id="strMenuUrl" placeholder="Menu url (VD: /backend/user/index)">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intDisplayOrder">Display order</label>
+            <input type="text" name="intDisplayOrder" value="<?php echo isset($arrMenuDetail['display_order'])?$arrMenuDetail['display_order']:'';?>" class="form-control" id="intDisplayOrder" placeholder="Display order">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Cập nhật</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+    </div>
+</form>

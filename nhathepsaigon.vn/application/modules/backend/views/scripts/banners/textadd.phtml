@@ -1,0 +1,40 @@
+<?php
+$arrBannerDetail = $this->arrBannerDetail;
+?>
+<form id="frm-banner-add" enctype="multipart/form-data" accept-charset="utf-8" action="<?php echo SITE_URL;?>/backend/banners/ajax-add-text-banner" method="POST" role="form">
+    <input type="hidden" name="intId" value="<?php echo isset($arrBannerDetail['id'])?$arrBannerDetail['id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Thêm quảng cáo</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strImage">Hình đại diện</label>
+            <input type="file" accept="image/*" id="image" name="strImage">
+        </div>
+        <?php
+        if (isset($arrBannerDetail['thumb_url']) && $arrBannerDetail['thumb_url'] != '') {
+            ?>
+            <div class="form-group frm-validate">
+                <div class="preview">
+                    <img src="<?php echo $this->ImageurlArticle($arrBannerDetail, 'size1'); ?>" height="100px">
+                </div>
+            </div>
+        <?php
+        }
+        ?>
+        <div class="form-group frm-validate">
+            <label for="strTitle">Tiêu đề</label>
+            <input type="text" name="strTitle" value="<?php echo isset($arrBannerDetail['title'])?$arrBannerDetail['title']:'';?>" class="form-control" id="strTitle" placeholder="Tiêu đề bài viết">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strShareUrl">Link</label>
+            <input type="text" name="strShareUrl" value="<?php echo isset($arrBannerDetail['share_url'])?$arrBannerDetail['share_url']:'';?>" class="form-control" id="strShareUrl" placeholder="Link bài viết">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Cập nhật</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+    </div>
+</form>

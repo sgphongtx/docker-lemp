@@ -1,0 +1,46 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/crawler" title="Crawler">Crawler</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/crawler/link-detail" title="Crawler theo link chi tiết">Crawler theo link chi tiết</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <form id="crawler" enctype="multipart/form-data" accept-charset="utf-8" method="post" action="" role="form">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Crawler theo link chi tiết</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="alert alert-warning p-b-10" role="alert" style="margin-bottom: 0px;">Các website mà bạn có thể crawler data: https://vnexpress.net, https://news.zing.vn</div>
+                    </div>
+                    <div class="box-body" style="margin-bottom: 50px;">
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <label for="strLink">Link</label>
+                                    <input name="strLink" type="text" value="" class="form-control" id="strLink" placeholder="Link crawler data" data-toggle="tooltip" data-original-title="VD: http://giaitri.vnexpress.net/photo/sao-dep-sao-xau/tu-anh-khoe-chan-voi-dam-ngan-xuyen-thau-3490550.html">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        <button type="button" class="btn btn-default">Hủy</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section><!-- /.content -->

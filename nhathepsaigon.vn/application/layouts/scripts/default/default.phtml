@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <?php echo $this->render('/common/header.phtml');?>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZTG6S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1135210193234217&autoLogAppEvents=1"></script>
+    <?php echo $this->render('/common/mb_top_menu.phtml');?>
+    <!-- Your Content -->
+    <div id="container">
+        <?php echo $this->render('/common/top_menu.phtml');?>
+        <?php echo $this->render('/common/banner.phtml');?>
+        <?php echo $this->layout()->content; ?>
+        <?php echo $this->render('/common/footer.phtml');?>
+    </div>
+    <a id="to_top" href="javascript:;" style="display: inline;"><i class="fa fa-angle-up"></i></a>
+	<!-- jquery 2.2.4 -->
+    <script src="<?php echo STATIC_URL; ?>/library/js/jquery-2.2.4<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!-- Lazyload 1.9.7 -->
+    <script src="<?php echo STATIC_URL; ?>/library/js/jquery.lazyload<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="<?php echo STATIC_URL; ?>/library/bootstrap-3.3.6/js/bootstrap<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!-- Js bootbox -->
+    <script src="<?php echo STATIC_URL; ?>/library/js/bootbox<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!-- Js validate -->
+    <script src="<?php echo STATIC_URL; ?>/library/js/jquery.validate<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="<?php echo STATIC_URL; ?>/library/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--pushy.js-->
+    <script src="<?php echo STATIC_URL; ?>/fe/js/pushy<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!--slick.min.js-->
+    <script src="<?php echo STATIC_URL; ?>/fe/js/slick<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!-- Main JS -->
+    <script src="<?php echo STATIC_URL; ?>/fe/js/main<?php echo EXT; ?>.js" type="text/javascript"></script>
+    <!-- Slimscroll -->
+    <!--<script src="<?php echo STATIC_URL; ?>/library/plugins/slimScroll/jquery.slimscroll.<?php echo EXT; ?>.js"></script>-->
+	<?php echo $this->headScript(); ?>
+</body>
+</html>

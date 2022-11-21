@@ -1,0 +1,116 @@
+<?php
+$arrData = $this->arrData;
+$arrCate = $this->arrCate;
+$arrId = array();
+?>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL; ?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <!-- TO DO List -->
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Set bài cho box topstory và category trang home</h3>
+                    <div class="box-tools pull-right">
+                        <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-header clearfix">
+                    <form id="frmFilter" role="form" method="GET" action="<?php echo SITE_URL; ?>/backend/index/index">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Danh mục</span>
+                                    <select class="form-control" name="intCategoryId">
+                                        <option value="0">Topstory</option>
+                                        <?php
+                                        if (!empty($arrCate)) {
+                                            foreach ($arrCate as $row) {
+                                                if($row['level'] == 0) {
+                                                    ?>
+                                                    <option value="<?php echo $row['category_id']; ?>" <?php echo $this->intCategoryId == $row['category_id'] ? 'selected' : ''; ?>><?php echo $row['cate_name']; ?></option>
+                                                <?php
+                                                }
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="width: 115px;">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-search">&nbsp;Search</i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="box-body">
+                    <div class="alert alert-warning p-b-10" role="alert" style="margin-bottom: 10px;">Bấm chuột vào nút <i class="fa fa-fw fa-arrows-alt"></i> giữ và di chuyển để sắp xếp vị trí</div>
+                    <?php
+                    if(!empty($arrData)) {
+                        ?>
+                        <ul class="todo-list">
+                            <?php
+                            $i = 1;
+                            foreach($arrData as $key => $data) {
+                                $arrId[] = $data['article_id'];
+                                ?>
+                                <li id="order_<?php echo $data['article_id'];?>">
+                                    <span style="margin: 0px 5px 0px 5px;"><?php echo $i;?></span>
+                                    <!-- drag handle -->
+                                    <span class="handle" data-toggle="tooltip"
+                                          data-original-title="Bấm giữ chuột và di chuyển để sắp xếp vị trí">
+                                        <i class="fa fa-fw fa-arrows-alt"></i>
+                                    </span>
+                                    <!-- todo text -->
+                                    <img src="<?php echo $this->ImageurlArticle($data, 'size3'); ?>" style="margin-left: 10px;" height="50px">
+                                    <span class="text"><?php echo $data['title']; ?></span>
+                                    <!-- General tools such as edit or delete-->
+                                    <div class="toolsDel">
+                                        <a data-toggle="tooltip" data-original-title="Xóa" class="act-del"
+                                           data-id="<?php echo $data['article_id']; ?>"
+                                           data-name="<?php echo $data['title']; ?>" href="javascript:;">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            <?php
+                                $i++;
+                            }
+                            ?>
+                            <input type="hidden" name="strId" value="<?php echo implode(',',$arrId);?>">
+                        </ul>
+                    <?php
+                    }else {
+                        ?>
+                        <div class="alert alert-warning p-b-10" role="alert">Không tìm thấy dữ liêu!</div>
+                    <?php
+                    }
+                    ?>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer clearfix no-border">
+                    <button class="btn btn-primary pull-right act-add" data-total = "<?php echo count($arrData);?>"><i class="fa fa-plus"></i> Add item</button>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+    <div class="modal fade" id="modal-add" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!-- /.row (main row) -->
+</section><!-- /.content -->

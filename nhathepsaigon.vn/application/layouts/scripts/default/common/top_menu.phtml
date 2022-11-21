@@ -1,0 +1,68 @@
+<!-- section -->
+<div class="section mobile-menu">
+    <header id="header">
+        <!-- Menu Button -->
+        <div class="left mobile-icon">
+            <i class="left menu-btn fa fa-bars"></i>
+        </div>
+        <div class="left mobile-logo">
+            <a style="display:inline-block; width: 80%; text-align: center;" <?php echo $this->moduleName == 'default' && $this->controllerName == 'index' && $this->actionName == 'index'?' class="active"':'';?> href="<?php echo SITE_URL;?>" title="Trang chủ"><img alt="<?php echo $this->arrConfig['web_name']; ?>" src="<?php echo STATIC_URL; ?>/fe/images/logo_mobile.png"></a>
+        </div>
+    </header>
+</div>
+<!-- /section -->
+<!-- section -->
+<div class="section desktop-menu">
+    <!--<div class="container header">
+        <div class="col-xs-3 col-md-3 col-sm-3 col-lg-3 h-logo" style="padding: 0px; background: #000000;">
+            <a href="<?php echo $this->arrConfig['web_link']; ?>" title="<?php echo $this->arrConfig['web_name']; ?>"><img height="50px" src="<?php echo STATIC_URL; ?>/fe/images/logo_nhadepsaithanh_desktop.png" alt="<?php echo $this->arrConfig['web_name']; ?>"></a>
+        </div>
+    </div>-->
+    <div class="container banner-content">
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'index' && $this->actionName == 'index'?' class="active"':'';?> href="<?php echo SITE_URL;?>" title="Trang chủ"><img src="<?php echo STATIC_URL; ?>/fe/images/logo.png" alt="<?php echo $this->arrConfig['web_name']; ?>"></a></li>
+                <!--<li><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'index' && $this->actionName == 'index'?' class="active"':'';?> href="<?php echo SITE_URL;?>" title="Trang chủ">Trang chủ</a></li>-->
+                <li><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'introduction'?' class="active"':'';?> href="<?php echo SITE_URL;?>/gioi-thieu.html" title="Giới thiệu">Giới thiệu</a></li>
+                <!-- <li><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'price'?' class="active"':'';?> href="<?php echo SITE_URL;?>/bang-gia.html" title="Bảng giá">Bảng giá</a></li> -->
+                <li><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'gallery'?' class="active"':'';?> href="<?php echo SITE_URL;?>/thu-vien.html" title="Thư viện">Thư viện</a></li>
+                <?php
+                if(!empty($this->arrCategories)){
+                    foreach($this->arrCategories as $row){
+                        $cls = '';
+                        if(isset($arrCateReturn) && !empty($arrCateReturn) && $arrCateReturn['category_id'] == $row['category_id']){
+                            $cls = ' class="active"';
+                        }
+                        if(empty($row['child'])) {
+                            ?>
+                            <li>
+                                <a <?php echo $cls;?> href="<?php echo SITE_URL.$row['cate_link'];?>" title="<?php echo $this->escape($row['cate_name']); ?>"><?php echo $row['cate_name']; ?></a>
+                            </li>
+                            <?php
+                        }else {
+                            ?>
+                            <li>
+                                <a <?php echo $cls;?> href="<?php echo SITE_URL.$row['cate_link'];?>" title="<?php echo $this->escape($row['cate_name']); ?>"><?php echo $row['cate_name']; ?></a>
+                                <ul class="dropdown-menu sub-ul">
+                                    <?php
+                                    $i = 1;
+                                    foreach($row['child'] as $row1) {
+                                        ?>
+                                        <li <?php echo $i==1?' class="first"':'';?>><a href="<?php echo SITE_URL.$row1['cate_link'];?>" title="<?php echo $this->escape($row1['cate_name']); ?>"><?php echo $row1['cate_name']; ?></a></li>
+                                        <?php
+                                        $i++;
+                                    }
+                                    ?>
+                                </ul>
+                            </li>
+                            <?php
+                        }
+                    }
+                }
+                ?>
+                <li><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'contact'?' class="active"':'';?> href="<?php echo SITE_URL;?>/lien-he.html" title="Liên hệ">Liên hệ</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /section -->

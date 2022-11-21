@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Thông báo phí - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors/nprogress.css" rel="stylesheet">
+    
+    <!-- bootstrap-datetimepicker -->
+    <link href="css/vendors/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+    <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="row">
+                      <div class="x_content">
+
+                        <!-- start accordion -->
+                        <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                          <div class="panel">
+                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <h4 class="panel-title">Dịch vụ</h4>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group has-feedback">
+                                  <input type="text" class="form-control has-feedback-left" id="tim-kiem-can-ho" placeholder="Tìm kiếm căn hộ">
+                                  <span class="fa fa-search form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                                  <select id="select-loc-loai-dich-vu" class="form-control col-md-3 col-xs-3">
+                                        <option value="">Tất cả dịch vụ</option>
+                                        <option value="Nước">Nước</option>
+                                        <option value="Gửi xe">Gửi xe</option>
+                                        <option value="Thu gom rác">Thu gom rác</option>
+                                        <option value="Phí quản lý">Phí quản lý</option>
+                                      </select>
+                                </div>
+
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group text-center">
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Tạo hóa đơn tự động</button>
+                                  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        
+                                        <form class="form-horizontal form-label-left">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">Tạo hóa đơn</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            
+                                            
+                                            <div class="form-group">
+                                              <label class="control-label col-md-3">Tạo hóa đơn từ tháng</label>
+                                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class='input-group date' id='tao-hoa-don-tu-thang'>
+                                                  <input type='text' class="form-control" />
+                                                  <span class="input-group-addon">
+                                                     <span class="glyphicon glyphicon-calendar"></span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                              <label class="control-label col-md-3">Từ ngày</label>
+                                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class='input-group date' id='tu-ngay'>
+                                                  <input type='text' class="form-control" />
+                                                  <span class="input-group-addon">
+                                                     <span class="glyphicon glyphicon-calendar"></span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                              <label class="control-label col-md-3">Đến ngày</label>
+                                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class='input-group date' id='den-ngay'>
+                                                  <input type='text' class="form-control" />
+                                                  <span class="input-group-addon">
+                                                     <span class="glyphicon glyphicon-calendar"></span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="submit" class="btn btn-primary btn-modal-thong-bao-phi">Tạo</button>
+                                          </div>
+                                        </form>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group text-center">
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-thu-cong-modal-lg">Tạo hóa đơn thủ công</button>
+                                  <div class="modal fade bs-thu-cong-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        
+                                        <form class="form-horizontal form-label-left">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel1">Tạo hóa đơn thủ công</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            
+                                            
+                                            <div class="form-group">
+                                              <label class="control-label col-md-3">Tạo hóa đơn từ tháng</label>
+                                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class='input-group date' id='tao-hoa-don-tu-thang-thu-cong'>
+                                                  <input type='text' class="form-control" />
+                                                  <span class="input-group-addon">
+                                                     <span class="glyphicon glyphicon-calendar"></span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                              <label class="control-label col-md-3">Từ ngày</label>
+                                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class='input-group date' id='tu-ngay-thu-cong'>
+                                                  <input type='text' class="form-control" />
+                                                  <span class="input-group-addon">
+                                                     <span class="glyphicon glyphicon-calendar"></span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                              <label class="control-label col-md-3">Đến ngày</label>
+                                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class='input-group date' id='den-ngay-thu-cong'>
+                                                  <input type='text' class="form-control" />
+                                                  <span class="input-group-addon">
+                                                     <span class="glyphicon glyphicon-calendar"></span>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                            <button type="submit" class="btn btn-primary btn-modal-thong-bao-phi">Tạo</button>
+                                          </div>
+                                        </form>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">Căn hộ</th>
+                                          <th class="column-title text-center">Số cũ</th>
+                                          <th class="column-title text-center">Số mới</th>
+                                          <th class="column-title text-center">Tiêu thụ</th>
+                                          <th class="column-title text-center">Đơn giá</th>
+                                          <th class="column-title text-center">Thành tiền</th>
+                                          <th class="column-title text-center">Hao hụt & phụ thu</th>
+                                          <th class="column-title text-center">Thuế giá trị gia tăng</th>
+                                          <th class="column-title text-center">Tổng tiền</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">CH1</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">946,600</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">955,330</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Nước(m³)</td>
+                                          <td class="danh-sach-dv text-center">614</td>
+                                          <td class="danh-sach-dv text-center">617</td>
+                                          <td class="danh-sach-dv text-center">3</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">34,200</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">43,930</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Phí quản lý(m²/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">220.6</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Thu gom rác(Căn hộ/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">CH1</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">946,600</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">955,330</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Nước(m³)</td>
+                                          <td class="danh-sach-dv text-center">614</td>
+                                          <td class="danh-sach-dv text-center">617</td>
+                                          <td class="danh-sach-dv text-center">3</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">34,200</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">43,930</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Phí quản lý(m²/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">220.6</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Thu gom rác(Căn hộ/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">CH1</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">946,600</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">955,330</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Nước(m³)</td>
+                                          <td class="danh-sach-dv text-center">614</td>
+                                          <td class="danh-sach-dv text-center">617</td>
+                                          <td class="danh-sach-dv text-center">3</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">34,200</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">43,930</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Phí quản lý(m²/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">220.6</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Thu gom rác(Căn hộ/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">CH1</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">946,600</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">955,330</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Nước(m³)</td>
+                                          <td class="danh-sach-dv text-center">614</td>
+                                          <td class="danh-sach-dv text-center">617</td>
+                                          <td class="danh-sach-dv text-center">3</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">34,200</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">43,930</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Phí quản lý(m²/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">220.6</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Thu gom rác(Căn hộ/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                        </tr><tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">CH1</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">946,600</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">955,330</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Nước(m³)</td>
+                                          <td class="danh-sach-dv text-center">614</td>
+                                          <td class="danh-sach-dv text-center">617</td>
+                                          <td class="danh-sach-dv text-center">3</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">34,200</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">43,930</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Phí quản lý(m²/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">220.6</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Thu gom rác(Căn hộ/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                        </tr><tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">CH1</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">946,600</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">955,330</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Nước(m³)</td>
+                                          <td class="danh-sach-dv text-center">614</td>
+                                          <td class="danh-sach-dv text-center">617</td>
+                                          <td class="danh-sach-dv text-center">3</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">34,200</td>
+                                          <td class="danh-sach-dv text-center">8,730</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">43,930</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Phí quản lý(m²/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">220.6</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">882,400</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">Thu gom rác(Căn hộ/tháng)</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel">
+                            <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <h4 class="panel-title">Hóa đơn</h4>
+                            </a>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                              <div class="panel-body">
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group has-feedback">
+                                  <input type="text" class="form-control has-feedback-left" id="tim-kiem-can-ho-hoa-don" placeholder="Tìm kiếm căn hộ">
+                                  <span class="fa fa-search form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                                  <select id="select-loc-loai-dich-vu-hoa-don" class="form-control col-md-3 col-xs-3">
+                                    <option value="">Tất cả dịch vụ</option>
+                                    <option value="Nước">Nước</option>
+                                    <option value="Gửi xe">Gửi xe</option>
+                                    <option value="Thu gom rác">Thu gom rác</option>
+                                    <option value="Phí quản lý">Phí quản lý</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                                  <select id="select-loc-nam-hoa-don" class="form-control col-md-3 col-xs-3">
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                                  <select id="select-loc-nam-hoa-don-1" class="form-control col-md-3 col-xs-3">
+                                    <option value="">Tất cả</option>
+                                    <option value="Nước">Nước</option>
+                                    <option value="Gửi xe">Gửi xe</option>
+                                    <option value="Thu gom rác">Thu gom rác</option>
+                                    <option value="Phí quản lý">Phí quản lý</option>
+                                  </select>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-in-modal-lg">In</button>
+                                  <div class="modal fade bs-in-modal-lg" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                          </button>
+                                          <h4 class="modal-title" id="myModalLabel">Xác nhận</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="col-md-6 col-sm-12 col-xs-12 form-group text-center margin-top-15">
+                                            BAN QUẢN LÝ CHUNG CƯ BESCO AN SƯƠNG
+                                          </div>
+                                          <div class="col-md-6 col-sm-12 col-xs-12 form-group text-center margin-top-15">
+                                            CÔNG TY CỔ PHẦN DỊCH VỤ KỸ THUẬT GIẢI PHÁP AN GIA
+                                          </div>
+                                          <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center margin-top-15">
+                                            <b>GIẤY BÁO PHÍ QUẢN LÝ</b>
+                                            <br>
+                                            <span>Tháng 12 năm 2018</span>
+                                          </div>
+                                          <div class="col-md-12 col-sm-12 col-xs-12 form-group text-center">
+                                            <div class="col-md-6 col-sm-12 col-xs-12 margin-top-15 text-right">
+                                              <b>Kính gửi Ông/Bà:</b>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12 margin-top-15 text-left">
+                                              <b>NGUYỄN TUẤN PHÚC(UQ)</b>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12 margin-top-10 text-right">
+                                              <b>Điện thoại:</b>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12 margin-top-10 text-left">
+                                              <b>012345697</b>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12 margin-top-10 text-right">
+                                              <b>Tòa nhà/Căn hộ:</b>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12 margin-top-10 text-left">
+                                              <b>B603</b>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 margin-top-15 text-left">
+                                              Ban quản CHUNG CƯ BESCO AN SƯƠNG xin trân trọng thông báo phí quản lý tháng 12/2018:
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 margin-top-10 text-left">
+                                              <b>Số nhân khẩu định mức nước: 0</b>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 margin-top-15">
+                                              <table class="table table-striped jambo_table bulk_action">
+                                                <thead>
+                                                  <tr class="headings">
+                                                    <th class="column-title text-center">STT</th>
+                                                    <th class="column-title text-center">Các khoản phí sinh hoạt</th>
+                                                    <th class="column-title text-center">ĐVT</th>
+                                                    <th class="column-title text-center">Số lượng</th>
+                                                    <th class="column-title text-center">Đơn giá</th>
+                                                    <th class="column-title text-center">Thành tiền</th>
+                                                    <th class="column-title text-center">Ghi chú</th>
+                                                  </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                  <tr class="even pointer">
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>A</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>PHÍ QUẢN LÝ tháng 12/2018</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center">m²/tháng</td>
+                                                    <td class="danh-sach-dv text-center">67.2</td>
+                                                    <td class="danh-sach-dv text-center">4,000</td>
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>268,800</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="odd pointer">
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>B</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>THU GOM RÁC tháng 12/2018</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center">Căn hộ/tháng</td>
+                                                    <td class="danh-sach-dv text-center">1</td>
+                                                    <td class="danh-sach-dv text-center">30,000</td>
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>30,000</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="even pointer">
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>C</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>GỬI XE tháng 12/2018</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>190,000</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="odd pointer">
+                                                    <td class="danh-sach-dv text-center">1</td>
+                                                    <td class="danh-sach-dv text-center">Xe máy</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center">2</td>
+                                                    <td class="danh-sach-dv text-center">50,000</td>
+                                                    <td class="danh-sach-dv text-center">100,000</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="even pointer">
+                                                    <td class="danh-sach-dv text-center">2</td>
+                                                    <td class="danh-sach-dv text-center">Xe máy thứ 3</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center">1</td>
+                                                    <td class="danh-sach-dv text-center">70,000</td>
+                                                    <td class="danh-sach-dv text-center">70,000</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="odd pointer">
+                                                    <td class="danh-sach-dv text-center">3</td>
+                                                    <td class="danh-sach-dv text-center">Xe đạp điện</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center">1</td>
+                                                    <td class="danh-sach-dv text-center">20,000</td>
+                                                    <td class="danh-sach-dv text-center">20,000</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="even pointer">
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>D</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center">
+                                                      <b>CÔNG NỢ KỲ TRƯỚC</b>
+                                                    </td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="odd pointer">
+                                                    <td class="danh-sach-dv text-center">1</td>
+                                                    <td class="danh-sach-dv text-center">Nợ kỳ trước</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center">547,160</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+
+                                                  <tr class="even pointer">
+                                                    <td class="danh-sach-dv text-center">2</td>
+                                                    <td class="danh-sach-dv text-center">Phí trả trước</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center">0</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="odd pointer">
+                                                    <td colspan="2" class="danh-sach-dv text-center">
+                                                      <b>Tổng cộng</b>
+                                                    </td>
+                                                    <td colspan="3" class="danh-sach-dv text-center"></td>
+                                                    <td class="danh-sach-dv text-center">1,035,960</td>
+                                                    <td class="danh-sach-dv text-center"></td>
+                                                  </tr>
+                                                  <tr class="even pointer">
+                                                    <td colspan="2" class="danh-sach-dv text-center">
+                                                      <b>Bằng chữ</b>
+                                                    </td>
+                                                    <td colspan="5" class="danh-sach-dv text-center">
+                                                      <b>Một triệu không trăm ba mươi lăm ngày chín trăm sáu mươi đồng</b>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+                                              <b>* LƯU Ý</b><br/>
+                                              Thời gian chốt nước từ ngày 13/10/2018 đến ngày 13/11/2018<br/>
+                                              <b>1. Quý cư dân vui lòng thanh toán từ ngày 15/11 đến hết ngày 25/11/2018.</b><br/>
+                                              <b>- Phương thức thanh toán</b><br/>
+                                              + Tiền mặt: Tại văn phòng Ban quản lý sảnh B từ 7h30 đến 17h00 từ thứ 2 đến thứ 7<br/>
+                                              + Chuyển khoản: Chủ tài khoản: ĐẶNG VĨNH LƯỢM, số tài khoản: 1234 5678 9874<br/>
+                                              Tại ngân hàng Sacombank, Chi nhánh Bình Thạnh, PGD Nơ Trang Long.<br>
+                                              <b>Nội dung thanh toán: Căn hộ ... thanh toán phí quản lý tháng ...</b><br>
+                                              <b>2. Mọi sai sót Quý cư dân vui lòng liên hệ Ban quản lý hoặc HOTLINE: 0123 456 789 để điều chỉnh.</b><br>
+                                              - Xin chân thành cảm ơn Quý cư dân.
+                                              <b>(Vui lòng bỏ qua phiếu này đối với những căn hộ đã thanh toán tiền).</b>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 col-md-offset-8 col-sm-offset-8 col-xs-offset-8 margin-top-15">
+                                              <b>TM. BAN QUẢN LÝ CHUNG CƯ</b>
+                                              <br><br><br><br><br>
+                                              <b>ĐỖ THỊ TUYẾT MAI</b>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                          <button type="button" class="btn btn-primary btn-modal-thong-bao-phi">Đồng ý</button>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">#</th>
+                                          <th class="column-title text-center">Ngày tạo</th>
+                                          <th class="column-title text-center">Nội dung</th>
+                                          <th class="column-title text-center">Ghi chú</th>
+                                          <th class="column-title text-center">Đầu kì</th>
+                                          <th class="column-title text-center">Cuối kì</th>
+                                          <th class="column-title text-center">Tổng tiền</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A107</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A107</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A107</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A107</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A107</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A107</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A107</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Chi phí dịch vụ gửi xe Tháng 11/2018</td>
+                                          <td class="danh-sach-dv text-center">Biển số xe 54K3-9519.<br/>Loại xe: Xe máy</td>
+                                          <td class="danh-sach-dv text-center">01/11/2018</td>
+                                          <td class="danh-sach-dv text-center">30/11/2018</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                        </tr>
+                                        <tr class="sum-line">
+                                          <td colspan="7" class="danh-sach-dv text-center">
+                                            Tổng tiền:
+                                          </td>
+                                          <td class="danh-sach-dv text-center">41,108,602</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end of accordion -->
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script> 
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- bootstrap-datetimepicker -->   
+    <script src="js/vendors/moment.min.js"></script> 
+    <script src="js/vendors/bootstrap-datetimepicker.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+    <script type="text/javascript">
+      $('#tao-hoa-don-tu-thang').datetimepicker({
+        format: 'MM.YYYY',
+        allowInputToggle: true
+      });
+      $('#tu-ngay').datetimepicker({
+        format: 'DD.MM.YYYY',
+        allowInputToggle: true
+      });
+      $('#den-ngay').datetimepicker({
+        format: 'DD.MM.YYYY',
+        allowInputToggle: true
+      });
+      $('#tao-hoa-don-tu-thang-thu-cong').datetimepicker({
+        format: 'MM.YYYY',
+        allowInputToggle: true
+      });
+      $('#tu-ngay-thu-cong').datetimepicker({
+        format: 'DD.MM.YYYY',
+        allowInputToggle: true
+      });
+      $('#den-ngay-thu-cong').datetimepicker({
+        format: 'DD.MM.YYYY',
+        allowInputToggle: true
+      });
+    </script>
+  </body>
+</html>

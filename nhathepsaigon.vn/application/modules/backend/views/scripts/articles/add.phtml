@@ -1,0 +1,232 @@
+<?php
+$arrCategories = $this->arrCategories;
+$arrReturn = $this->arrReturn;
+$intType = $this->intType;
+?>
+<script type="text/javascript">
+    var list_tags = <?php echo isset($arrReturn['data']['listTags'])?$arrReturn['data']['listTags']:'[]'; ?>;
+</script>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/articles/status/2" title="Bài viết">Bài viết</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/articles/add" title="Tạo bài viết">Tạo bài viết</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <form id="add" enctype="multipart/form-data" accept-charset="utf-8" method="post" action="" role="form">
+            <input type="hidden" name="intType" value="<?php echo $intType;?>"> <!-- 1: Article, 2: Video -->
+            <input type="hidden" name="intImgW" value="0">
+            <input type="hidden" name="intImgH" value="0">
+            <input type="hidden" name="intCropX" value="0">
+            <input type="hidden" name="intCropY" value="0">
+            <input type="hidden" name="intZoom" value="0">
+            <div class="col-md-12 image-editor">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Tạo bài viết</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="form-group frm-validate">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group frm-validate">
+                                        <label for="strImage">Hình đại diện</label>
+                                        <input type="file" accept="image/*" class="cropit-image-input" id="image" name="strImage">
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <div class="cropit-preview"></div>
+                                    </div>
+                                    <?php
+                                    if (isset($arrReturn['data']['strThumbUrl']) && $arrReturn['data']['strThumbUrl'] != '') {
+                                        ?>
+                                        <div class="form-group frm-validate">
+                                            <div class="preview">
+                                                <img src="<?php echo $this->ImageurlArticle($arrReturn['data'], 'size1'); ?>" height="100px">
+                                            </div>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
+                                    <div class="form-group frm-validate">
+                                        <label for="strTitle">Title</label>
+                                        <input name="strTitle" type="text" value="<?php echo isset($arrReturn['data']['strTitle']) ? $arrReturn['data']['strTitle'] : ''; ?>" class="form-control" id="strTitle">
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <label for="strDesc">Description</label>
+                                        <textarea class="form-control" style="width: 100%;" rows="4" cols="118" name="strDesc" id="strDesc"><?php echo isset($arrReturn['data']['strDesc']) ? $arrReturn['data']['strDesc'] : ''; ?></textarea>
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <label for="strMetaTitle">Meta title</label>
+                                        <input name="strMetaTitle" type="text" value="<?php echo isset($arrReturn['data']['strMetaTitle']) ? $arrReturn['data']['strMetaTitle'] : ''; ?>" class="form-control" id="strMetaTitle">
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <label for="strMetaDesc">Meta description</label>
+                                        <textarea class="form-control" style="width: 100%;" rows="4" cols="118" name="strMetaDesc" id="strMetaDesc"><?php echo isset($arrReturn['data']['strMetaDesc']) ? $arrReturn['data']['strMetaDesc'] : ''; ?></textarea>
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <label for="strMetaKeyword">Meta keyword</label>
+                                        <input name="strMetaKeyword" type="text" value="<?php echo isset($arrReturn['data']['strMetaKeyword']) ? $arrReturn['data']['strMetaKeyword'] : ''; ?>" class="form-control" id="strMetaKeyword">
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <?php
+                                        if($intType == 1) {
+                                            ?>
+                                            <label for="ckeditor">Nội dung bài viết</label>
+                                            <textarea name="ckeditor" id="ckeditor">
+                                                <?php
+                                                echo isset($arrReturn['data']['ckeditor']) && $arrReturn['data']['ckeditor'] != '' ? $arrReturn['data']['ckeditor'] : 'Nội dung';
+                                                ?>
+                                            </textarea>
+                                        <?php
+                                        }
+                                        if($intType == 2) {
+                                            ?>
+                                            <label for="strMetaTitle">Link video</label>
+                                            <input name="strLinkVideo" type="text" value="<?php echo isset($arrReturn['data']['strLinkVideo']) ? $arrReturn['data']['strLinkVideo'] : ''; ?>" class="form-control" id="strLinkVideo">
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <label for="strTags">Tags</label>
+                                        <input name="strTags" type="text" value="" class="form-control" id="strTags">
+                                        <?php if (!empty($arrReturn['data']['arrTags'])) {
+                                            foreach ($arrReturn['data']['arrTags'] as $id => $row) { ?>
+                                                <input type="hidden" name="tag_id_<?php echo $id; ?>" id="hd_tag_id_<?php echo $id; ?>" value="<?php echo $id; ?>">
+                                                <input type="hidden" name="tag_name_<?php echo $id; ?>" id="hd_tag_name_<?php echo $id; ?>" value="<?php echo $row; ?>">
+                                            <?php }
+                                        } ?>
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="intIsComment">Cho user bình luận</label>
+                                                <select class="form-control" name="intIsComment">
+                                                    <option value="1"<?php echo isset($arrReturn['data']['intIsComment']) && $arrReturn['data']['intIsComment'] == 1 ? ' selected':'';?>>Có</option>
+                                                    <option value="0"<?php echo isset($arrReturn['data']['intIsComment']) && $arrReturn['data']['intIsComment'] == 0 ? ' selected':'';?>>Không</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="intCommentType">Loại bình luận</label>
+                                                <select class="form-control" name="intCommentType">
+                                                    <option value="1"<?php echo isset($arrReturn['data']['intCommentType']) && $arrReturn['data']['intCommentType'] == 1 ? ' selected':'';?>>Bình luận facebook</option>
+                                                    <option value="0"<?php echo isset($arrReturn['data']['intCommentType']) && $arrReturn['data']['intCommentType'] == 0 ? ' selected':'';?>>Bình luận trên trang</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="strDate">Thời gian đăng bài</label>
+                                                <input name="strDate" type="text" value="<?php echo isset($arrReturn['data']['strDate']) && $arrReturn['data']['strDate'] != '' ? $arrReturn['data']['strDate']:'';?>" class="form-control" id="strDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group frm-validate">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="strMetaKeyword">Status</label>
+                                                <select class="form-control" name="intStatus">
+                                                    <option value="1"<?php echo isset($arrReturn['data']['intStatus']) && $arrReturn['data']['intStatus'] == 1 ? ' selected':'';?>>Duyệt</option>
+                                                    <option value="2"<?php echo isset($arrReturn['data']['intStatus']) && $arrReturn['data']['intStatus'] == 2 ? ' selected':'';?>>Chờ duyệt</option>
+                                                    <option value="3"<?php echo isset($arrReturn['data']['intStatus']) && $arrReturn['data']['intStatus'] == 3 ? ' selected':'';?>>Lưu nháp</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="intCate">Danh mục</label>
+                                    <div class="row" style="max-width:97%;<?php echo $intType == 2?'max-height:600px;overflow: auto;':'';?>">
+                                        <table class="table table-bordered table-responsive no-padding" style="margin-bottom: 0px;">
+                                            <tbody>
+                                            <?php
+                                            if (isset($arrCategories) && !empty($arrCategories)) {
+                                                $i = 0;
+                                                foreach ($arrCategories as $val) {
+                                                    $lab = '';
+                                                    $numRepeat = $val['level'];
+                                                    $char = '';
+                                                    if ($numRepeat > 0) {
+                                                        $char .= str_repeat('-----', $numRepeat);
+                                                    }
+                                                    if((isset($arrReturn['data']['intCate']) && $arrReturn['data']['intCate'] != 0 && $arrReturn['data']['intCate'] == $val['category_id'])){
+                                                        $lab = "checked";
+                                                    }
+                                                    if($intType == 2){
+                                                        if($val['category_id'] == CATE_VIDEO){
+                                                            echo '<tr><td class="text-center"><input '.$lab.' value="'.$val['category_id'].'" name="intCate" type="radio" class="minimal"></td><td>'.$char . ' ' . $val['cate_name'].'</td></tr>';
+                                                        }
+                                                    }else{
+                                                        echo '<tr><td class="text-center"><input '.$lab.' value="'.$val['category_id'].'" name="intCate" type="radio" class="minimal"></td><td>'.$char . ' ' . $val['cate_name'].'</td></tr>';
+                                                    }
+                                                    $i++;
+                                                }
+                                            }
+                                            ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <label class="error" for="intCate"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        <button type="button" class="btn btn-default">Hủy</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section><!-- /.content -->
+<?php
+if ($arrReturn['is_post'] == 1) {
+    ?>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            bootbox.dialog({
+                message: '<?php echo $arrReturn['msg'];?>',
+                title: 'Thông báo',
+                title_className: 'bg-primary',
+                buttons: {
+                    close: {
+                        label: "Close",
+                        className: "btn-default",
+                        callback: function () {
+                        }
+                    }
+                }
+            });
+            <?php
+            if($arrReturn['error'] == 0)
+            {
+            ?>
+            setTimeout(function () {
+                location.href = SITE_URL + '/backend/articles/index/status/1';
+            }, 2000);
+            <?php
+            }
+            ?>
+        });
+    </script>
+<?php
+}
+?>

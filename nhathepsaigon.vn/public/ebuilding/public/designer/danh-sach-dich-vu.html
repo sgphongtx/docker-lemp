@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dashboard - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors/nprogress.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="css/vendors/daterangepicker.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+
+    <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="row">
+                      <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade active in" id="tab_ttcb" aria-labelledby="ttcb-tab">
+                          <div class="col-lg-1 col-md-2 col-sm-4 col-xs-4">
+                            <!-- required for floating -->
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs tabs-left can-ho-cu-dan-tab-left">
+                              <li class="active">
+                                <a href="#nuoc" data-toggle="tab" class="text-center tab-icon-dich-vu">
+                                  <img src="images/icon-nuoc.png" class="tab-icon">
+                                  <span class="tab-span">Nước</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#gui-xe" data-toggle="tab" class="text-center tab-icon-dich-vu">
+                                  <img src="images/icon-xe-may.png" class="tab-icon">
+                                  <span class="tab-span">Gửi xe</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#phi-quan-ly" data-toggle="tab" class="text-center tab-icon-dich-vu">
+                                  <img src="images/icon-phi-quan-ly.png" class="tab-icon">
+                                  <span class="tab-span">Phí quản lý</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#thu-gom-rac" data-toggle="tab" class="text-center tab-icon-dich-vu">
+                                  <img src="images/icon-rac.jpg" class="tab-icon">
+                                  <span class="tab-span">Thu gom rác</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div class="col-lg-11 col-md-10 col-sm-8 col-xs-8">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                              <div class="tab-pane active" id="nuoc">
+                                <form class="form-horizontal form-label-left">
+                                  
+                                  <div class="form-group">
+                                    <label class="control-label col-md-3" for="gioi-tinh">Tháng</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                      <select id="thang" class="form-control col-md-3 col-xs-3">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label col-md-3" for="trang-thai">Năm</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                      <select id="nam" class="form-control col-md-3 col-xs-3">
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label col-md-3" for="dau-ky">Đầu kỳ</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                      <input type="text" class="form-control col-md-7 col-xs-12" id="dau-ky" placeholder="Đầu kỳ" aria-describedby="inputDauKy">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label col-md-3" for="cuoi-ky">Cuối kỳ</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                      <input type="text" class="form-control col-md-7 col-xs-12" id="cuoi-ky" placeholder="Cuối kỳ" aria-describedby="inputCuoiKy">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 text-center">
+                                      <button type="submit" class="btn btn-ebuilding">Cập nhật</button>
+                                    </div>
+                                  </div>
+                                </form>
+                                <div class="row">
+                                  <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action">
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-can-ho-nuoc" name="txt-loc-can-ho-nuoc" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-dau-ky" name="txt-loc-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-cuoi-ky" name="txt-loc-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-dang-ky-dm" name="txt-loc-dang-ky-dm" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <select id="select-loc-loai" class="form-control">
+                                              <option value="Tất cả">Tất cả</option>
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-tong" name="txt-loc-tong" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-thanh-tien-nuoc" name="txt-loc-thanh-tien-nuoc" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center">#</th>
+                                          <th class="column-title text-center">Căn hộ</th>
+                                          <th class="column-title text-center">Đầu kỳ</th>
+                                          <th class="column-title text-center">Cuối kỳ</th>
+                                          <th class="column-title text-center">Đăng ký định mức</th>
+                                          <th class="column-title text-center">Loại</th>
+                                          <th class="column-title text-center">Tổng</th>
+                                          <th class="column-title text-center">Thành tiền</th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">2</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dau-ky" name="txt-dau-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-cuoi-ky" name="txt-cuoi-ky" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-dang-ky-dinh-muc" name="txt-dang-ky-dinh-muc" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Sinh hoạt">Sinh hoạt</option>
+                                              <option value="Kinh doanh">Kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                          <td class="danh-sach-dv text-center">0</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane" id="gui-xe">
+                                <div class="row text-right">
+								                  <a href="dang-ky-dich-vu-gui-xe.html" class="btn btn-ebuilding">Đăng ký dịch vụ gửi xe</a>
+                                  <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action">
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-can-ho-gui-xe" name="txt-loc-can-ho-gui-xe" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <select id="select-loc-loai" class="form-control">
+                                              <option value="Tất cả">Tất cả</option>
+                                              <option value="Xe máy">Xe máy</option>
+                                              <option value="Xe máy thứ 1">Xe máy thứ 1</option>
+                                              <option value="Xe máy thứ 2">Xe máy thứ 2</option>
+                                              <option value="Xe máy thứ 3">Xe máy thứ 3</option>
+                                              <option value="Ô tô">Ô tô</option>
+                                            </select>
+                                          </th>
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-bien-so-xe" name="txt-loc-bien-so-xe" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-ngay-them" name="txt-loc-ngay-them" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center"></th>
+                                        </tr>
+                                      </thead>
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center">Sử dụng</th>
+                                          <th class="column-title text-center">Căn hộ</th>
+                                          <th class="column-title text-center">Loại</th>
+                                          <th class="column-title text-center">Số lượng</th>
+                                          <th class="column-title text-center">Thành tiền(VNĐ)</th>
+                                          <th class="column-title text-center">Biển số xe</th>
+                                          <th class="column-title text-center">Ghi chú</th>
+                                          <th class="column-title text-center">Ngày thêm</th>
+                                          <th class="column-title text-center"></th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">500,000</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Ô tô</td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">500,000</td>
+                                          <td class="danh-sach-dv text-center">51A-24058</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">21/11/2018</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <button>
+                                              <i class="fa fa-share-square-o"></i>
+                                            </button>
+                                          </td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">A102</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">2</td>
+                                          <td class="danh-sach-dv text-center">100,000</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Xe máy</td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          <td class="danh-sach-dv text-center">51A-24058</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">21/11/2018</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <button>
+                                              <i class="fa fa-share-square-o"></i>
+                                            </button>
+                                          </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Xe máy</td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          <td class="danh-sach-dv text-center">51A-24058</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">21/11/2018</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <button>
+                                              <i class="fa fa-share-square-o"></i>
+                                            </button>
+                                          </td>
+                                        </tr>
+                                        <tr class="odd pointer line-header">
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">A103</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">3</td>
+                                          <td class="danh-sach-dv text-center">170,000</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Xe máy</td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          <td class="danh-sach-dv text-center">51A-24058</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">21/11/2018</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <button>
+                                              <i class="fa fa-share-square-o"></i>
+                                            </button>
+                                          </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Xe máy</td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">50,000</td>
+                                          <td class="danh-sach-dv text-center">51A-24058</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">21/11/2018</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <button>
+                                              <i class="fa fa-share-square-o"></i>
+                                            </button>
+                                          </td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="checkbox" name="su-dung-select">
+                                          </td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">Xe máy thứ 3</td>
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">70,000</td>
+                                          <td class="danh-sach-dv text-center">51A-24058</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">21/11/2018</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <button>
+                                              <i class="fa fa-share-square-o"></i>
+                                            </button>
+                                          </td>
+                                        </tr>
+										                    <tr class="sum-line">
+                                          <td colspan="3" class="danh-sach-dv text-center">
+                                            Tổng
+                                          </td>
+                                          <td class="danh-sach-dv text-center">566</td>
+                                          <td class="danh-sach-dv text-center">51,300,000</td>
+                                          <td colspan="6" class="danh-sach-dv text-center"></td>
+                                        </tr>
+                                        
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane" id="phi-quan-ly">
+                                <div class="row">
+                                  <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action">
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-can-ho-phi-quan-ly" name="txt-loc-can-ho-phi-quan-ly" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-so-luong-phi-quan-ly" name="txt-loc-so-luong-phi-quan-ly" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <select id="select-loc-loai" class="form-control">
+                                              <option value="Tất cả">Tất cả</option>
+                                              <option value="Phí quản lý sinh hoạt">Phí quản lý sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-chi-phi" name="txt-loc-chi-phi" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          
+                                        </tr>
+                                      </thead>
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center">#</th>
+                                          <th class="column-title text-center">Căn hộ</th>
+                                          <th class="column-title text-center">Giá</th>
+                                          <th class="column-title text-center">Số lượng(m²/tháng)</th>
+                                          <th class="column-title text-center">Loại</th>
+                                          <th class="column-title text-center">Chi phí</th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">4,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong" name="txt-so-luong" value="90.2" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          
+                                          <td class="danh-sach-dv text-center">
+                                            <select id="select-loai" class="form-control">
+                                              <option value="Phí quản lý sinh hoạt">Sinh hoạt</option>
+                                              <option value="Phí quản lý kinh doanh">Phí quản lý kinh doanh</option>
+                                            </select>
+                                          </td>
+                                          <td class="danh-sach-dv text-center">360.000</td>
+                                        </tr>
+                                        <tr class="sum-line">
+                                          <td colspan="3" class="danh-sach-dv text-center">Tổng</td>
+                                          <td class="danh-sach-dv text-center">23,684.801</td>
+                                          <td class="danh-sach-dv text-center"></td>
+                                          <td class="danh-sach-dv text-center">96,678.123</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane" id="thu-gom-rac">
+                                <div class="row">
+                                  <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action">
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-can-ho-thu-gom-rac" name="txt-loc-can-ho-thu-gom-rac" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center"></th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-so-luong-thu-gom-rac" name="txt-loc-so-luong-thu-gom-rac" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          <th class="column-title text-center">
+                                            <input type="text" id="txt-loc-thanh-tien-thu-gom-rac" name="txt-loc-thanh-tien-thu-gom-rac" class="txt-danh-sach-dich-vu">
+                                          </th>
+                                          
+                                        </tr>
+                                      </thead>
+                                      <thead>
+                                        <tr class="headings">
+                                          <th class="column-title text-center">#</th>
+                                          <th class="column-title text-center">Căn hộ</th>
+                                          <th class="column-title text-center">Giá</th>
+                                          <th class="column-title text-center">Số lượng(Căn hộ/tháng)</th>
+                                          <th class="column-title text-center">Thành tiền</th>
+                                        </tr>
+                                      </thead>
+
+                                      <tbody>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+
+                                        <tr class="even pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="odd pointer">
+                                          <td class="danh-sach-dv text-center">1</td>
+                                          <td class="danh-sach-dv text-center">A101</td>
+                                          <td class="danh-sach-dv text-center">30,000</td>
+                                          <td class="danh-sach-dv text-center">
+                                            <input type="text" id="txt-so-luong-thu-gom-rac" name="txt-so-luong-thu-gom-rac" value="1" class="txt-danh-sach-dich-vu">
+                                          </td>
+                                          <td class="danh-sach-dv text-center">30.000</td>
+                                        </tr>
+                                        <tr class="sum-line">
+                                          <td colspan="3" class="danh-sach-dv text-center">Tổng</td>
+                                          <td class="danh-sach-dv text-center">304</td>
+                                          <td class="danh-sach-dv text-center">9,120,000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script> 
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="js/vendors/moment.min.js"></script>
+    <script src="js/vendors/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+    <script type="text/javascript">
+      $('#dau-ky').daterangepicker({
+        singleDatePicker: true,
+        singleClasses: "picker_1"
+      }, function(start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+      });
+      $('#cuoi-ky').daterangepicker({
+        singleDatePicker: true,
+        singleClasses: "picker_1"
+      }, function(start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+      });
+    </script>
+  </body>
+</html>

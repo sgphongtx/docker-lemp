@@ -1,0 +1,59 @@
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="row footer-content">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="footer-static-title"><h5>Kết nối & chia sẽ</h5></div>
+                <div class="logo-footer-content"><div id="cmsblock-25" class="cmsblock">
+                        <div class="fb-page" data-href="<?php echo $this->arrConfig['link_fb']; ?>" data-adapt-container-width="true" data-height="214" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo $this->arrConfig['link_fb']; ?>"><a href="<?php echo $this->arrConfig['link_fb']; ?>"><?php echo $this->arrConfig['web_name']; ?></a></blockquote></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="footer-static-title"><h5>Liên hệ</h5></div>
+                <div class="list-unstyled contact-us-content">
+                    <div class="contact-list">
+                        <i class="fa fa-map-marker"></i>
+                        <p> <span class="color-title"></span> <?php echo $this->arrConfig['address']; ?></p>
+                    </div>
+                    <div class="contact-list">
+                        <i class="fa fa-map-marker"></i>
+                        <p> <span class="color-title"></span>Xưởng: 414 Nguyễn Thị Minh Khai, Tân Đông Hiệp, Dĩ An, Bình Dương, Việt Nam</p>
+                    </div>
+                    <div class="contact-list">
+                        <i class="fa fa-envelope-o"></i>
+                        <p>
+                            <span class="color-title">Email: <?php echo $this->arrConfig['email']; ?></span>
+                        </p>
+                    </div>
+                    <div class="contact-list">
+                        <i class="fa fa-phone"></i>
+                        <p>
+                            <span class="color-title">Phone: <?php echo $this->arrConfig['phone']; ?></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-powered">
+        Copyright © 2019 <?php echo $this->arrConfig['web_name']; ?>. All right reserved. Designed by <a href="https://www.phongtx.dev">Phong Tran Xuan</a>
+    </div>
+</footer>
+<!-- /FOOTER -->
+<div class="hotline-phone-ring-wrap">
+	<div class="hotline-phone-ring">
+		<div class="hotline-phone-ring-circle"></div>
+		<div class="hotline-phone-ring-circle-fill"></div>
+		<div class="hotline-phone-ring-img-circle">
+		<a href="tel:<?php echo $this->arrConfig['phone']; ?>" class="pps-btn-img">
+			<img src="<?php echo STATIC_URL; ?>/fe/images/icon-call.png" alt="Gọi điện thoại" width="50">
+		</a>
+		</div>
+	</div>
+	<div class="hotline-bar">
+		<a href="tel:<?php echo $this->arrConfig['phone']; ?>">
+			<span class="text-hotline"><?php echo $this->arrConfig['phone']; ?></span>
+		</a>
+	</div>
+</div>

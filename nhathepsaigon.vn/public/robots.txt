@@ -1,0 +1,8 @@
+User-agent: * 
+Disallow: /logs/
+Disallow: /library/
+Disallow: /public/captcha/
+Disallow: /public/static/library/
+Disallow: /public/static/fe/
+Disallow: /public/static/be/
+Sitemap: http://nhathepsaigon.vn/sitemap.xml

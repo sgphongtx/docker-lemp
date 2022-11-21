@@ -1,0 +1,102 @@
+<?php
+// Kiem tra da login chua
+if (isset($this->user) && $this->user['user_id'] > 0) {
+    $arrCategories = $this->arrCate;
+    ?>
+    <form class="form" id="add" enctype="multipart/form-data" accept-charset="utf-8" method="post" action=""
+          role="form">
+        <div class="col-md-8 main-content">
+            <!-- row ads -->
+            <div class="row left content-ads">
+                <div class="col-md-12">
+                    <img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/qc-728x90.png" src="<?php echo STATIC_URL; ?>/fe/images/qc-728x90.png" alt="ads">
+                </div>
+            </div>
+            <div class="form-group frm-validate width_common">
+                <label for="strTitle">Tiêu đề bài viết</label>
+                <input type="text" id="strTitle" class="form-control" value="" name="strTitle">
+            </div>
+            <div class="form-group frm-validate width_common">
+                <label for="strDesc">Lời mở đầu bài viết</label>
+                <textarea class="form-control" style="width: 100%;" rows="4" cols="118" name="strDesc"
+                          id="strDesc"><?php echo isset($arrReturn['data']['strDesc']) ? $arrReturn['data']['strDesc'] : ''; ?></textarea>
+            </div>
+            <div class="form-group">
+                <label>Danh mục</label>
+                <select class="form-control select2" name="intCate" style="width: 100%;">
+                    <?php
+                    if (isset($arrCategories) && !empty($arrCategories)) {
+                        $i = 0;
+                        foreach ($arrCategories as $val) {
+                            $lab = '';
+                            $numRepeat = $val['level'];
+                            $char = '';
+                            if ($numRepeat > 0) {
+                                $char .= str_repeat('-----', $numRepeat);
+                            }
+                            if ((isset($arrReturn['data']['intCate']) && $arrReturn['data']['intCate'] != 0 && $arrReturn['data']['intCate'] == $val['category_id'])) {
+                                $lab = ' selected="selected"';
+                            }
+                            ?>
+                                <option value="<?php echo $val['category_id'];?>"<?php echo $lab;?>><?php echo $char . ' ' . $val['cate_name'];?></option>
+                            <?php
+                            $i++;
+                        }
+                    }
+                    ?>
+                </select>
+                <label class="error" for="intCate" style="margin-top: 10px;"></label>
+            </div><!-- /.form-group -->
+            <div class="form-group frm-validate width_common">
+                <label for="ckeditor">Nội dung bài viết</label>
+                <textarea class="form-control" name="ckeditor" id="ckeditor">
+                    Nội dung
+                </textarea>
+            </div>
+            <div class="form-group frm-validate width_common">
+                <label for="ckeditor">Mã xác nhận</label>
+
+                <div class="width_common">
+                    <div class="left">
+                        <input class="form-control" id="captcha" type="text" name="strCode" value="">
+                    </div>
+                    <span class="left" class="txt_huongdan" id="showCaptcha"></span>
+                    <a data-toggle="tooltip" data-original-title="Tạo mã khác" style="margin-top: 2px;"
+                       id="loadCaptcha" class="left" href="javascript:;" title="Tạo mã khác"><img
+                            class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/icon-refreh.png" src="<?php echo STATIC_URL; ?>/fe/images/icon-refreh.png"/></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="col-md-4 left">
+            <div class="txt_666 width_common content_mobile_18">
+                1. Đặc biệt ưu tiên các bài viết hay, gần gũi, dành cho đông đảo bạn đọc.<br>
+                2. Hạn chế các bài viết tâm sự quá cá nhân.<br>
+                3. Thành viên có hành vi vi phạm bản quyền tác giả sẽ không được duyệt.<br>
+                4. Các bài viết hay sẽ được đăng trang trọng trên trang chủ.<br>
+                5. Tất cả bài viết đều có phần giới thiệu tác giả và dẫn về trang Facebook để đông đảo bạn đọc biết đến.<br>
+                6. BBT có thể sẽ chỉnh sửa bài viết để có nội dung tốt và phù hợp nhất với định hướng của tạp chí.<br>
+                7. Bài viết cần đảm bảo chuẩn mực ngữ pháp và chính tả tối thiểu, nhất là chữ hoa, chữ thường, dấu chấm,
+                dấu phẩy.
+            </div>
+        </div>
+        <div class="col-md-12 width_common block_btn_send">
+            <input style="margin-top: 20px;" type="submit" value="Gửi" class="btn btn-primary" id="btn_send_article">
+        </div>
+    </form>
+<?php
+}else{
+?>
+<!--Wrap Success-->
+<div class="col-md-12 main-content">
+    <div class="wrap-success">
+        <p><img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/success_img.png" src="<?php echo STATIC_URL; ?>/fe/images/success_img.png" alt="Thành công" /></p>
+        <p>Bạn phải đăng nhập trước khi gửi bài.</p>
+        <p>Bạn đã có tài khoản. <a class="link_login" style="color: #d71450;" href="javascript:;">Đăng nhập</a> ngay.</p>
+        <p>Bạn chưa có tài khoản? <a href="javascript;:" style="color: #d71450;" class="link_register">Đăng ký</a> ngay.</p>
+    </div>
+    <!--End Wrap Success-->
+</div>
+<?php
+}
+?>

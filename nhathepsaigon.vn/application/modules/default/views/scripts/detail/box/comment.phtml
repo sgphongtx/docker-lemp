@@ -1,0 +1,102 @@
+<?php
+$arrArticleDetail = $this->arrArticleDetail;
+$arrListComment = $this->arrListComment;
+if(!empty($arrListComment['data'])) {
+    ?>
+    <div id="box_comment" class="width_common space_bottom_20">
+        <div class="block_show_commen width_common">
+            <div class="title_show txt_666">
+                <div style="" class="ykien_vne">
+                    <div class="left"><strong>Ý kiến bạn đọc</strong> (<label id="total_comment"><?php echo $this->NumberFormat($arrListComment['total']);?></label>)</div>
+                </div>
+            </div>
+            <div class="main_show_comment width_common">
+                <div id="list_comment" class="main_show_comment box_width_common">
+                    <?php
+                    $i = 1;
+                    foreach($arrListComment['data'] as $row) {
+                        ?>
+                        <div class="comment_item<?php echo $i%2==0?' hight_light':'';?>">
+                            <div class="right width_comment_item width_common">
+                                <div class="width_common content_mobile_18">
+                                    <p><?php echo $row['content'];?></p>
+                                    <div class="user_status width_common">
+                                        <span class="left txt_666 txt_11"><b><?php echo $row['name'];?></b> - <?php echo date('H:i | d/m/Y',$row['ctime']); ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    $i++;
+                    }
+                    ?>
+                </div>
+                <div class="view_more_coment left"></div>
+            </div>
+        </div>
+    </div>
+<?php
+}
+if($arrArticleDetail['comment_type'] == 0) {
+    ?>
+    <div class="block_input_comment width_common" style="margin-bottom: 10px;">
+        <div class="input_comment">
+            <form id="comment_post_form">
+                <textarea class="h100 left block_input" onblur="if (this.value == '') this.value = this.defaultValue"
+                          onfocus="if (this.value == this.defaultValue) this.value = ''" value="Ý kiến của bạn"
+                          id="txtComment" rows="" cols="">Ý kiến của bạn</textarea>
+
+                <div class="width_common block_relative">
+                    <div class="right block_btn_send">
+                        <input style="margin-top: 10px;" type="button" id="comment_post_button" class="btn btn-primary" value="Gửi">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php
+}
+?>
+<div class="modal fade" id="modal-comment" role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="frm-comment-add" action="" method="POST" role="form">
+                <input type="hidden" name="intArticleId" value="<?php echo isset($arrArticleDetail['article_id'])?$arrArticleDetail['article_id']:0;?>">
+                <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title">Gửi bình luận</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group frm-validate">
+                        <input type="text" name="strEmail" value="<?php echo isset($arrTagDetail['email'])?$arrTagDetail['email']:'';?>" class="form-control" id="strEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group frm-validate">
+                        <input name="strName" type="text" value="<?php echo isset($arrTagDetail['name'])?$arrTagDetail['name']:'';?>" class="form-control" id="strName" placeholder="Họ và tên">
+                    </div>
+                    <div class="form-group frm-validate">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="left">
+                                    <input class="form-control" type="text" name="strCode" value="" placeholder="Mã xác nhận">
+                                </div>
+                                <span class="left" class="txt_huongdan" id="showCaptcha"></span>
+                                <a data-toggle="tooltip" data-original-title="Tạo mã khác" style="margin-top: 2px;" id="loadCaptcha" class="left" href="javascript:;"><img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/icon-refreh.png" src="<?php echo STATIC_URL; ?>/fe/images/icon-refreh.png" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-save">Hoàn tất</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<?php
+if($arrArticleDetail['comment_type'] == 1) {
+    ?>
+    <div class="fb-comments" data-href="<?php echo SITE_URL . $arrArticleDetail['share_url']; ?>" data-width="100%" data-numposts="5"></div>
+<?php
+}

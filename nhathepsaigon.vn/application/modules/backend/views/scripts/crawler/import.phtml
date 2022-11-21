@@ -1,0 +1,52 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/crawler" title="Crawler">Crawler</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/crawler/import" title="Crawler">Import data crawler RSS</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <form id="import" method="post" action="" role="form">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Import data crawler RSS</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="alert alert-warning p-b-10" role="alert" style="margin-bottom: 0px;">
+                            Các link RSS cho phép import
+                            <p>VnExpress.net: http://vnexpress.net/rss/giai-tri.rss</p>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Bắt đầu import</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section><!-- /.content -->
+<div class="modal fade" id="modal-loading" role="dialog" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Thông báo</h4>
+            </div>
+            <div class="modal-body">
+                Hệ thống đang xử lý...Để khỏi lỗi dữ liệu vui lòng không đóng trình duyệt.
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

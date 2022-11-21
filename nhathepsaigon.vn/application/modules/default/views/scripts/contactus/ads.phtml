@@ -1,0 +1,48 @@
+<form class="form" id="add" enctype="multipart/form-data" accept-charset="utf-8" method="post" action=""
+      role="form">
+    <div class="col-md-8 main-content">
+        <!-- row ads -->
+        <div class="row content-ads">
+            <div class="col-md-12">
+                <img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/qc-728x90.png" src="<?php echo STATIC_URL; ?>/fe/images/qc-728x90.png" alt="ads">
+            </div>
+        </div>
+        <div class="form-group frm-validate width_common">
+            <label for="strName">Họ tên</label>
+            <input name="strName" type="text" class="form-control" placeholder="Họ tên">
+        </div>
+        <div class="form-group frm-validate width_common">
+            <label for="strEmail">Email</label>
+            <input name="strEmail" type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group frm-validate width_common">
+            <label for="strPhone">Số điện thoại</label>
+            <input name="strPhone" type="text" class="form-control" placeholder="Số điện thoại">
+        </div>
+        <div class="form-group frm-validate width_common">
+            <label for="ckeditor">Nội dung bài viết</label>
+            <textarea class="form-control" name="ckeditor" id="ckeditor">
+                Nội dung
+            </textarea>
+        </div>
+        <div class="form-group frm-validate width_common">
+            <label for="ckeditor">Mã xác nhận</label>
+
+            <div class="width_common">
+                <div class="left">
+                    <input class="form-control" id="captcha" type="text" name="strCode" value="">
+                </div>
+                <span class="left" class="txt_huongdan" id="showCaptcha"></span>
+                <a data-toggle="tooltip" data-original-title="Tạo mã khác" style="margin-top: 2px;"
+                   id="loadCaptcha" class="left" href="javascript:;" title="Tạo mã khác"><img
+                        class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/icon-refreh.png" src="<?php echo STATIC_URL; ?>/fe/images/icon-refreh.png"/></a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="col-md-4 left">
+    </div>
+    <div class="col-md-12 width_common block_btn_send">
+        <input style="margin-top: 20px;" type="submit" value="Gửi" class="btn btn-primary" id="btn_send_article">
+    </div>
+</form>

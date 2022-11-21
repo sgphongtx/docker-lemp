@@ -1,0 +1,131 @@
+/*Author: PhongTX*/
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fff none repeat scroll 0 0;
+    color: #000;
+    font: 400 12px arial;
+    text-align: left;
+}
+h2 {
+    line-height: 16px;
+}
+a {
+    display: inline-block;
+    color: #000;
+    outline: 1px none;
+    text-decoration: none;
+}
+a:hover {
+    color: #004f8b;
+    text-decoration: none;
+}
+img {
+    border: 0 none;
+    font-size: 0;
+    line-height: 0;
+    max-width: 100%;
+}
+ul, li {
+    list-style-type: none;
+}
+@media all{
+    #print_page{
+        width: 480px;
+        margin:0 auto;
+    }
+    .block_col_480{
+        width:100%;
+        float: left;
+    }
+    .header_right_print{
+        margin:50px 0 0 0;
+    }
+
+    .header_right_print a{
+        color:#666;
+        font:400 11px/15px Arial;
+        padding-left:20px;
+        margin:40px 0 0 0;
+    }
+
+    #detail_page{
+        margin:20px 0 0 0;
+        padding:10px 0 0  0;
+        border-top:1px solid #cccccc;
+    }
+
+    .header_right_print span{
+        text-decoration:underline;
+        margin:0 0 0 5px;
+    }
+    #box_details_news .fck_detail table.tplCaption{
+        width:auto;
+    }
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.width_common {
+    float: left;
+    width: 100%;
+}
+#box_details_news .w670 {
+    width: 100%;
+}
+.block_timer_share {
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+}
+#box_details_news .block_timer {
+    font: 400 11px arial;
+    padding: 5px 0 0;
+    white-space: nowrap;
+}
+#box_details_news .title_news, #box_details_news .relative_news {
+    color: #333;
+    float: left;
+    padding-bottom: 10px;
+    width: 100%;
+}
+#box_details_news .title_news {
+    color: #333;
+    margin-top: 10px;
+}
+#box_details_news .title_news h1 {
+    font: 400 28px/32px arial;
+    text-rendering: geometricprecision;
+}
+#box_details_news .short_intro {
+    color: #444;
+    float: left;
+    font: 700 14px/18px arial;
+    padding-bottom: 10px;
+    text-rendering: geometricprecision;
+    width: 100%;
+}
+#box_details_news .fck_detail {
+    color: #333;
+    float: left;
+    font: 400 14px arial;
+    overflow: hidden;
+    padding: 0 2% 0 0;
+    width: 98%;
+    text-align: justify;
+}
+#box_details_news .fck_detail .Normal, #box_details_news .fck_detail p {
+    line-height: 18px;
+    margin: 10px 0px 10px 0px;
+    text-rendering: geometricprecision;
+}
+.header_left_logo{
+    margin-top: 15px;
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Căn hộ - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors//nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+   <!-- ebuilding -->
+   <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="can_ho_title_left">
+                <h3>Danh sách cư dân</h3>
+              </div>
+              <div class="btn_them_can_ho">
+                <a class="btn btn-ebuilding" href="them-cu-dan.html">Thêm</a>
+              </div>
+              
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <form class="form-horizontal form-label-left">
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="can-ho">Căn hộ</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="can-ho" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="chu-ho">Chủ hộ</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="chu-ho" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="gioi-tinh">Giới tính</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="gioi-tinh" class="form-control" required>
+                      <option value="Nam">Nam</option>
+                      <option value="Nữ">Nữ</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="gioi-tinh">Giới tính</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="do-tuoi" class="form-control" required>
+                      <option value="1-30">Từ 1-30</option>
+                      <option value="1-30">Từ 1-30</option>
+                      <option value="1-30">Từ 1-30</option>
+                      <option value="1-30">Từ 1-30</option>
+                      <option value="1-30">Từ 1-30</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="trang-thai">Trạng thái</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="trang-thai" class="form-control" required>
+                      <option value="Kích hoạt">Đã kích hoạt</option>
+                      <option value="Chặn">Đã chặn</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="ngay-het-han-thi-thuc">Ngày hết hạn thị thực</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="ngay-het-han-thi-thuc" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 text-center">
+                    <button type="submit" class="btn btn-ebuilding">Tìm</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="row">
+                      <div class="table-responsive">
+                        <table class="table table-striped jambo_table bulk_action">
+                          <thead>
+                            <tr class="headings">
+                              <th class="column-title">Căn hộ</th>
+                              <th class="column-title">Tên</th>
+                              <th class="column-title">Ngày sinh(ngày/tháng/năm)</th>
+                              <th class="column-title">Chủ hộ</th>
+                              <th class="column-title">Số ĐT cá nhân</th>
+                              <th class="column-title">Số ĐT công việc</th>
+                              <th class="column-title">Số Fax</th>
+                              <th class="column-title">Email cá nhân</th>
+                              <th class="column-title">Email công việc</th>
+                              <th class="column-title">Số chứng minh thư</th>
+                              <th class="column-title">Giới tính</th>
+                              <th class="column-title no-link last"><span class="nobr">Action</span>
+                              </th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr class="even pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="odd pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="even pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="odd pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="even pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="odd pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="even pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="odd pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+
+                            <tr class="even pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                            <tr class="odd pointer">
+                              <td class="">CH1</td>
+                              <td class="">Cửa hàng 1</td>
+                              <td class="text-center">21/11/2018</td>
+                              <td class="text-center">
+                                <input type="checkbox" name="chu-ho">
+                              </td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class="text-center"></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class=""></td>
+                              <td class="text-center">Nam</td>
+                              <td class="last text-center">
+                                <a href="#">Sửa</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script>
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+  </body>
+</html>

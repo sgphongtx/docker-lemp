@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Thêm cư dân - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors//nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+
+    <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <h4>Thêm căn hộ</h4>
+            <form class="form-horizontal form-label-left">
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ho-ten">Họ tên <span class="required">*</span></label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ho" placeholder="Họ" required="required" class="form-control form-control-small col-md-3 col-xs-3">
+                  <input type="text" id="dem" placeholder="Đệm" class="form-control form-control-small col-md-3 col-xs-3">
+                  <input type="text" id="ten" placeholder="Tên" required="required" class="form-control form-control-small  col-md-3 col-xs-3">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ho-ten">Ngày sinh</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select id="ngày" class="form-control form-control-small col-md-3 col-xs-3">
+                    <option value="">--Chọn ngày--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                  <select id="thang" class="form-control form-control-small col-md-3 col-xs-3">
+                    <option value="">--Chọn tháng--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select id="nam" class="form-control form-control-small col-md-3 col-xs-3">
+                    <option value="">--Chọn năm--</option>
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="dt-ca-nhan">Số ĐT cá nhân</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="dt-ca-nhan" name="dt-ca-nhan" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="email-ca-nhan">Email cá nhân</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="email-ca-nhan" name="email-ca-nhan" required="required" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="so-dt-cong-viec">Số ĐT công việc</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="so-dt-cong-viec" name="so-dt-cong-viec" required="required" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="email-cong-viec">Email công việc</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="email-cong-viec" name="email-cong-viec" required="required" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="so-fax">Số Fax</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="so-fax" name="so-fax" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="so-cmt">Số CMT</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="so-cmt" name="so-cmt" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="gioi-tinh">Giới tính</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select id="gioi-tinh" class="form-control" required>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="noi-cap-cmt">Nơi cấp CMT</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="noi-cap-cmt" name="noi-cap-cmt" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ngay-cap-cmt">Ngày cấp CMT</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ngay-cap-cmt" placeholder="(mm/dd/yyyy)" name="ngay-cap-cmt" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="dia-chi-thuong-tru">Địa chỉ thường trú</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="dia-chi-thuong-tru" name="dia-chi-thuong-tru" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="quoc-tich">Quốc tịch</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="quoc-tich" name="quoc-tich" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="so-thi-thuc">Số thị thực</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="so-thi-thuc" name="so-thi-thuc" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ngay-het-han-thi-thuc">Ngày hết hạn thị thực</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ngay-het-han-thi-thuc" disabled="" placeholder="dd/mm/yyyy" name="ngay-het-han-thi-thuc" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="trang-thai">Trạng thái</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select id="trang-thai" class="form-control">
+                    <option value="Đang ở">Đang ở</option>
+                    <option value="Sắp ở">Sắp ở</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ngay-cap-cmt">Ngày đăng ký nhập khẩu</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ngay-cap-cmt" name="ngay-cap-cmt" placeholder="(mm/dd/yyyy)" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="can-ho">Căn hộ <span class="required">*</span></label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="can-ho" name="can-ho" required class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="cong-viec">Công việc</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="cong-viec" name="cong-viec" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ten-cong-ty">Tên công ty</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ten-cong-ty" name="ten-cong-ty" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="dia-chi-cong-ty">Địa chỉ công ty</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="dia-chi-cong-ty" name="dia-chi-cong-ty" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="quan-he">Quan hệ</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="quan-he" name="quan-he" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ghi-chu">Ghi chú</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ghi-chu" name="ghi-chu" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="so-so-tam-chu">Số sổ tạm trú</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="so-so-tam-chu" name="so-so-tam-chu" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ngay-het-han-tam-chu">Ngày hết hạn tạm trú</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ngay-het-han-tam-chu" name="ngay-het-han-tam-chu" disabled="" placeholder="(mm/dd/yyyy)" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label col-md-3" for="ngay-dang-ky-tam-chu">Ngày đăng ký tạm trú</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="ngay-dang-ky-tam-chu" name="ngay-dang-ky-tam-chu" placeholder="(mm/dd/yyyy)" class="form-control col-md-7 col-xs-12">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                  <button type="submit" class="btn btn-ebuilding">Submit</button>
+                </div>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script> 
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+    
+  </body>
+</html>

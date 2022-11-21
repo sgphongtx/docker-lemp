@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Báo cáo - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors/nprogress.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="css/vendors/daterangepicker.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+   <!-- ebuilding -->
+   <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>   
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="can_ho_title_left">
+                <h3>Báo cáo phiếu thu</h3>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <form class="form-horizontal form-label-left">
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="tu-ngay">Từ ngày</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="tu-ngay" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="den-ngay">Đến ngày</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="den-ngay" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="can-ho">Căn hộ</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="can-ho" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="dich-vu">Dịch vụ</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="dich-vu" class="form-control" required>
+                      <option value="">-- Tất cả --</option>
+                      <option value="Nước">Nước</option>
+                      <option value="Gửi xe">Gửi xe</option>
+                      <option value="Thu gom rác">Thu gom rác</option>
+                      <option value="Phí quản lý">Phí quản lý</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="so-phieu">Số phiếu</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="so-phieu" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="loai-phieu">Loại phiếu</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="loai-phieu" class="form-control" required>
+                      <option value="">-- Tất cả --</option>
+                      <option value="Loại 1">Loại 1</option>
+                      <option value="Loại 2">Loại 2</option>
+                      <option value="Loại 3">Loại 3</option>
+                      <option value="Loại 4">Loại 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="nhan">Nhãn</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="nhan" class="form-control" required>
+                      <option value="">-- Tất cả --</option>
+                      <option value="Nhãn 1">Nhãn 1</option>
+                      <option value="Nhãn 2">Nhãn 2</option>
+                      <option value="Nhãn 3">Nhãn 3</option>
+                      <option value="Nhãn 4">Nhãn 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="phuong-thuc-thanh-toan">Phương thức thanh toán</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="phuong-thuc-thanh-toan" class="form-control" required>
+                      <option value="">-- Tất cả --</option>
+                      <option value="Chuyển khoản">Chuyển khoản</option>
+                      <option value="Tiền mặt">Tiền mặt</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 text-center">
+                    <button type="submit" class="btn btn-ebuilding">Tìm</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="row">
+                      <div class="table-responsive">
+                        <table class="table table-striped jambo_table bulk_action">
+                          <thead>
+                            <tr class="headings">
+                              <th class="column-title text-center vertical-align-middle">Số phiếu</th>
+                              <th class="column-title text-center vertical-align-middle">Thu ngân</th>
+                              <th class="column-title text-center vertical-align-middle">Người thanh toán</th>
+                              <th class="column-title text-center vertical-align-middle">Diễn giải</th>
+                              <th class="column-title text-center vertical-align-middle">Quỹ</th>
+                              <th class="column-title text-center vertical-align-middle">Tài khoản căn hộ</th>
+                              <th class="column-title text-center vertical-align-middle">Nhãn</th>
+                              <th class="column-title text-center vertical-align-middle">Ngày thanh toán</th>
+                              <th class="column-title text-center vertical-align-middle">Phương thức thanh toán</th>
+                              <th class="column-title text-center vertical-align-middle">Tài khoản(VNĐ)</th>
+                              <th class="column-title text-center vertical-align-middle">Tổng thu(VNĐ)</th>
+                              <th class="column-title no-link last text-center vertical-align-middle">
+                                <span class="nobr">Hành động</span>
+                              </th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr class="even pointer">
+                              <td class="text-center vertical-align-middle">PT2018/11/00141</td>
+                              <td class="text-center vertical-align-middle">Nguyễn Kim Hồng</td>
+                              <td class="text-center vertical-align-middle">Cửa hàng 1</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-view-dien-giai-modal-sm"><i class="fa fa-eye"></i></a>
+                              </td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle">21/11/2018</td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle">0</td>
+                              <td class="text-center vertical-align-middle">950,330</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-in-phieu-thu-modal-sm"><i class="fa fa-print"></i></a>
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-xoa-phieu-thu-modal-sm"><i class="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            <tr class="odd pointer">
+                              <td class="text-center vertical-align-middle">PT2018/11/00141</td>
+                              <td class="text-center vertical-align-middle">Nguyễn Kim Hồng</td>
+                              <td class="text-center vertical-align-middle">Cửa hàng 1</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-view-dien-giai-modal-sm"><i class="fa fa-eye"></i></a>
+                              </td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle">21/11/2018</td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle">0</td>
+                              <td class="text-center vertical-align-middle">950,330</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-in-phieu-thu-modal-sm"><i class="fa fa-print"></i></a>
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-xoa-phieu-thu-modal-sm"><i class="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            <tr class="even pointer">
+                              <td class="text-center vertical-align-middle">PT2018/11/00141</td>
+                              <td class="text-center vertical-align-middle">Nguyễn Kim Hồng</td>
+                              <td class="text-center vertical-align-middle">Cửa hàng 1</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-view-dien-giai-modal-sm"><i class="fa fa-eye"></i></a>
+                              </td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle">21/11/2018</td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle">0</td>
+                              <td class="text-center vertical-align-middle">950,330</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-in-phieu-thu-modal-sm"><i class="fa fa-print"></i></a>
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-xoa-phieu-thu-modal-sm"><i class="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            <tr class="odd pointer">
+                              <td class="text-center vertical-align-middle">PT2018/11/00141</td>
+                              <td class="text-center vertical-align-middle">Nguyễn Kim Hồng</td>
+                              <td class="text-center vertical-align-middle">Cửa hàng 1</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-view-dien-giai-modal-sm"><i class="fa fa-eye"></i></a>
+                              </td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle"></td>
+                              <td class="text-center vertical-align-middle">21/11/2018</td>
+                              <td class="text-center vertical-align-middle">Tiền mặt</td>
+                              <td class="text-center vertical-align-middle">0</td>
+                              <td class="text-center vertical-align-middle">950,330</td>
+                              <td class="text-center vertical-align-middle">
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-in-phieu-thu-modal-sm"><i class="fa fa-print"></i></a>
+                                <a class="btn btn-khoi" data-toggle="modal" data-target=".bs-xoa-phieu-thu-modal-sm"><i class="fa fa-trash"></i></a>
+                              </td>
+                            </tr>
+                            
+                            <tr class="sum-line">
+                              <td colspan="10" class="text-center"><b>Tổng:</b></td>
+                              <td class="text-center"><b>0</b></td>
+                              <td class="text-center"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <div class="modal fade bs-view-dien-giai-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal form-label-left">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title">CH2</h4>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+               
+                <div class="table-responsive">
+                  <table class="table table-striped jambo_table bulk_action">
+                    <thead>
+                      <tr class="headings">
+                        <th class="column-title text-center">#</th>
+                        <th class="column-title text-center">Dịch vụ</th>
+                        <th class="column-title text-center">Tổng thu</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="even pointer">
+                        <td class="text-center">1</td>
+                        <td class="text-center">Thu gom rác</td>
+                        <td class="text-center">30,000</td>
+                      </tr>
+                      <tr class="odd pointer">
+                        <td class="text-center">2</td>
+                        <td class="text-center">Phí quản lý</td>
+                        <td class="text-center">884,400</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                    
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bs-xoa-phieu-thu-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal form-label-left">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title">Xác nhận xóa phiếu thu</h4>
+            </div>
+            <div class="modal-body">
+              Bạn có chắc muốn xoá phiếu thu CH1 không?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+              <button type="submit" class="btn btn-danger">Xóa</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bs-in-phieu-thu-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal form-label-left">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title"><i class="fa fa-file-text"></i> Phiếu thu</h4>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-3 col-sm-12 col-xs-12 text-center">
+                <img src="images/img.jpg" class="logo-phieu-thu">
+              </div>
+              <div class="col-md-6 col-sm-12 col-xs-12">
+                <p class="upper-case text-center"><b>công ty cổ phần dịch vụ kỹ thuật giải pháp an gia</b></p>
+                <p class="upper-case text-center"><b>ban quản lý chung cư besco an sương</b></p>
+                <p class="upper-case text-center"><b>hotline: 0915 846840</b></p>
+              </div>
+              <div class="col-md-3 col-sm-12 col-xs-12">
+                <p>Số/No: PT2018/11/00678</p>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 text-center upper-case font-size-20 margin-top-15">
+                <b>phiếu thu / receipt</b>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                Ngày 23 tháng 11 năm 2018
+              </div>
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15">
+                  Họ tên người nộp / Receipt from
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left margin-top-15 upper-case">
+                  <b>cửa hàng 2</b>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15">
+                  Địa chỉ / Address
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left margin-top-15 upper-case">
+                  <b>ch2</b>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15">
+                  Lý do / Reason
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left margin-top-15">
+                  Chi phí dịch vụ thu gom rác tháng 11/2018(30,000đ), phí quản lý tháng 11/2018(882,400đ), Chi phí dịch vụ thu gom rác tháng 11/2018(30,000đ), phí quản lý tháng 11/2018(882,400đ), Chi phí dịch vụ thu gom rác tháng 11/2018(30,000đ), phí quản lý tháng 11/2018(882,400đ), Chi phí dịch vụ thu gom rác tháng 11/2018(30,000đ), phí quản lý tháng 11/2018(882,400đ)
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15">
+                  Số tiền / Amounts
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left margin-top-15 upper-case">
+                  <b>912,400 VNĐ</b>
+                </div> 
+              </div>
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15">
+                  Bằng chữ / In words
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left margin-top-15 upper-case">
+                  Chín trăm mười hai nghìn bốn trăm đồng<br>
+                  (Nine Hundred twelve thousand four hundred) VNĐ
+                </div> 
+              </div> 
+              <div class="form-group">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15 margin-bottom-100">
+                  <b>Ban quản trị(nếu có)</b>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15 margin-bottom-100">
+                  <b>Trưởng BQL / Manager</b>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15 margin-bottom-100">
+                  <b>Người nộp tiền / Payer</b>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 text-left margin-top-15 margin-bottom-100">
+                  <b>Người lập phiếu / Prepare by</b>
+                </div>  
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success">In phiếu thu</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script>
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="js/vendors/moment.min.js"></script>
+    <script src="js/vendors/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+    <script type="text/javascript">
+      $('#tu-ngay').daterangepicker({
+        singleDatePicker: true,
+        singleClasses: "picker_1",
+        locale: {
+          format: 'DD/MM/YYYY'
+        }
+      }, function(start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+      });
+      $('#den-ngay').daterangepicker({
+        singleDatePicker: true,
+        singleClasses: "picker_1",
+        locale: {
+          format: 'DD/MM/YYYY'
+        }
+      }, function(start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+      });
+    </script>
+  </body>
+</html>

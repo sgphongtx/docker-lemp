@@ -1,0 +1,119 @@
+<?php
+$arrData = $this->arrData;
+$arrStatus = $this->arrStatus;
+$arrUsser = $this->arrUsser;
+?>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/comments/index/status/2" title="Bài viết">Bình luận</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Bình luận</h3>
+                </div>
+                <?php
+                if(!empty($arrData['data'])) {
+                    ?>
+                    <!-- /.box-header -->
+                    <div class="box-header clearfix">
+                        <?php echo $this->Pagination($arrData['total'], $arrData['intPage'], $arrData['intLimit'], 1); ?>
+                    </div>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th style="width: 10px">ID</th>
+                                <th>Họ và tên</th>
+                                <th class="text-center">Email</th>
+                                <th>Nội dung</th>
+                                <th class="text-center">Người duyệt</th>
+                                <th class="text-center">Ngày đăng</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                            <?php
+                            foreach ($arrData['data'] as $data) {
+                                ?>
+                                <tr>
+                                    <td class="text-center"><?php echo $data['id']; ?></td>
+                                    <td><?php echo $data['name']; ?></td>
+                                    <td><?php echo $data['email']; ?></td>
+                                    <td><div style="max-height: 100px; overflow: auto;"><?php echo $data['content']; ?></div></td>
+                                    <td class="text-center"><?php echo isset($arrUsser) ? $arrUsser[$data['id']]['user_approve']['fullname'] : ''; ?></td>
+                                    <td class="text-center"><?php echo date('d/m/Y', $data['ctime']); ?></td>
+                                    <td class="text-center"><?php echo $this->arrStatus[$data['status']]; ?></td>
+                                    <td class="text-center">
+                                        <a data-original-title="Edit" href="javascript:;" data-target="#modal-add" data-id="<?php echo $data['id'];?>" data-toggle="tooltip" class="act-add">
+                                            <i class="fa fa-edit"></i>
+                                        </a>&nbsp;
+                                        <?php
+                                        if($data['status'] == 2 || $data['status'] == 3) {
+                                            ?>
+                                            <a class="act-update-status" data-id="<?php echo $data['id']; ?>"
+                                               data-name="<?php echo $data['name']; ?>" data-status="1"
+                                               href="javascript:;" data-toggle="tooltip" data-original-title="Duyệt">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                            &nbsp;
+                                        <?php
+                                        }
+                                        if($data['status'] == 1 || $data['status'] == 2) {
+                                            ?>
+                                            <a class="act-update-status" data-id="<?php echo $data['id']; ?>"
+                                               data-name="<?php echo $data['name']; ?>" data-status="3"
+                                               href="javascript:;" data-toggle="tooltip"
+                                               data-original-title="Từ chối duyệt">
+                                                <i class="fa fa-stop"></i>
+                                            </a>
+                                            &nbsp;
+                                        <?php
+                                        }
+                                        ?>
+                                        <a data-toggle="tooltip" data-original-title="Xóa" class="act-del"
+                                           data-id="<?php echo $data['id']; ?>"
+                                           data-name="<?php echo $data['name']; ?>" href="javascript:;">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                            ?>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <?php echo $this->Pagination($arrData['total'], $arrData['intPage'], $arrData['intLimit'], 1); ?>
+                    </div>
+                <?php
+                }else{
+                    ?>
+                    <div class="box-body">
+                        <div class="alert alert-warning p-b-10" role="alert">Không tìm thấy dữ liêu!</div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+    <div class="modal fade" id="modal-add" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+</section><!-- /.content -->

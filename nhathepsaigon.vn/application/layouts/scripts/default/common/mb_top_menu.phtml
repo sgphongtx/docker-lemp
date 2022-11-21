@@ -1,0 +1,52 @@
+<?php
+$arrCateReturn = $this->arrCateReturn;
+$arrTagsReturn = $this->arrTagsReturn;
+?>
+<!-- Pushy Menu -->
+<nav class="pushy pushy-left">
+    <div class="pushy-content">
+        <ul>
+            <li class="pushy-link"><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'index' && $this->actionName == 'index'?' class="active"':'';?> href="<?php echo SITE_URL;?>" title="Trang chủ">Trang chủ</a></li>
+            <li class="pushy-link"><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'introduction'?' class="active"':'';?> href="<?php echo SITE_URL;?>/gioi-thieu.html" title="Giới thiệu">Giới thiệu</a></li>
+            <!-- <li class="pushy-link"><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'price'?' class="active"':'';?> href="<?php echo SITE_URL;?>/bang-gia.html" title="Bảng giá">Bảng giá</a></li> -->
+            <li class="pushy-link"><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'gallery'?' class="active"':'';?> href="<?php echo SITE_URL;?>/thu-vien.html" title="Thư viện">Thư viện</a></li>
+            <?php
+            if(!empty($this->arrCategories)){
+                foreach($this->arrCategories as $row){
+                    $cls = '';
+                    if(isset($arrCateReturn) && !empty($arrCateReturn) && $arrCateReturn['category_id'] == $row['category_id']){
+                        $cls = ' class="active"';
+                    }
+                    if(empty($row['child'])) {
+                        ?>
+                        <li class="pushy-link">
+                            <a <?php echo $cls;?> href="<?php echo SITE_URL.$row['cate_link'];?>" title="<?php echo $this->escape($row['cate_name']); ?>"><?php echo $row['cate_name']; ?></a>
+                        </li>
+                        <?php
+                    }else {
+                        ?>
+                        <li class="pushy-submenu">
+                            <a <?php echo $cls;?> href="javascript:;" title="<?php echo $this->escape($row['cate_name']); ?>"><?php echo $row['cate_name']; ?></a>
+                            <ul>
+                                <?php
+                                $i = 1;
+                                foreach($row['child'] as $row1) {
+                                    ?>
+                                    <li <?php echo $i==count($row['child'])?' class="pushy-link"':' class="pushy-link end"';?>><a href="<?php echo SITE_URL.$row1['cate_link'];?>" title="<?php echo $this->escape($row1['cate_name']); ?>"><?php echo $row1['cate_name']; ?></a></li>
+                                    <?php
+                                    $i++;
+                                }
+                                ?>
+                            </ul>
+                        </li>
+                        <?php
+                    }
+                }
+            }
+            ?>
+            <li class="pushy-link"><a <?php echo $this->moduleName == 'default' && $this->controllerName == 'contactus' && $this->actionName == 'contact'?' class="active"':'';?> href="<?php echo SITE_URL;?>/lien-he.html" title="Liên hệ">Liên hệ</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Site Overlay -->
+<div class="site-overlay"></div>

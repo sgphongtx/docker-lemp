@@ -1,0 +1,220 @@
+<?php
+$arrData = $this->arrData;
+$arrStatus = $this->arrStatus;
+$arrCate = $this->arrCate;
+$arrUser = $this->arrUser;
+$arrUserId = $this->arrUserId;
+?>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/articles" title="Bài viết">Bài viết</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Bài viết</h3>
+                    <div class="box-tools pull-right">
+                        <a href="<?php echo SITE_URL;?>/backend/articles/add" class="btn btn-add act-add btn-block btn-primary btn-sm">Tạo mới</a>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-header clearfix">
+                    <form id="frmFilter" role="form" method="GET" action="<?php echo SITE_URL; ?>/backend/articles/index">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon">From</span>
+                                    <input value="<?php echo (isset($this->fromdate) && !empty($this->fromdate)) ? $this->fromdate : ''; ?>" name="form_date" id="form_date" type="text" class="form-control">
+                                    <span class="input-group-addon">To</span>
+                                    <input value="<?php echo (isset($this->todate) && !empty($this->todate)) ? $this->todate : ''; ?>" name="to_date" id="to_date" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Search</span>
+                                    <input name="keyid" value="<?php echo isset($this->intId)&&$this->intId>0?$this->intId:'';?>" type="text" class="form-control" placeholder="ID bài viết" data-toggle="tooltip" data-original-title="Tìm theo ID bài viết">
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="input-group" style="width: 100%;">
+                                    <input name="keyword" value="<?php echo isset($this->strKeyword)?$this->strKeyword:'';?>" type="text" class="form-control" placeholder="Tên bài viết" data-toggle="tooltip" data-original-title="Tìm theo tên bài viết">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Danh mục</span>
+                                    <select class="form-control" name="categoryid">
+                                        <option value="0">All</option>
+                                        <?php
+                                        if (!empty($arrCate)) {
+                                            foreach ($arrCate as $row) {
+                                                $numRepeat = $row['level'];
+                                                $char = '';
+                                                if ($numRepeat > 0) {
+                                                    $char .= str_repeat('-----', $numRepeat);
+                                                }
+                                                ?>
+                                                <option value="<?php echo $row['category_id']; ?>" <?php echo $this->intCategoryId == $row['category_id'] ? 'selected' : ''; ?>><?php echo $char . ' ' . $row['cate_name']; ?></option>
+                                            <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Người đăng</span>
+                                    <select class="form-control" name="userid">
+                                        <option value="0" <?php echo $this->intUserId == 0 ? 'selected' : ''; ?>>All</option>
+                                        <?php
+                                        if(!empty($arrUserId)){
+                                            foreach($arrUserId as $row){
+                                                ?>
+                                                <option value="<?php echo $row['user_id'];?>" <?php echo $this->intUserId == $row['user_id'] ? 'selected' : ''; ?>><?php echo $row['fullname'].' - '.$row['email'];?></option>
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Pageviews</span>
+                                    <select class="form-control" name="pageview">
+                                        <option value="0" <?php echo $this->intPageview == 0 ? 'selected' : ''; ?>>All</option>
+                                        <option value="1" <?php echo $this->intPageview == 1 ? 'selected' : ''; ?>>Tăng dần</option>
+                                        <option value="2" <?php echo $this->intPageview == 2 ? 'selected' : ''; ?>>Giảm dần</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Trang thái</span>
+                                    <select class="form-control" name="status">
+                                        <option value="0" <?php echo $this->intStatus == 0 ? 'selected' : ''; ?>>All</option>
+                                        <option value="<?php echo STATUS_CHO_DUYET;?>" <?php echo $this->intStatus == STATUS_CHO_DUYET ? 'selected' : ''; ?>>Chờ duyệt</option>
+                                        <option value="<?php echo STATUS_DA_DUYET;?>" <?php echo $this->intStatus == STATUS_DA_DUYET ? 'selected' : ''; ?>>Đã duyệt</option>
+                                        <option value="<?php echo STATUS_LUU_NHAP;?>" <?php echo $this->intStatus == STATUS_LUU_NHAP ? 'selected' : ''; ?>>Lưu nháp</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="width: 115px;">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-search">&nbsp;Search</i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <?php
+                if(!empty($arrData['data'])) {
+                    ?>
+                    <!-- /.box-header -->
+                    <div class="box-header clearfix">
+                        <?php echo $this->Pagination($arrData['total'], $arrData['intPage'], $arrData['intLimit'], 1); ?>
+                    </div>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th style="width: 10px">ID</th>
+                                <th class="text-center">Hình đại diện</th>
+                                <th>Tên bài viết</th>
+                                <th class="text-center">Pageviews</th>
+                                <th class="text-center">Người đăng</th>
+                                <th class="text-center">Người duyệt</th>
+                                <th class="text-center">Thời gian đăng</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                            <?php
+                            foreach ($arrData['data'] as $data) {
+                                ?>
+                                <tr>
+                                    <td class="text-center"><?php echo $data['article_id']; ?></td>
+                                    <td class="text-center">
+                                        <a data-toggle="tooltip" data-original-title="Edit" href="<?php echo SITE_URL . '/backend/articles/edit/id/' . $data['article_id']; ?>">
+                                            <img src="<?php echo $this->ImageurlArticle($data, 'size1'); ?>" height="50px">
+                                        </a>
+                                    </td>
+                                    <td><a data-toggle="tooltip" data-original-title="Edit"
+                                           href="<?php echo SITE_URL . '/backend/articles/edit/id/' . $data['article_id']; ?>"><?php echo $data['title']; ?></a>
+                                    </td>
+                                    <td class="text-center"><?php echo $data['views']; ?></td>
+                                    <td class="text-center"><?php echo isset($arrUser) ? $arrUser[$data['article_id']]['user']['fullname'] : ''; ?><br><?php echo isset($arrUser) ? $arrUser[$data['article_id']]['user']['email'] : ''; ?></td>
+                                    <td class="text-center"><?php echo isset($arrUser) ? $arrUser[$data['article_id']]['user_approve']['fullname'] : ''; ?><br><?php echo isset($arrUser) ? $arrUser[$data['article_id']]['user_approve']['email'] : ''; ?></td>
+                                    <td class="text-center"><?php echo date('H:i:s', $data['ptime']); ?><br><?php echo date('d/m/Y', $data['ptime']); ?></td>
+                                    <td class="text-center"><?php echo $this->arrStatus[$data['status']]; ?></td>
+                                    <td class="text-center">
+                                        <a data-toggle="tooltip" data-original-title="Edit"
+                                           href="<?php echo SITE_URL . '/backend/articles/edit/id/' . $data['article_id']; ?>">
+                                            <i class="fa fa-edit"></i>
+                                        </a>&nbsp;
+                                        <?php
+                                        if($data['status'] == STATUS_CHO_DUYET || $data['status'] == STATUS_LUU_NHAP) {
+                                            ?>
+                                            <a class="act-update-status" data-id="<?php echo $data['article_id']; ?>"
+                                               data-name="<?php echo $data['title']; ?>" data-status="<?php echo STATUS_DA_DUYET;?>"
+                                               href="javascript:;" data-toggle="tooltip" data-original-title="Duyệt">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                            &nbsp;
+                                        <?php
+                                        }
+                                        if($data['status'] == STATUS_DA_DUYET || $data['status'] == STATUS_CHO_DUYET) {
+                                            ?>
+                                            <a class="act-update-status" data-id="<?php echo $data['article_id']; ?>"
+                                               data-name="<?php echo $data['title']; ?>" data-status="<?php echo STATUS_LUU_NHAP;?>"
+                                               href="javascript:;" data-toggle="tooltip"
+                                               data-original-title="Từ chối duyệt">
+                                                <i class="fa fa-stop"></i>
+                                            </a>
+                                            &nbsp;
+                                        <?php
+                                        }
+                                        ?>
+                                        <a data-toggle="tooltip" data-original-title="Xóa" class="act-del"
+                                           data-id="<?php echo $data['article_id']; ?>"
+                                           data-name="<?php echo $data['title']; ?>" href="javascript:;">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                            ?>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <?php echo $this->Pagination($arrData['total'], $arrData['intPage'], $arrData['intLimit'], 1); ?>
+                    </div>
+                <?php
+                }else{
+                    ?>
+                    <div class="box-body">
+                        <div class="alert alert-warning p-b-10" role="alert">Không tìm thấy dữ liêu!</div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section><!-- /.content -->

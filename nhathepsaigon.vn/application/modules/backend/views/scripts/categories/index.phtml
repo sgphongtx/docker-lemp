@@ -1,0 +1,77 @@
+<?php
+$arrData = $this->arrData;
+?>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/categories/index/type/<?php echo $this->intCategoryType;?>" title="Danh mục">Danh mục</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Danh mục</h3>
+
+                    <div class="box-tools pull-right">
+                        <a href="javascript:;" class="btn btn-add act-add btn-block btn-primary btn-sm" data-id="0" data-type="<?php echo $this->intCategoryType;?>"
+                           data-toggle="modal" data-target="#modal-add">Tạo mới</a>
+                    </div>
+                </div>
+                <?php
+                if(isset($arrData) && !empty($arrData)){
+                ?>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                            <tr>
+                                <th class="txt-id text-center">ID</th>
+                                <th>Tên</th>
+                                <th class="txt-id text-center">Thứ tự</th>
+                                <th class="txt-action text-center text-nowrap">Thao tác</th>
+                            </tr>
+
+                            <?php
+                            foreach ($arrData as $val) {
+                                $numRepeat = $val['level'];
+                                $char = '';
+                                if ($numRepeat > 0) {
+                                    $char .= str_repeat('-----', $numRepeat);
+                                }
+                                echo '<tr><td class="text-center">'.$val['category_id'].'</td><td><a href="javascript:;" class="tooltips act-add" data-toggle="tooltip" data-id="' . $val['category_id'] . '" data-type="'.$this->intCategoryType.'" data-toggle="modal" data-target="#modal-add" data-original-title="Edit">'.$char . ' ' . $val['cate_name'].'</a></td><td class="text-center">'.$val['display_order'].'</td><td class="text-center"><a class="tooltips act-add" data-toggle="tooltip" data-id="' . $val['category_id'] . '" data-type="'.$this->intCategoryType.'" data-toggle="modal" data-target="#modal-add" href="javascript:;" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;&nbsp;<a class="tooltips act-update-status" data-id="'.$val['category_id'].'" data-name="'.$val['cate_name'].'" data-status="'.$val['status'].'" href="javascript:;" data-toggle="tooltip" data-original-title="'.($val['status']==1?"Inactive":"Active").'"><i class="fa '.($val['status']==1?"fa-lock":"fa-unlock").'"></i></a>&nbsp;&nbsp;&nbsp;<a class="tooltips act-del" data-id="'.$val['category_id'].'" data-name="'.$val['cate_name'].'" href="javascript:;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></a></td></tr>';
+                            }
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                <?php
+                }else{
+                    ?>
+                    <div class="box-body">
+                        <div class="alert alert-warning p-b-10" role="alert">Không tìm thấy dữ liêu!</div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+    <div class="modal fade" id="modal-add" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</section><!-- /.content -->

@@ -1,0 +1,114 @@
+<?php
+$arrResult = $this->arrData;
+$arrOtherNews = $this->arrOtherNews;
+$item = '';
+if(!empty($arrResult)){
+    foreach ($arrResult as $r) {
+        $link = SITE_URL . $r['share_url'];
+        $imageUrl = ($r['thumb_url']) ? $this->ImageurlArticle($r, 'size1') : '';
+        //Lazyload image
+        //$r["content"] =  str_ireplace('data-original=','src=',$r["content"]);
+        $r["content"] = Core_Filter::purify(preg_replace('#style=".*"#siU', '', $r["content"]));
+        $content = preg_replace('#<p.+?<img.+?src="([^"]*)".*?/?>.+?p>#i', '<figure data-feedback="fb:likes, fb:comments" data-mode="aspect-fit-only"><img src="$1" /></figure>', $r["content"]);
+        $li = '';
+        if(!empty($arrOtherNews[$r['article_id']])){
+            foreach ($arrOtherNews[$r['article_id']] as $r1) {
+                $link1 = SITE_URL . $r1['share_url'];
+                $li .= '<li>
+                            <a href="'.$link1.'"></a>
+                        </li>';
+            }
+        }
+        $strTitle = '\''.$r["title"].'\'';
+        $item .= '<item>
+                    <title>'.$r["title"].'</title>
+                    <link>'.$link.'</link>
+                    <guid>'.$r["article_id"].'</guid>
+                    <pubDate>'.date(DATE_ISO8601,$r['ptime']).'</pubDate>
+                    <author>'.$this->arrConfig['web_name'].'</author>
+                    <description>'.$r['lead'].'</description>
+                    <content:encoded><![CDATA[ <!doctype html>
+                        <html lang="en" prefix="op: http://media.facebook.com/op#">
+                        <head>
+                            <meta charset="utf-8">
+                            <meta property="og:image" content="'.$imageUrl.'">
+                            <meta property="op:markup_version" content="v1.0">
+                            <meta property="fb:use_automatic_ad_placement" content="enable=true ad_density=default">
+                            <link rel="canonical" href="'.$link.'">
+                        </head>
+                        <body>
+                        <article>
+                            <header>
+                                <h1>'.$r["title"].'</h1>
+                                <h2>'.$r['lead'].'</h2>
+                                <!-- The date and time when your article was originally published -->
+                                <time class="op-published" datetime="'.date(DATE_ISO8601,$r['ptime']).'">'.date('d/m/Y',$r['ptime']).'</time>
+                                <!-- The date and time when your article was last updated -->
+                                <time class="op-modified" dateTime="'.date(DATE_ISO8601,$r['ptime']).'">'.date('d/m/Y',$r['ptime']).'</time>
+                                <!-- The authors of your article -->
+                                <address>
+                                    <a rel="'.$this->arrConfig['web_name'].'" href="'.SITE_URL.'"><?php echo $this->arrConfig["web_name"]; ?></a>
+                                </address>
+                                <!-- The cover image shown inside your article -->
+                                <figure>
+                                    <img src="'.$imageUrl.'" />
+                                    <figcaption>'.$r['lead'].'</figcaption>
+                                </figure>
+                                <!-- Adding tracking if defined -->
+                                <figure class="op-tracker">
+                                    <iframe>
+                                        <script type="text/javascript">
+                                            (function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){
+                                                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                            })(window,document,\'script\',\'https://www.google-analytics.com/analytics.js\',\'ga\');
+
+                                            ga(\'create\', \'UA-78641839-1\', \'auto\');
+                                            ga(\'require\', \'displayfeatures\');
+                                            ga(\'set\', \'campaignSource\', \'Facebook\');
+                                            ga(\'set\', \'campaignMedium\', \'Social Instant Article\');
+                                            ga(\'set\', \'title\', '.$strTitle.');
+                                            ga(\'send\', \'pageview\');
+                                        </script>
+                                    </iframe>
+                                </figure>
+                                <section class="op-ad-template">
+                                    <figure class="op-ad op-ad-default">
+                                        <iframe width="300" height="250" style="border:0; margin:0;" src="https://www.facebook.com/adnw_request?placement=319543528426535_319547468426141&adtype=banner300x250"></iframe>
+                                    </figure>
+                                    <figure class="op-ad">
+                                        <iframe width="300" height="250" style="border:0; margin:0;" src="https://www.facebook.com/adnw_request?placement=319543528426535_319547835092771&adtype=banner300x250"></iframe>
+                                    </figure>
+                                    <figure class="op-ad">
+                                        <iframe width="300" height="250" style="border:0; margin:0;" src="https://www.facebook.com/adnw_request?placement=319543528426535_319547885092766&adtype=banner300x250"></iframe>
+                                    </figure>
+                                </section>
+                            </header>
+                            '.$content.'
+                            <footer>
+                                <ul class="op-related-articles">
+                                    '.$li.'
+                                </ul>
+                            </footer>
+                        </article>
+                        </body>
+                        </html>
+                        ]]>
+                    </content:encoded>
+                </item>';
+    }
+}
+header('Content-Type: text/xml; charset=utf-8');
+$xml = '<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+    <title>'.$this->arrConfig['web_name'].'</title>
+    <link>'.$this->arrConfig['web_link'].'</link>
+    <description>'.$this->arrConfig['web_description'].'</description>
+    <language>vi-VN</language>
+    <lastBuildDate>Sun, 12 Jun 2016 13:39:01 +0700</lastBuildDate>
+    '.$item.'
+</channel>
+</rss>';
+echo $xml;
+?>

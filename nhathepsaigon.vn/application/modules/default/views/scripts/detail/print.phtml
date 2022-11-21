@@ -1,0 +1,47 @@
+<?php $articleDetail = $this->articleDetail; ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?php echo $articleDetail['title']; ?></title>
+    <link rel="shortcut icon" type="image/png" href="<?php echo SITE_URL; ?>/favicon.png"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="<?php echo STATIC_URL; ?>/fe/css/print<?php echo EXT; ?>.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="print_page">
+    <div class="header_page">
+        <div class="header_left_logo left">
+            <a href="javascript:;" title="<?php echo $this->arrConfig['web_name'];?>"><img src="<?php echo STATIC_URL; ?>/fe/images/logo.png" alt="<?php echo $this->arrConfig['web_name'];?>" /></a>
+        </div>
+        <div class="header_right_print right">
+            <a href="javascript:;" onclick="return window.print();" title="In trang"><img src="<?php echo STATIC_URL; ?>/fe/images/icon_print.gif" alt="In Trang" /><span>&nbsp;In trang</span>&nbsp;(Ctr + P)</a>
+        </div>
+    </div>
+    <div id="detail_page" class="width_common">
+        <div class="box_width_common" id="box_details_news">
+            <div class="w670 left">
+                <div class="main_content_detail width_common">
+                    <div class="title_news">
+                        <h1><?php echo $articleDetail['title']; ?></h1>
+                    </div>
+                    <div class="block_timer_share">
+                        <div class="block_timer left">
+                            <?php echo $this->DateTimeFormat($articleDetail['ptime'], 'long'); ?>
+                        </div>
+                    </div>
+                    <div class="short_intro txt_666"><?php echo $articleDetail['lead']; ?></div>
+                    <div class="width_common space_bottom_20">
+                        <div class="block_col_480">
+                            <div class="fck_detail width_common">
+                                <?php echo $articleDetail['content'];?>
+                            </div>
+                        </div>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

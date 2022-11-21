@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cấu hình hệ thống - Quản lý tòa nhà eBuilding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/vendors/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/vendors/custom.min.css" rel="stylesheet">
+
+    <link href="css/ebuilding/ebuilding.css" rel="stylesheet">    
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title">
+                <img src="images/logo.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Đỗ Thị Tuyết Mai</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                  <li><a href="can-ho.html"><i class="fa fa-home"></i> Căn hộ</a></li>
+                  <li><a href="danh-sach-cu-dan.html"><i class="fa fa-user"></i> Cư dân</a></li>
+                  <li><a href="danh-sach-dich-vu.html"><i class="fa fa-laptop"></i> Dịch vụ</a></li>
+                  <li><a href="thong-bao-phi.html"><i class="fa fa-info"></i> Thông báo phí</a></li>
+                  <li><a href="thanh-toan.html"><i class="fa fa-credit-card"></i> Thanh toán</a></li>
+                  <li>
+                    <a><i class="fa fa-wechat"></i> Giao tiếp <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="giao-tiep-thong-bao-chung.html">Thông báo chung</a></li>
+                        <li><a href="giao-tiep-y-kien-cu-dan.html">Ý kiến cứ dân</a></li>
+                    </ul>
+                  </li> 
+                  <li><a href="nhan-vien.html"><i class="fa fa-users"></i> Nhân viên</a></li>
+                  <li><a href="cong-viec-noi-bo.html"><i class="fa fa-sitemap"></i> Công việc nội bộ</a></li>
+                  <li><a href="trang-thiet-bi-vat-tu.html"><i class="fa fa-desktop"></i> Trang thiết bị vật tư</a></li>
+                  <li>
+                    <a><i class="fa fa-book"></i> Báo cáo <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="bao-cao-so-quy.html">Sổ quỹ</a></li>
+                        <li><a href="bao-cao-tong-thu-dich-vu.html">Tổng thu dịch vụ</a></li>
+                        <li><a href="bao-cao-phieu-thu.html">Phiếu thu</a></li>
+                        <li><a href="bao-cao-phieu-chi.html">Phiếu chi</a></li>
+                        <li><a href="bao-cao-cong-no.html">Công nợ</a></li>
+                        <li><a href="bao-cao-tai-lieu.html">Tài liệu</a></li>
+                        <li><a href="bao-cao-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li> 
+                  <li>
+                    <a><i class="fa fa-cog"></i> Cấu hình hệ thống <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="cau-hinh-he-thong-khoi.html">Khối</a></li>
+                        <li><a href="cau-hinh-he-thong-tang.html">Tầng</a></li>
+                        <li><a href="cau-hinh-he-thong-can-ho.html">Căn hộ</a></li>
+                        <li><a href="cau-hinh-he-thong-dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-chuc-vu.html">Chức vụ</a></li>
+                        <li><a href="cau-hinh-he-thong-phong-ban.html">Phòng ban</a></li>
+                        <li><a href="cau-hinh-he-thong-nhan.html">Nhãn</a></li>
+                        <li><a href="cau-hinh-he-thong-mau.html">Mẫu</a></li>
+                        <li><a href="cau-hinh-he-thong-tai-khoan.html">Tài khoản</a></li>
+                    </ul>
+                  </li>    
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">John Doe
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <!-- <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">Help</a></li> -->
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <h2><b>Hoá đơn</b></h2>
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-hoa-don text-center active">
+                            <a href="" onclick="chooseIconHoaDon(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-hoa-don text-center">
+                            <a href="" onclick="chooseIconHoaDon(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-hoa-don text-center">
+                            <a href="" onclick="chooseIconHoaDon(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-hoa-don text-center">
+                            <a href="" onclick="chooseIconHoaDon(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-hoa-don text-center">
+                            <a href="" onclick="chooseIconHoaDon(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-hoa-don text-center">
+                            <a href="" onclick="chooseIconHoaDon(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-hoa-don text-center">
+                            <a href="" onclick="chooseIconHoaDon(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>                        
+                      </div>
+                    </div>
+
+                    <h2><b>Phiếu thu</b></h2>
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-thu text-center active">
+                            <a href="" onclick="chooseIconPhieuThu(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-thu text-center">
+                            <a href="" onclick="chooseIconPhieuThu(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-thu text-center">
+                            <a href="" onclick="chooseIconPhieuThu(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-thu text-center">
+                            <a href="" onclick="chooseIconPhieuThu(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-thu text-center">
+                            <a href="" onclick="chooseIconPhieuThu(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-thu text-center">
+                            <a href="" onclick="chooseIconPhieuThu(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-thu text-center">
+                            <a href="" onclick="chooseIconPhieuThu(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <h2><b>Phiếu chi</b></h2>
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-chi text-center active">
+                            <a href="" onclick="chooseIconPhieuChi(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-chi text-center">
+                            <a href="" onclick="chooseIconPhieuChi(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-chi text-center">
+                            <a href="" onclick="chooseIconPhieuChi(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-chi text-center">
+                            <a href="" onclick="chooseIconPhieuChi(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-chi text-center">
+                            <a href="" onclick="chooseIconPhieuChi(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-chi text-center">
+                            <a href="" onclick="chooseIconPhieuChi(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="temp-phieu-chi text-center">
+                            <a href="" onclick="chooseIconPhieuChi(this)" data-toggle="modal" data-target=".bs-cap-nhat-thong-tin-mau-modal-lg">
+                              <img src="images/temp/spending-bill-temp1.png" alt="" class="img-responsive">
+                            </a>
+                            <p>bill-temp-1</p>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                      <button class="btn btn-primary">Lưu</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            ©<script>document.write(new Date().getFullYear())</script> All Rights Reserved
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <div class="modal fade bs-cap-nhat-thong-tin-mau-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal form-label-left">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title"><i class="fa fa-building"></i>Toà nhà</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="icon-toa-nha">Icon toà nhà <span class="required">*</span>
+                  </label>
+                  <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                    <img id="img" src="images/img.jpg">
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-12">
+                    <input type="file" id="icon-toa-nha" required="required" class="form-control col-md-7 col-xs-12" onChange="readURL(this);">
+                  </div>
+
+                </div>
+              
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="ten-toa-nha">Tên toà nhà <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="ten-toa-nha" required="required" class="form-control col-md-7 col-xs-12" value="Chung cư Besco An Sương">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="dia-chi">Địa chỉ <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="dia-chi" required="required" class="form-control col-md-7 col-xs-12" value="55 Trần Chánh Chiếu, P14, Q5, TP.HCM">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="chu-dau-tu">Chủ đầu tư</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="chu-dau-tu" class="form-control col-md-7 col-xs-12" value="Công ty cổ phần giải phát kỹ thuật An Gia">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="loai-toa-nha">Loại tòa nhà</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <select id="select-loai-toa-nha" class="form-control col-md-3 col-xs-3">
+                      <option value="Chung cư trung bình">Chung cư trung bình</option>
+                      <option value="Chung cư nhỏ">Chung cư nhỏ</option>
+                      <option value="Chung cư mini">Chung cư mini</option>
+                      <option value="Chung cư lớn">Chung cư lớn</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="dia-chi-cong-ty-dau-tu">Địa chỉ công ty đầu tư</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="dia-chi-cong-ty-dau-tu" class="form-control col-md-7 col-xs-12" value="">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="hotline">Hotline</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="hotline" class="form-control col-md-7 col-xs-12" value="0933457156">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-md-3" for="hotline">Ghi chú hóa đơn</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div id="alerts"></div>
+                    <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                      <div class="btn-group">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        </ul>
+                      </div>
+
+                      <div class="btn-group">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a data-edit="fontSize 5" style="color: #5A738E">
+                              <p style="font-size:17px">Huge</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a data-edit="fontSize 3" style="color: #5A738E">
+                              <p style="font-size:14px">Normal</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a data-edit="fontSize 1" style="color: #5A738E">
+                              <p style="font-size:11px">Small</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="btn-group">
+                        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                      </div>
+
+                      <div class="btn-group">
+                        <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                        <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+                        <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                        <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                      </div>
+
+                      <div class="btn-group">
+                        <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                        <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                        <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                      </div>
+
+                      <div class="btn-group">
+                        <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
+                        <div class="dropdown-menu input-append">
+                          <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                          <button class="btn" type="button">Add</button>
+                        </div>
+                        <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+                      </div>
+
+                      <div class="btn-group">
+                        <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                        <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                      </div>
+
+                      <div class="btn-group">
+                        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                      </div>
+                    </div>
+
+                    <div id="editor-one" class="editor-wrapper"></div>
+
+                    <textarea name="descr" id="descr" style="display:none;"></textarea>
+                  </div>
+                </div>
+
+
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+              <button type="submit" class="btn btn-primary">Cập nhật</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/vendors/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/vendors/bootstrap.min.js"></script> 
+    <!-- NProgress -->
+    <script src="js/vendors/nprogress.js"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script src="js/vendors/bootstrap-wysiwyg.min.js"></script>
+    <script src="js/vendors/jquery.hotkeys.js"></script>
+    <script src="js/vendors/prettify.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="js/vendors/custom.min.js"></script>
+
+    <script type="text/javascript">
+      function chooseIconHoaDon(target) {
+        var listElement = document.getElementsByClassName("temp-hoa-don");
+        for (var i = 0; i < listElement.length; i++){
+          listElement[i].classList.remove("active");
+        }
+        target.closest(".temp-hoa-don").classList.add("active");
+      }
+      function chooseIconPhieuThu(target) {
+        var listElement = document.getElementsByClassName("temp-phieu-thu");
+        for (var i = 0; i < listElement.length; i++){
+          listElement[i].classList.remove("active");
+        }
+        target.closest(".temp-phieu-thu").classList.add("active");
+      }
+      function chooseIconPhieuChi(target) {
+        var listElement = document.getElementsByClassName("temp-phieu-chi");
+        for (var i = 0; i < listElement.length; i++){
+          listElement[i].classList.remove("active");
+        }
+        target.closest(".temp-phieu-chi").classList.add("active");
+      }
+      function readURL(input){
+        var ext = input.files[0]['name'].substring(input.files[0]['name'].lastIndexOf('.') + 1).toLowerCase();
+        if (input.files && input.files[0] && (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#img').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        } else {
+             $('#img').attr('src', 'images/img.jpg');
+        }
+      }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<div class="login-logo">
+    <a href="<?php echo SITE_URL;?>"><b>Admin</b>LTE</a>
+</div><!-- /.login-logo -->
+<div class="login-box-body">
+    <form id="form-login" action="<?php echo SITE_URL .'/backend/users/verify'?>" method="POST">
+        <input type="hidden" id="redirect" name="redirect" value="<?php echo $this->redirect; ?>" >
+        <div id="msg-error" class="has-feedback">
+            <?php if (isset($this->error) && !empty($this->error)) { ?>
+            <div class="error">
+                <?php echo $this->error; ?>
+            </div>
+            <?php } ?>
+        </div>
+        <div class="form-group has-feedback">
+            <div class="inputgroup">
+                <input id="email" type="text" class="form-control" placeholder="Email" name="email" value=""/>
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <div class="inputgroup">
+                <input id="password" type="password" class="form-control" placeholder="Mật khẩu" name="password" value=""/>
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+        </div>
+        <div class="row btn-row">
+            <!-- /.col -->
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng nhập</button>
+            </div>
+            <!-- /.col -->
+        </div>
+    </form>
+</div><!-- /.login-box-body -->

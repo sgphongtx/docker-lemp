@@ -1,0 +1,46 @@
+<?php
+$arrData = $this->arrData;
+?>
+<div class="col-md-8 main-content">
+    <div class="box-body table-responsive no-padding">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th class="text-center"><strong>Hình đại diện</strong></th>
+                <th><strong>Tên bài viết</strong></th>
+                <th class="text-center"><strong>Thời gian gửi</strong></th>
+                <th class="text-center"><strong>Trạng thái</strong></th>
+            </tr>
+            <?php
+            foreach ($arrData['data'] as $data) {
+                ?>
+                <tr>
+                    <td class="text-center">
+                        <a data-toggle="tooltip" data-original-title="Xem bài viết" href="<?php echo SITE_URL . $data['share_url']; ?>">
+                            <img class="lazy" data-original="<?php echo $this->ImageurlArticle($data, 'size3'); ?>" src="<?php echo $this->ImageurlArticle($data, 'size3'); ?>" style="height:50px;">
+                        </a>
+                    </td>
+                    <?php
+                    if($data['status'] == 1) {
+                        ?>
+                        <td><a data-toggle="tooltip" data-original-title="Xem bài viết"
+                               href="<?php echo SITE_URL . $data['share_url']; ?>"><?php echo $data['title']; ?></a>
+                        </td>
+                    <?php
+                    }else {
+                        ?>
+                        <td><?php echo $data['title']; ?></td>
+                    <?php
+                    }
+                    ?>
+                    <td class="text-center"><?php echo date('H:i:s', $data['ctime']); ?><br><?php echo date('d/m/Y', $data['ctime']); ?></td>
+                    <td class="text-center"><?php echo $data['status']==1?'Đã duyệt':'Chờ duyệt';?></td>
+                </tr>
+            <?php
+            }
+            ?>
+        </table>
+    </div>
+</div>
+<div class="col-md-4 right-sidebar">
+    <a title="Liên hệ quảng cáo" href="<?php echo SITE_URL;?>/lien-he-quang-cao"><img class="lazy" data-original="<?php echo STATIC_URL; ?>/fe/images/qc-317x264.png" src="<?php echo STATIC_URL; ?>/fe/images/qc-317x264.png" alt="ads sidebar"></a>
+</div>

@@ -1,0 +1,21 @@
+<?php
+$arrPositionDetail = $this->arrPositionDetail;
+?>
+<form id="frm-position-add" action="" method="POST" role="form">
+    <input type="hidden" name="intId" value="<?php echo isset($arrPositionDetail['id'])?$arrPositionDetail['id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Thêm vị trí quảng cáo</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strName">Tên</label>
+            <input type="text" name="strName" value="<?php echo isset($arrPositionDetail['name'])?$arrPositionDetail['name']:'';?>" class="form-control" id="strName" placeholder="Tên position">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Cập nhật</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+    </div>
+</form>

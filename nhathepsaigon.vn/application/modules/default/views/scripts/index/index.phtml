@@ -1,0 +1,62 @@
+<?php
+$arrData = $this->arrData;
+?>
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="news container">
+        <!-- row -->
+        <div class="row">
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h2 class="title"><?php echo $this->arrPageDetail['name'];?></h2>
+                </div>
+            </div>
+            <!-- section title -->
+
+            <!-- Product Single -->
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <?php echo $this->CropWord($this->arrPageDetail['content'],190); ?>
+                <div class="product-btns">
+                    <button class="primary-btn add-to-cart"><a href="<?php echo SITE_URL;?>/gioi-thieu.html" title="Giới thiệu"><i class="fa fa fa-info"></i> Xem chi tiết</a></button>
+                </div>
+            </div>
+            <!-- /Product Single -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->
+<!-- section -->
+<div class="section">
+    <!-- container -->
+    <div class="news container">
+        <!-- row -->
+        <div class="row">
+            <?php
+            foreach ($arrData['data'] as $row) {
+                ?>
+                <!-- Product Single -->
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <div class="product product-single">
+                        <a href="<?php echo SITE_URL . $row['share_url']; ?>" title="<?php echo $this->escape($row['title']); ?>" class="product-thumb">
+                            <img class="lazy" data-original="<?php echo $this->ImageurlArticle($row, 'size1'); ?>" src="<?php echo $this->ImageurlArticle($row, 'size1'); ?>" alt="<?php echo $this->escape($row['title']); ?>">
+                        </a>
+                        <div class="product-body">
+                            <h1 class="news-title"><a href="<?php echo SITE_URL . $row['share_url']; ?>" title="<?php echo $this->escape($row['title']); ?>"><?php echo $row['title']; ?></a></h1>
+                            <h2 class="news-desc"><?php echo $this->CropWord($row['lead'],40); ?></h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Product Single -->
+                <?php
+            }
+            ?>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /section -->

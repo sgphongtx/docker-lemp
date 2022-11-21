@@ -1,0 +1,41 @@
+<?php
+$arrData = $this->arrData;
+$arrStatus = $this->arrStatus;
+?>
+<form id="frm-topstory-add" action="" method="POST" role="form">
+    <input type="hidden" value="<?php echo $this->total;?>" name="intTotal">
+    <input type="hidden" value="<?php echo $this->intCategoryId;?>" name="intCategoryId">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Thêm bài viết vào topstory</h4>
+    </div>
+    <div class="modal-body table-responsive no-padding" style="max-height: 500px; overflow: auto;">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td class="text-center"></td>
+                <th style="width: 10px">ID</th>
+                <th>Tên bài viết</th>
+                <th class="text-center">Ngày đăng</th>
+            </tr>
+            <?php
+            foreach ($arrData['data'] as $data) {
+                ?>
+                <tr>
+                    <td class="text-center"><input type="checkbox" name="articleid[]" value="<?php echo $data['article_id']; ?>"></td>
+                    <td class="text-center"><?php echo $data['article_id']; ?></td>
+                    <td><?php echo $data['title']; ?></td>
+                    <td class="text-center"><?php echo date('H:i:s', $data['ptime']); ?><br><?php echo date('d/m/Y', $data['ptime']); ?></td>
+                </tr>
+            <?php
+            }
+            ?>
+        </table>
+    </div>
+    <div style="margin: 10px 10px 0px 10px;"><label class="error" for="articleid[]"></label></div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+    </div>
+</form>

@@ -1,0 +1,72 @@
+<?php
+$arrGroupDetail = $this->arrGroupDetail;
+$arrMenus = $this->arrMenus;
+?>
+<form id="frm-group-add" action="" method="POST" role="form">
+    <input type="hidden" name="intGroupId" value="<?php echo isset($arrGroupDetail['group_id'])?$arrGroupDetail['group_id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Add group</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strGroupName">Name</label>
+            <input name="strGroupName" value="<?php echo isset($arrGroupDetail['group_name'])?$arrGroupDetail['group_name']:'';?>" type="text" class="form-control" id="strGroupName" placeholder="Group name">
+        </div>
+        <div class="form-group frm-validate">
+            <div class="input-group">
+                <label for="strGroupDesc">Description</label>
+                <textarea name="strGroupDesc" class="form-control" id="strGroupDesc" placeholder="Group description" rows="5" cols="100"><?php echo isset($arrGroupDetail['group_desc'])?$arrGroupDetail['group_desc']:'';?></textarea>
+            </div>
+            <!-- /.input group -->
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intCate">Phân quyền</label>
+            <div style="max-width:100%; max-height: 500px; overflow: auto;">
+                <table class="table table-bordered table-responsive no-padding" style="margin-bottom: 0px;">
+                    <tbody>
+                    <tr>
+                        <td class="text-left"><b>Menu name</b></td>
+                        <td class="text-center"><b>Xem</b></td>
+                        <td class="text-center"><b>Tạo/Sửa</b></td>
+                        <td class="text-center"><b>Xóa</b></td>
+                    </tr>
+                    <?php
+                    if (isset($arrMenus) && !empty($arrMenus)) {
+                        $i = 0;
+                        foreach ($arrMenus as $val) {
+                            $lab = '';
+                            $numRepeat = $val['level'];
+                            $char = '';
+                            if ($numRepeat > 0) {
+                                $char .= str_repeat('-----', $numRepeat);
+                            }
+                            $labview = $labadd = $labdel = '';
+                            if(isset($val['action']) && !empty($val['action'])){
+                                if(in_array(PERMISSION_VIEW,$val['action'])){
+                                    $labview = 'checked';
+                                }
+                                if(in_array(PERMISSION_ADD_EDIT,$val['action'])){
+                                    $labadd = 'checked';
+                                }
+                                if(in_array(PERMISSION_DEL,$val['action'])){
+                                    $labdel = 'checked';
+                                }
+                            }
+                            echo '<tr><td>'.$char . ' ' . $val['menu_name'].'</td><td class="text-center"><input '.$labview.' type="checkbox" name="accept['.$val['menu_id'].'][]" value="'.PERMISSION_VIEW.'"></td><td class="text-center"><input '.$labadd.' type="checkbox" name="accept['.$val['menu_id'].'][]" value="'.PERMISSION_ADD_EDIT.'"></td><td class="text-center"><input '.$labdel.' type="checkbox" name="accept['.$val['menu_id'].'][]" value="'.PERMISSION_DEL.'"></td></tr>';
+                            $i++;
+                        }
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+    </div>
+</form>

@@ -1,0 +1,97 @@
+<?php
+$arrCategoryDetail = $this->arrCategoryDetail;
+$arrCategories = $this->arrCategories['data'];
+?>
+<form id="frm-cate-add" action="" method="POST" role="form">
+    <input type="hidden" name="intCategoryId" value="<?php echo isset($arrCategoryDetail['category_id']) ? $arrCategoryDetail['category_id'] : 0; ?>">
+
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Thêm danh mục</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label>Danh mục cha</label>
+            <div class="block_select site_id_list">
+                <span class="selected_data" id="site_id_list" data-value="<?php echo isset($arrCategoryDetail['parent_id'])?$arrCategoryDetail['parent_id']:0;?>"><span><?php echo isset($arrCategoryDetail['parent_name'])?$arrCategoryDetail['parent_name']:'';?></span></span>
+                <input class="selected_data_hidden" type="hidden" name="intParentId" value="<?php echo isset($arrCategoryDetail['parent_id'])?$arrCategoryDetail['parent_id']:0;?>">
+                <ul class="list_menu">
+                    <?php
+                    if (isset($arrCategories) && !empty($arrCategories)) {
+                        $arrHtml = array();
+                        foreach ($arrCategories as $row) {
+                            $p = (int)$row['parent_id'];
+                            $c = (int)$row['category_id'];
+                            // Xuat category name
+                            $name = '<a href="javascript:;" data-value="'.$c.'">'.$row['cate_name'].'</a>';
+                            if (isset($arrHtml[$c]) && !empty($arrHtml[$c])) {
+                                $arrHtml[$p][$c] = '<li class="has_sub_menu">' . $name . '<span class="colspan">&nbsp;</span><ul>' . implode('', $arrHtml[$c]) . '</ul></li>';
+                                unset($arrHtml[$c]);
+                            } else {
+                                $arrHtml[$p][$c] = '<li class="has_sub_menu">' . $name . '</li>';
+                            }
+                        }
+                        echo implode('', $arrHtml[0]);
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <input type="hidden" name="intCategoryType" value="<?php echo $this->intCategoryType;?>"> <!-- 1: News category, 2: Product category -->
+        <div class="form-group frm-validate">
+            <label for="strCateName">Tên danh mục</label>
+            <input name="strCateName" value="<?php echo isset($arrCategoryDetail['cate_name'])?$arrCategoryDetail['cate_name']:'';?>" type="text" class="form-control" id="strCateName" placeholder="Giải trí">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strCateLink">Link</label>
+            <input name="strCateLink" value="<?php echo isset($arrCategoryDetail['cate_link'])?$arrCategoryDetail['cate_link']:'';?>" type="text" class="form-control" id="strCateLink" placeholder="/tin-tuc/giai-tri">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intDisplayOrder">Vị trí</label>
+            <input name="intDisplayOrder" type="text" value="<?php echo isset($arrCategoryDetail['display_order'])?$arrCategoryDetail['display_order']:1;?>" class="form-control is-num" id="intDisplayOrder"
+                   placeholder="Position">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMetaTitle">Meta title</label>
+            <input name="strMetaTitle" type="text" value="<?php echo isset($arrCategoryDetail['meta_title'])?$arrCategoryDetail['meta_title']:'';?>" class="form-control" id="strMetaTitle"
+                   placeholder="MetaTitle">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMetaDesc">Meta description</label>
+            <input name="strMetaDesc" type="text" value="<?php echo isset($arrCategoryDetail['meta_desc'])?$arrCategoryDetail['meta_desc']:'';?>" class="form-control" id="strMetaDesc"
+                   placeholder="MetaDescription">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMetaKeyword">Meta keyword</label>
+            <input name="strMetaKeyword" type="text" value="<?php echo isset($arrCategoryDetail['keyword'])?$arrCategoryDetail['keyword']:'';?>" class="form-control" id="strMetaKeyword"
+                   placeholder="Keyword">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intStatus">Trạng thái</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" <?php echo ((isset($arrCategoryDetail['status']) && $arrCategoryDetail['status'] == 1) || !isset($arrCategoryDetail['status']))?'checked':'';?> name="intStatus" value="1">
+            Kích hoạt
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" <?php echo (isset($arrCategoryDetail['status']) && $arrCategoryDetail['status'] == 2)?'checked':'';?> name="intStatus" value="2">
+            Không kích hoạt
+        </div>
+        <div class="form-group frm-validate">
+            <label for="intShowFolder">Hiển thị fontend</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" <?php echo ((isset($arrCategoryDetail['show_folder']) && $arrCategoryDetail['show_folder'] == 1) || !isset($arrCategoryDetail['show_folder']))?'checked':'';?> checked="checked" name="intShowFolder" value="1">
+            Hiện
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" <?php echo (isset($arrCategoryDetail['show_folder']) && $arrCategoryDetail['show_folder'] == 0)?'checked':'';?> name="intShowFolder" value="0">
+            Ẩn
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Lưu</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+    </div>
+</form>
+<script language="javascript">
+    $('.is-num').number(true);
+</script>

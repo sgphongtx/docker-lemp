@@ -1,0 +1,37 @@
+<?php
+$arrTagDetail = $this->arrTagDetail;
+?>
+<form id="frm-tag-add" action="" method="POST" role="form">
+    <input type="hidden" name="intTagId" value="<?php echo isset($arrTagDetail['tag_id'])?$arrTagDetail['tag_id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Thêm tags</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strTagName">Tên tags</label>
+            <input type="text" name="strTagName" value="<?php echo isset($arrTagDetail['tag_name'])?$arrTagDetail['tag_name']:'';?>" class="form-control" id="strTagName" placeholder="Tên tags">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMetaTitle">Meta title</label>
+            <input name="strMetaTitle" type="text" value="<?php echo isset($arrTagDetail['meta_title'])?$arrTagDetail['meta_title']:'';?>" class="form-control" id="strMetaTitle"
+                   placeholder="MetaTitle">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMetaDesc">Meta description</label>
+            <input name="strMetaDesc" type="text" value="<?php echo isset($arrTagDetail['meta_desc'])?$arrTagDetail['meta_desc']:'';?>" class="form-control" id="strMetaDesc"
+                   placeholder="MetaDescription">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strMetaKeyword">Meta keyword</label>
+            <input name="strMetaKeyword" type="text" value="<?php echo isset($arrTagDetail['keyword'])?$arrTagDetail['keyword']:'';?>" class="form-control" id="strMetaKeyword"
+                   placeholder="Keyword">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Cập nhật</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+    </div>
+</form>

@@ -1,0 +1,409 @@
+<?php
+$p = $_GET['p'];
+?>
+<div id="lienhe_page" class="width_common line_page">
+   <div class="left block_lienhe">
+      <div class="form_lienhe" >
+         <div class="width_common item_input_lienhe">
+            <label>Họ tên <span>*</span></label>
+            <input class="txt_input tieude" type="text" name="fName" id="fName">
+            <span class="error" id="errorName"></span>
+         </div>
+         <div class="width_common item_input_lienhe">
+            <label>Email <span>*</span></label>
+            <input class="txt_input tieude" type="text" name="fEmail" id="fEmail">
+            <span class="error" id="errorEmail"></span>
+         </div>
+         <div class="width_common item_input_lienhe">
+            <label>Gửi tới <span>*</span></label>
+            <select name="fCategory" id="fCategory">
+                <option selected="" value="webmaster@vnexpress.net">Ban Biên tập</option>
+				<option <?php echo ($p == 'thoisu') ? 'selected=true' : '' ?> value="thoisu@vnexpress.net">Ban Thời sự</option>
+				<option <?php echo ($p == 'gocnhin') ? 'selected=true' : '' ?> value="gocnhin@vnexpress.net">Ban Góc nhìn</option>
+				<option <?php echo ($p == 'thegioi') ? 'selected=true' : '' ?> value="thegioi@vnexpress.net">Ban Thế giới</option>
+    			<option <?php echo ($p == 'kinhdoanh') ? 'selected=true' : '' ?> value="kinhdoanh@vnexpress.net">Ban Kinh doanh</option>
+				<option <?php echo ($p == 'giaitri') ? 'selected=true' : '' ?> value="giaitri@vnexpress.net">Ban Giải trí</option>
+				<option <?php echo ($p == 'thethao') ? 'selected=true' : '' ?> value="thethao@vnexpress.net">Ban Thể thao</option>
+    			<option <?php echo ($p == 'phapluat') ? 'selected=true' : '' ?> value="thoisu@vnexpress.net">Ban Pháp luật</option>
+				<option <?php echo ($p == 'giaoduc') ? 'selected=true' : '' ?> value="giaoduc@vnexpress.net">Ban Giáo dục</option>
+				<option <?php echo ($p == 'suckhoe') ? 'selected=true' : '' ?> value="suckhoe@vnexpress.net">Ban Sức khỏe</option>
+    			<option <?php echo ($p == 'doisong') ? 'selected=true' : '' ?> value="doisong@vnexpress.net">Ban Đời sống</option>
+				<option <?php echo ($p == 'dulich') ? 'selected=true' : '' ?> value="dulich@vnexpress.net">Ban Du lịch</option>
+				<option <?php echo ($p == 'khoahoc') ? 'selected=true' : '' ?> value="khoahoc@vnexpress.net">Ban Khoa học</option>
+				<option <?php echo ($p == 'sohoa') ? 'selected=true' : '' ?> value="sohoa@vnexpress.net">Ban Số hóa</option>
+				<option <?php echo ($p == 'xemay') ? 'selected=true' : '' ?> value="xe@vnexpress.net">Ban Ôtô Xe máy</option>
+    			<option <?php echo ($p == 'bandoc' || $p == 'congdong') ? "selected=true" :'' ;?> value="bandoc@vnexpress.net">Ban Cộng đồng</option>
+    			<option <?php echo ($p == 'tamsu') ? 'selected=true' : '' ?> value="tamsu@vnexpress.net">Ban Tâm sự</option>
+				<option <?php echo ($p == 'video') ? 'selected=true' : '' ?> value="video@vnexpress.net">Ban Video</option>
+    			<option <?php echo ($p == 'cuoi') ? 'selected=true' : '' ?> value="cuoi@vnexpress.net">Ban Cười</option>                                                            
+            </select>
+         </div>
+         <div class="width_common item_input_lienhe">
+            <label>Tiêu đề <span>*</span></label>
+            <input class="txt_input tieude" type="text" name="fTitle" id="fTitle">
+            <span class="error" id="errorTitle"></span>
+         </div>
+		<?php
+		if (DEVICE_ENV == 4)
+		{
+		?>
+		<div class="width_common item_input_lienhe">
+			<label>File đính kèm</label>
+			<span id="spanButtonPlaceHolder"></span>
+			<input type="hidden" name="thumbnail_url" id="thumbnail_url" />
+			<div id="divFileProgressContainer" style="display: block;"></div>
+			<div class="flash" id="fsUploadProgress"></div>
+			<ul id="thumbnails"></ul>
+			<input id="btnCancel" type="button" value="Hủy tải lên" onclick="swfu.cancelQueue();" disabled="disabled" style="margin-left: 2px; font-size: 8pt; height: 29px; display: none;" />
+			<div id="divStatus" style="display: none;"></div>
+		</div>
+		<?php
+		}
+		else
+		{
+		?>
+		<div class="width_common item_input_lienhe">
+			<label>File đính kèm</label>
+			<div id="btn_upload" class="item_input_lienhe"><button type="file">Chọn file</button></div>
+			<div id="upload_status" style="overflow: hidden; color: #A5315A;"></div>
+			<input type="hidden" name="thumbnail_url" id="thumbnail_url" />
+			<ul id="thumbnails"></ul>
+		</div>
+			<?php
+		}
+		?>
+         <div class="width_common item_input_lienhe">
+            <label>Nội dung</label>
+            <textarea class="txt_area noidung" name="txtContent" id="fContent"></textarea>
+            <span class="error left" id="errorContent"></span>
+         </div>
+		 <div class="width_common code item_input_lienhe">
+		  <div class="left">
+			<label>Mã xác nhận</label>
+			<input class="txt_input xacnhan" id="fCaptcha" type="text"> 
+			<span class="error" id="errorCaptcha"></span>
+		  </div>
+		  <span class="left" style="padding-top:23px;" class="txt_huongdan" id="showCaptcha"></span>
+		  <a class="left" onclick="sendContactUs.loadCaptcha();" href="javascript:;" title="Tạo mã khác"><img class="lazy" data-original="<?php echo $this->config['images'] ?>/refesh.gif" src="<?php echo $this->config['images'] ?>/refesh.gif" /></a>
+		</div>
+        <div class="width_common button item_input_lienhe">
+            <input class="btn_gui" type="button" value="Gửi" name="B1" onClick="sendContactUs.checkForm()">
+            <input class="txt_xoatrang txt_666 txt_11" name="B2" type="reset" onclick="sendContactUs.clearForm();" value="Xóa trắng" style="cursor:pointer;">
+         </div>
+         <!-- end button -->
+         <div class="width_common note2">Phần có dấu (*) là thông tin bắt buộc</div>
+      </div>
+   </div>
+   <div class="right block_txt_right_rss">
+      <div class="title_block width_common">Thông tin về VnExpress</div>
+      <div class="content">
+         <p>Tờ báo có nhiều độc giả nhất Việt Nam</p>
+         <p>
+            <strong>Thành lập ngày 26/02/2001.</strong><br>
+            <strong>Cơ quan chủ quản:</strong> Bộ Khoa học Công nghệ.<br>
+            <strong>Giấy phép:</strong> Số 511/GP - BVHTT ngày 25/11/2002.<br>
+            <strong>Tổng biên tập:</strong> Thang Đức Thắng
+         </p>
+         <p>
+            <strong>Tòa soạn:</strong> Tầng 5, Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội.<br>
+            <strong>Đường dây nóng:</strong> 0123 888 0123<br>
+            <strong>Điện thoại:</strong> 04 7300 8899 - máy lẻ 4500<br>
+            <strong>Fax:</strong> 04 3795 9948
+         </p>
+         <p>
+            <strong>Văn phòng đại diện TP HCM</strong>: Tầng 2 - tòa nhà FPT, Lô 29B-31B-33B đường Tân Thuận, KCX Tân Thuận, Phường Tân Thuận Đông, Quận 7, TP HCM.<br>
+            <strong>Đường dây nóng:</strong> 0129 233 3555<br>
+            <strong>Điện thoại:</strong> 08 7300 8899 - máy lẻ 8505<br>
+            <strong>Fax:</strong> 08 7300 9998<br>
+         </p>
+         <p>
+            <strong>Liên hệ quảng cáo:</strong> 09 4560 1212 (HN) - 09 0810 7277 (TP HCM).
+         </p>
+      </div>
+      <!-- end content -->
+      <div class="fan_page">
+         <div id="box_fb" style="border: 1px solid #E2E2E3;">
+	       <iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fcongdongvnexpress&amp;width=300&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=278843212202375" style="border:none; overflow:hidden; width:100%; height:62px;"></iframe>
+        </div>
+      </div>
+      <!-- end fan_page -->
+   </div>
+</div>
+<!-- InstanceEndEditable -->
+<div class="banner_980x60">
+    <?php echo $this->getBlock('footer'); ?>
+</div>
+<div class="clear"></div>
+<?php if(DEVICE_ENV == 4) { ?>
+<script type="text/javascript">
+ CKEDITOR.replace('txtContent', {
+	toolbar: [['Cut','Copy','Paste','-'],['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],['Bold','Italic','Underline','-','NumberedList','BulletedList'],['Font','FontSize']],
+	removePlugins: 'elementspath',
+	toolbarCanCollapse: true,
+	resize_enabled: false,
+	customConfig: ''
+});
+</script>
+<?php } ?>
+<script type="text/javascript">
+var api_upload_url = 'http://c0.attachment.vnecdn.net';
+$(document).ready(function(){
+	sendContactUs.loadCaptcha();
+	/* Xu ly upload file */
+	UploadFile.init({
+		api_upload				: 'http://photo.upload.vnexpress.net/attachment', // Đường dẫn nhận file
+		session_id				: '<?php echo session_id(); ?>',
+		file_size_limit			: "40 MB", // File size limit
+		upload_success_handler	: uploadSuccess, // Function action handler file success
+		button_placeholder_id	: "spanButtonPlaceHolder",
+		debug					: false,
+		file_types				: '*.jpg;*.jpeg;*.png;*.gif;*.mov;*.flv;*.mp4;*.avi;*.mpg;*.xls;*.xlsx;*.doc;*.docx;*.mp3;*.pdf',
+		device_env				: <?php echo DEVICE_ENV; ?> 
+	});
+})
+
+var sendContactUs = {
+    checkForm: function() {
+        // reset error
+        $('#errorTitle, #errorContent, #errorName, #errorEmail, #errorCaptcha').html('');
+        var txtTitle = $('#fTitle').val();
+		var txtCaptcha = $('#fCaptcha').val();
+		<?php if(DEVICE_ENV == 4) : ?>
+        var txtContent     = CKEDITOR.instances['fContent'].getData();
+		<?php else : ?>
+		var txtContent     = $('#fContent').val();
+		<?php endif; ?>
+        var txtEmail = $('#fEmail').val();
+        var txtName = $('#fName').val();
+        var isValid = true;
+        if (!txtTitle) {
+            $('#errorTitle').html('Tiêu đề không được để trống');
+            isValid = false;
+        } else if (txtTitle.length > 100) {
+            $('#errorTitle').html('Tiêu đề phải ít hơn 100 ký tự');
+            isValid = false;
+        }
+        if (txtContent.split(' ').length < 5) {
+            $('#errorContent').html('Số lượng chữ tối thiểu là 5 chữ');
+            $('#fContent').focus();
+            isValid = false;
+        }
+        if (!txtEmail) {
+            $('#errorEmail').html('Email không được để trống');
+            isValid = false;
+        }
+		if (!txtName) {
+            $('#errorName').html('Họ tên không được để trống');
+            isValid = false;
+        }
+        if (txtCaptcha.length != 4) {
+            $('#errorCaptcha').html('Mã bảo mật không chính xác.');
+			sendContactUs.loadCaptcha();
+            isValid = false;
+        } else if ((txtEmail.toLowerCase() == this.CheckEmailAddress(txtEmail)) == '') {
+            $('#errorEmail').html('Địa chỉ email không hợp lệ');
+            isValid = false;
+        }
+        if (isValid) {
+            this.contactUs();
+        } 
+        return false;
+    },
+    contactUs: function() {
+        var name        = $('#fName').val();
+        var title       = $('#fTitle').val();
+        var cate        = $('#fCategory').val();
+        var catetext    = $('#fCategory option:selected').text();
+		<?php if(DEVICE_ENV == 4) : ?>
+        var content     = CKEDITOR.instances['fContent'].getData();
+		<?php else : ?>
+		var content     = $('#fContent').val();
+		<?php endif; ?>
+        var linkDownload= $('#thumbnail_url').val();
+        var email       = $('#fEmail').val();
+		var captcha     = $('#fCaptcha').val();
+		var captchaId   = $('#captchaID2').val();
+        $.ajax({
+            type: "POST",            
+            url: base_url + "/contactus",
+            data: {
+                sender_name: name,
+                email_user: email,
+                title_email: title,
+                receiver_mail: cate,
+                receiver_mail_text: catetext,
+                message_mail: content,
+                linkcodes:linkDownload,
+                url: '',
+				captchaID:captchaId,
+				txtCode:captcha
+            },
+			dataType: 'json',
+            success: function (result) { 
+				var tmp_alert = '<div id="login-vne4" class="login-form">'
+						+ '<div class="ttOline">Thông báo</div>'
+						+ '<div class="complete-form">'
+							+ '<div class="content_form">{MESSAGE}</div>'
+						+ '</div>'
+						+ '<div class="close-lb" onclick="sendContactUs.clearForm();"></div>'
+						+ '<div class="clear">&nbsp;</div>'
+					+ '</div>';
+                if (result.error == 2) 
+                {
+                    Sexy.notice(tmp_alert.replace('{MESSAGE}', result.message));  
+                    sendContactUs.clearForm();                
+                }
+				else if(result.error == 3)
+				{
+					$('#errorCaptcha').html(result.message);
+					sendContactUs.loadCaptcha();
+				}
+                else 
+                {
+                    Sexy.notice(tmp_alert.replace('{MESSAGE}', 'Gửi liên hệ không thành công'));                
+                }
+                return false;
+            }
+        });  
+    },
+	loadCaptcha: function() {
+		$.ajax({
+			type: 'GET',
+			url: base_url + '/captcha/show2',
+			dataType: 'json',
+			beforeSend: function() {
+			},
+			success: function(response) {
+				if (response != false) {
+					$('#showCaptcha').html(response.html);
+				}
+			}
+		});
+	},
+	goHome: function()
+	{
+		window.location.href = base_url;
+	},
+	clearForm: function()
+	{
+		$('#fName').val('');
+        $('#fTitle').val('');
+        $('#fCategory').val('');
+        $('#fContent').val('');
+		$('#fCaptcha').val('');
+        $('#linkcodes').val('');
+		$('.linksdown').empty();
+        $('#fEmail').val('');
+        sendContactUs.loadCaptcha();
+		return false;
+	},
+    CheckEmailAddress: function(Email) {
+        Email = Email.toLowerCase();
+        while (Email != '') {
+            c = Email.charAt(0);
+            if (c == ' ' || c == '<' || c == 39 || c == ':' || c == '.') {
+                Email = Email.substr(1);
+            }
+            else {
+                break;
+            }
+        }
+        i = Email.indexOf('>');
+        if (i == -1) {
+            while (Email != '') {
+                c = Email.charAt(Email.length - 1);
+                if (c == ' ' || c == 39 || c == '.') {
+                    Email = Email.substr(0, Email.length - 1);
+                }
+                else {
+                    break;
+                }
+            }
+        } else {
+            Email = Email.substr(0, i);
+        }
+        if (Email.length > 96)
+            return '';
+        i = Email.lastIndexOf('@');
+        j = Email.lastIndexOf('.');
+        if (i < j)
+            i = j;
+
+        switch (Email.length - i - 1) {
+            case 2:
+                break;
+            case 3:
+                switch (Email.substr(i).toLowerCase()) {
+                    case '.com':
+                    case '.net':
+                    case '.org':
+                    case '.edu':
+                    case '.mil':
+                    case '.gov':
+                    case '.biz':
+                    case '.pro':
+                    case '.int':
+                        break;
+                    default:
+                        return '';
+                }
+                break;
+            default:
+                switch (Email.substr(i).toLowerCase()) {
+                    case '.name':
+                    case '.info':
+                        break;
+                    default:
+                        return '';
+                }
+                break;
+        }
+
+        Email = Email.toLowerCase();
+
+        if (Email == '')
+            return '';
+
+        if (Email.indexOf(' ') != -1)
+            return '';
+
+        if (Email.indexOf('..') != -1)
+            return '';
+
+        if (Email.indexOf('.@') != -1)
+            return '';
+
+        if (Email.indexOf('@.') != -1)
+            return '';
+
+        if (Email.indexOf(':') != -1)
+            return '';
+
+        for (i = 0; i < Email.length; i++) {
+            c = Email.charAt(i);
+
+            if (c >= '0' && c <= '9')
+                continue;
+
+            if (c >= 'a' && c <= 'z')
+                continue;
+
+            if ('`~!#$%^&*-_+=?/\\|@.'.indexOf(c) != -1)
+                continue;
+
+            return '';
+        }
+
+        if ((i = Email.indexOf('@')) == -1)
+            return '';
+
+        if (Email.substr(i + 1).indexOf('@') != -1)
+            return '';
+
+        if (Email.charAt(0) == '.' || Email.charAt(Email.length - 1) == '.')
+            return '';
+
+        return Email;
+    }
+};	
+</script>

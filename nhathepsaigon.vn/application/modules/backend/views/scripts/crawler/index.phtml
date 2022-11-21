@@ -1,0 +1,98 @@
+<?php
+$arrData = $this->arrData;
+?>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo SITE_URL;?>/backend"><i class="fa fa-th"></i> Dashboard</a></li>
+            <li><a href="<?php echo SITE_URL;?>/backend/crawler/index" title="Bài viết"> List data crawler</a></li>
+        </ol>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--<div class="callout callout-info">
+        <h4>Thông báo</h4>
+        <p>Cập nhật thành công</p>
+    </div>-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">List data crawler</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-header clearfix">
+                    <form id="frmFilter" role="form" method="GET" action="<?php echo SITE_URL; ?>/backend/crawler/index">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Danh mục</span>
+                                    <select class="form-control" name="key">
+                                        <?php
+                                        if (!empty($this->arrLink)) {
+                                            foreach ($this->arrLink as $key => $row) {
+                                                ?>
+                                                <option value="<?php echo $key; ?>" <?php echo $this->intKey == $key ? 'selected' : ''; ?>><?php echo $row; ?></option>
+                                            <?php
+                                            }
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="width: 115px;">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-search">&nbsp;Search</i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <?php
+                if(!empty($arrData)) {
+                    ?>
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th style="width: 10px">STT</th>
+                                <th>Tên bài viết</th>
+                                <th class="text-center">Description</th>
+                                <th class="text-center">Link</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                            <?php
+                            foreach ($arrData as $key => $data) {
+                                ?>
+                                <tr>
+                                    <td class="text-center"><?php echo $key + 1; ?></td>
+                                    <td><a target="_blank" data-toggle="tooltip" data-original-title="Biên tập"
+                                           href="<?php echo SITE_URL . '/backend/articles/add?link=' . $data['link']; ?>"><?php echo $data['title']; ?></a>
+                                    </td>
+                                    <td class="text-center"><?php echo str_replace('_490x294','',str_replace('_180x108','',$data['description'])); ?></td>
+                                    <td class="text-center"><a target="_blank" href="<?php echo $data['link']; ?>"><?php echo $data['link']; ?></a></td>
+                                    <td class="text-center">
+                                        <a target="_blank" data-toggle="tooltip" data-original-title="Biên tập"
+                                           href="<?php echo SITE_URL . '/backend/articles/add?link=' . $data['link']; ?>">
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php
+                            }
+                            ?>
+                        </table>
+                    </div>
+                <?php
+                }else{
+                    ?>
+                    <div class="box-body">
+                        <div class="alert alert-warning p-b-10" role="alert">Không tìm thấy dữ liêu!</div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section><!-- /.content -->

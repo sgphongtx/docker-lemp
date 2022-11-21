@@ -1,0 +1,30 @@
+<?php
+$arrCommentDetail = $this->arrCommentDetail;
+?>
+<form id="frm-comment-add" action="" method="POST" role="form">
+    <input type="hidden" name="intId" value="<?php echo isset($arrCommentDetail['id'])?$arrCommentDetail['id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Edit comment</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strEmail">Email</label>
+            <input readonly type="text" name="strEmail" value="<?php echo isset($arrCommentDetail['email'])?$arrCommentDetail['email']:'';?>" class="form-control" id="strEmail" placeholder="Email">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strName">Họ và tên</label>
+            <input readonly name="strName" type="text" value="<?php echo isset($arrCommentDetail['name'])?$arrCommentDetail['name']:'';?>" class="form-control" id="strName" placeholder="Họ và tên">
+        </div>
+        <div class="form-group frm-validate">
+            <label for="strContent">Nội dung</label>
+            <textarea class="form-control" style="width: 100%;" rows="4" cols="118" name="strContent" id="strContent"><?php echo isset($arrCommentDetail['content']) ? $arrCommentDetail['content'] : ''; ?></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Cập nhật</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+    </div>
+</form>

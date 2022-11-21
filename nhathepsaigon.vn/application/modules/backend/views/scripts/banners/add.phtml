@@ -1,0 +1,87 @@
+<?php
+$arrBannerDetail = $this->arrBannerDetail;
+$arrCategories = $this->arrCategories;
+$arrPositions = $this->arrPositions;
+$intCategoryId = $this->intCategoryId;
+?>
+<form id="frm-banner-add" action="" method="POST" role="form">
+    <input type="hidden" name="intPositionIdEdit" value="<?php echo isset($arrBannerDetail['position_id'])?$arrBannerDetail['position_id']:0;?>">
+    <input type="hidden" name="intCategoryIdEdit" value="<?php echo isset($arrBannerDetail['category_id'])?$arrBannerDetail['category_id']:0;?>">
+    <div class="modal-header">
+        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title">Thêm quảng cáo</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group frm-validate">
+            <label for="strName">Tên quảng cáo</label>
+            <input type="text" name="strName" value="<?php echo isset($arrBannerDetail['name'])?$arrBannerDetail['name']:'';?>" class="form-control" id="strName" placeholder="Tên quảng cáo">
+        </div>
+        <?php
+        if((!isset($arrBannerDetail['position_id']) || $arrBannerDetail['position_id'] == 0) && (!isset($arrBannerDetail['category_id']) || $arrBannerDetail['category_id'] == 0)){
+            ?>
+        <div class="form-group frm-validate">
+            <label>Danh mục</label>
+            <select class="form-control select2" name="intCategoryId" style="width: 100%;">
+                <option value="1000"<?php echo $arrBannerDetail['category_id'] == 1000 || $intCategoryId == 1000 || $intCategoryId == 0?' selected':'';?>>Trang chủ</option>
+                <option value="1001"<?php echo $arrBannerDetail['category_id'] == 1001 || $intCategoryId == 1001?' selected':'';?>>Trang tag</option>
+                <?php
+                if (isset($arrCategories) && !empty($arrCategories)) {
+                    $i = 0;
+                    foreach ($arrCategories as $val) {
+                        $lab = '';
+                        $numRepeat = $val['level'];
+                        $char = '';
+                        if ($numRepeat > 0) {
+                            $char .= str_repeat('-----', $numRepeat);
+                        }
+                        if ((isset($arrBannerDetail['category_id']) && $arrBannerDetail['category_id'] != 0 && $arrBannerDetail['category_id'] == $val['category_id']) || $intCategoryId == $val['category_id']) {
+                            $lab = ' selected';
+                        }
+                        ?>
+                        <option value="<?php echo $val['category_id'];?>"<?php echo $lab;?>><?php echo $char . ' ' . $val['cate_name'];?></option>
+                        <?php
+                        $i++;
+                    }
+                }
+                ?>
+            </select>
+            <label class="error" for="intCategoryId" style="margin-top: 10px;"></label>
+        </div><!-- /.form-group -->
+        <div class="form-group frm-validate">
+            <label>Vị trí quảng cáo</label>
+            <select class="form-control select2" name="intPositionId" style="width: 100%;">
+                <?php
+                if (isset($arrPositions) && !empty($arrPositions)) {
+                    foreach ($arrPositions as $val) {
+                        ?>
+                        <option value="<?php echo $val['id'];?>"<?php echo $arrBannerDetail['position_id'] == $val['id']?' selected':'';?>><?php echo $val['name'];?></option>
+                        <?php
+                    }
+                }
+                ?>
+            </select>
+            <label class="error" for="intPositionId" style="margin-top: 10px;"></label>
+        </div><!-- /.form-group -->
+        <?php
+        }else{
+            ?>
+            <input type="hidden" name="intPositionId" value="<?php echo isset($arrBannerDetail['position_id'])?$arrBannerDetail['position_id']:0;?>">
+            <input type="hidden" name="intCategoryId" value="<?php echo isset($arrBannerDetail['category_id'])?$arrBannerDetail['category_id']:0;?>">
+        <?php
+        }
+        ?>
+        <div class="form-group frm-validate">
+            <label for="ckeditor">Nội dung quảng cáo</label>
+            <textarea class="form-control" style="width: 100%;" name="strContent" id="strContent">
+                <?php
+                echo isset($arrBannerDetail['content']) && $arrBannerDetail['content'] != ''?$arrBannerDetail['content']:'Nội dung';
+                ?>
+            </textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary btn-save">Cập nhật</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+    </div>
+</form>

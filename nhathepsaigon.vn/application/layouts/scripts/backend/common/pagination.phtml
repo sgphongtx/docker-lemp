@@ -1,0 +1,23 @@
+<ul class="pagination pagination-sm no-margin pull-right">
+    <li>
+        <a href="<?php echo($this->previous ? $this->url(array('page' => $this->first, 'limit' => $this->itemCountPerPage)) . ($_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : '') : 'javascript:;'); ?>"><i
+                class="fa fa-angle-double-left<?php if (!$this->previous) echo ' disabled'; ?>"></i></a></li>
+    <li>
+        <a href="<?php echo($this->previous ? $this->url(array('page' => $this->previous, 'limit' => $this->itemCountPerPage)) . ($_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : '') : 'javascript:;'); ?>"><i
+                class="fa fa-angle-left<?php if (!$this->previous) echo ' disabled'; ?>"></i></a></li>
+    <?php foreach ($this->pagesInRange as $page) { ?>
+        <li class="<?php if ($this->current == $page) { ?>active<?php } ?>">
+            <a data-page="<?php echo $page; ?>"
+               data-limit="<?php echo $this->itemCountPerPage; ?>"
+               href="<?php echo($this->current == $page ? 'javascript:;' : $this->url(array('page' => $page, 'limit' => $this->itemCountPerPage)) . ($_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : '')); ?>">
+                <?php echo $page; ?>
+            </a>
+        </li>
+    <?php } ?>
+    <li>
+        <a href="<?php echo($this->next ? $this->url(array('page' => $this->next, 'limit' => $this->itemCountPerPage)) . ($_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : '') : 'javascript:;'); ?>"><i
+                class="fa fa-angle-right<?php if (!$this->next) echo ' disabled'; ?>"></i></a></li>
+    <li>
+        <a href="<?php echo($this->next ? $this->url(array('page' => $this->last, 'limit' => $this->itemCountPerPage)) . ($_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : '') : 'javascript:;'); ?>"><i
+                class="fa fa-angle-double-right<?php if (!$this->next) echo ' disabled'; ?>"></i></a></li>
+</ul>
